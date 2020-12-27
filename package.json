@@ -19,7 +19,7 @@
     "gatsby-plugin-robots-txt": "^1.5.5",
     "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-plugin-typescript": "^2.9.0",
-    "gatsby-source-filesystem": "^2.5.0",
+    "gatsby-source-filesystem": "^2.8.1",
     "gatsby-transformer-sharp": "^2.6.0",
     "postcss": "^8.2.1",
     "prop-types": "^15.7.2",
