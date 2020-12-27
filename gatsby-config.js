@@ -7,7 +7,6 @@ module.exports = {
     description: config.siteDescription,
     author: config.name,
     email: config.email,
-    purpose: config.purpose,
     githubUrl: config.githubUrl,
     linkedInUrl: config.linkedInUrl,
   },

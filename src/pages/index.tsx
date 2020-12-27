@@ -33,7 +33,6 @@ export const pageQuery = graphql`
         title
         author
         email
-        purpose
         githubUrl
         linkedInUrl
       }
