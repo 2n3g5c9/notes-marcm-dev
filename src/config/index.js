@@ -9,6 +9,7 @@ module.exports = {
   name: 'Marc Molina',
   email: 'contact@marcm.dev',
   githubUrl: 'https://github.com/2n3g5c9',
+  keybaseUrl: 'https://keybase.io/2n3g5c9',
   linkedInUrl: 'https://www.linkedin.com/in/marc-molina',
 
   backgroundColor: '#F5F5F7',

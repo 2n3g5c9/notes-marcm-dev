@@ -8,6 +8,7 @@ module.exports = {
     author: config.name,
     email: config.email,
     githubUrl: config.githubUrl,
+    keybaseUrl: config.keybaseUrl,
     linkedInUrl: config.linkedInUrl,
   },
   plugins: [

@@ -1,11 +1,27 @@
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   variants: {
     extend: {},
   },
   plugins: [],
   theme: {
+    extend: {
+      backgroundColor: {
+        accent: 'var(--color-bg-accent)',
+        accentHover: 'var(--color-bg-accentHover)',
+        accentLight: 'var(--color-bg-accentLight)',
+        accentLightHover: 'var(--color-bg-accentLightHover)',
+        primary: 'var(--color-bg-primary)',
+        secondary: 'var(--color-bg-secondary)',
+      },
+      textColor: {
+        accent: 'var(--color-text-accent)',
+        accentDark: 'var(--color-text-accentDark)',
+        primary: 'var(--color-text-primary)',
+        secondary: 'var(--color-text-secondary)',
+      },
+    },
     fontFamily: {
       sans: [
         'ui-sans-serif',

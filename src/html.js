@@ -15,7 +15,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes}>
+      <body {...props.bodyAttributes} className="bg-primary">
         {props.preBodyComponents}
         <div
           key={`body`}

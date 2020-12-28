@@ -1,3 +1,4 @@
+import Footer from './Footer'
 import HeroSection from './HeroSection'
 import Layout from './Layout'
 import NavBar from './nav/NavBar'
@@ -8,6 +9,7 @@ import NavMenuToggle from './nav/NavMenuToggle'
 import SEO from './SEO'
 
 export {
+  Footer,
   HeroSection,
   Layout,
   NavBar,

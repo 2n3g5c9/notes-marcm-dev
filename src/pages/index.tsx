@@ -29,6 +29,7 @@ export const pageQuery = graphql`
         author
         email
         githubUrl
+        keybaseUrl
         linkedInUrl
       }
     }

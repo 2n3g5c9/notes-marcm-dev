@@ -1,3 +1,33 @@
+:root {
+    @apply light;
+}
+
+.dark {
+    --color-bg-primary: #2d3748;
+    --color-bg-secondary: #283141;
+    --color-bg-accent: #81E6D9;
+    --color-bg-accentHover: #25BDA9;
+    --color-bg-accentLight: #BEF3EC;
+    --color-bg-accentLightHover: #A5EEE5;
+    --color-text-primary: #f7fafc;
+    --color-text-secondary: #e2e8f0;
+    --color-text-accent: #81E6D9;
+    --color-text-accentDark: #177B6F;
+}
+
+.light {
+    --color-bg-primary: #FFFFFF;
+    --color-bg-secondary: #F9FAFB;
+    --color-bg-accent: #EF4444;
+    --color-bg-accentHover: #B91C1C;
+    --color-bg-accentLight: #FEE2E2;
+    --color-bg-accentLightHover: #FECACA;
+    --color-text-primary: #111827;
+    --color-text-secondary: #6B7280;
+    --color-text-accent: #EF4444;
+    --color-text-accentDark: #B91C1C;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
