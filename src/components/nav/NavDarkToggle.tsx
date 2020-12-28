@@ -15,8 +15,6 @@ const NavDarkToggle = (): ReactElement => {
     }
   }
 
-  console.log(theme)
-
   return (
     <Switch
       checked={theme === 'light'}

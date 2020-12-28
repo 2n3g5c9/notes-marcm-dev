@@ -18,13 +18,13 @@
 .light {
     --color-bg-primary: #FFFFFF;
     --color-bg-secondary: #F9FAFB;
-    --color-bg-accent: #EF4444;
+    --color-bg-accent: #DC2626;
     --color-bg-accentHover: #B91C1C;
     --color-bg-accentLight: #FEE2E2;
     --color-bg-accentLightHover: #FECACA;
     --color-text-primary: #111827;
     --color-text-secondary: #6B7280;
-    --color-text-accent: #EF4444;
+    --color-text-accent: #DC2626;
     --color-text-accentDark: #B91C1C;
 }
 
