@@ -4,10 +4,11 @@ import PropTypes from 'prop-types'
 
 interface Props {
   to: string
+  icon: string
   text: string
 }
 
-const NavMenuLink = ({ to, text }: Props): ReactElement => {
+const NavMenuLink = ({ to, icon, text }: Props): ReactElement => {
   return (
     <Link
       to={to}
@@ -15,18 +16,20 @@ const NavMenuLink = ({ to, text }: Props): ReactElement => {
       activeClassName="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
       aria-label={text}
     >
-      {text}
+      {icon}&nbsp;&nbsp;{text}
     </Link>
   )
 }
 
 NavMenuLink.propTypes = {
   to: PropTypes.string,
+  icon: PropTypes.string,
   text: PropTypes.string,
 }
 
 NavMenuLink.defaultProps = {
   to: `#`,
+  icon: `🟢`,
   text: `Placeholder`,
 }
 

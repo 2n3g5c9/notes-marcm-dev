@@ -22,8 +22,8 @@ const NavBar = ({ title }: Props): ReactElement => {
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
                 <NavLink to="/" text="Home" />
-                <NavLink to="#" text="About" />
                 <NavLink to="#" text="Notes" />
+                <NavLink to="#" text="About" />
               </div>
             </div>
           </div>
@@ -35,9 +35,9 @@ const NavBar = ({ title }: Props): ReactElement => {
       </div>
       <div className={`${isToggled ? 'block' : 'hidden'} sm:hidden`}>
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <NavMenuLink to="/" text="Home" />
-          <NavMenuLink to="#" text="About" />
-          <NavMenuLink to="#" text="Notes" />
+          <NavMenuLink to="/" icon="🏡" text="Home" />
+          <NavMenuLink to="#" icon="📝" text="Notes" />
+          <NavMenuLink to="#" icon="👨🏻‍💻" text="About️" />
         </div>
       </div>
     </nav>
