@@ -15,7 +15,7 @@ const NavBar = ({ title }: Props): ReactElement => {
   return (
     <nav className="bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14">
+        <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" aria-label="Home" className="flex-shrink-0">
               <LogoSVG className="lg:block h-8 w-auto" alt={title} />
