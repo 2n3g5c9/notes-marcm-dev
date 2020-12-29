@@ -1,7 +1,7 @@
 const path = require('path')
 
 // https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig
-exports.onCreateWebpackConfig = ({ actions }) => {
+exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
@@ -14,4 +14,10 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       },
     },
   })
+
+  if (getConfig().mode === 'production') {
+    actions.setWebpackConfig({
+      devtool: false,
+    })
+  }
 }
