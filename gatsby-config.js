@@ -23,6 +23,28 @@ module.exports = {
     },
     // TypeScript
     `gatsby-plugin-typescript`,
+    // Security
+    {
+      resolve: `gatsby-plugin-csp`,
+      options: {
+        disableOnDev: true,
+        reportOnly: false,
+        mergeScriptHashes: false,
+        mergeStyleHashes: false,
+        mergeDefaultDirectives: true,
+        directives: {
+          'script-src': "'self' 'unsafe-inline'",
+          'style-src': "'self' 'unsafe-inline'",
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sri',
+      options: {
+        hash: 'sha256',
+        crossorigin: false,
+      },
+    },
     // Gatsby & React
     {
       resolve: `gatsby-plugin-manifest`,
@@ -39,6 +61,8 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-react-svg',
@@ -81,8 +105,5 @@ module.exports = {
         plugins: [],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

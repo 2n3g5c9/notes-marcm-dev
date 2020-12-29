@@ -12,6 +12,6 @@ module.exports = {
   keybaseUrl: 'https://keybase.io/2n3g5c9',
   linkedInUrl: 'https://www.linkedin.com/in/marc-molina',
 
-  backgroundColor: '#F5F5F7',
-  themeColor: '#333333',
+  backgroundColor: '#FFFFFF',
+  themeColor: '#1F2937',
 }
