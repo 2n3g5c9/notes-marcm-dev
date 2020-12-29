@@ -5,14 +5,14 @@
 .dark {
     --color-bg-primary: #2D3748;
     --color-bg-secondary: #283141;
-    --color-bg-accent: #DB2777;
-    --color-bg-accentHover: #BE185D;
-    --color-bg-accentLight: #FCE7F3;
-    --color-bg-accentLightHover: #FBCFE8;
+    --color-bg-accent: #1B8375;
+    --color-bg-accentHover: #11554C;
+    --color-bg-accentLight: #BFF3ED;
+    --color-bg-accentLightHover: #9CECE2;
     --color-text-primary: #F7FAFC;
     --color-text-secondary: #E2E8F0;
-    --color-text-accent: #EC4899;
-    --color-text-accentDark: #BE185D;
+    --color-text-accent: #81e6d9;
+    --color-text-accentDark: #11554C;
 }
 
 .light {
