@@ -20,6 +20,7 @@ module.exports = {
         accentDark: 'var(--color-text-accentDark)',
         primary: 'var(--color-text-primary)',
         secondary: 'var(--color-text-secondary)',
+        tertiary: 'var(--color-text-tertiary)',
       },
     },
     fontFamily: {

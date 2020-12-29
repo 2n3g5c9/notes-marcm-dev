@@ -34,7 +34,7 @@ const HeroSection = ({ home }: Props): ReactElement => {
                 <div className="rounded-md shadow">
                   <Link
                     to="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-accent hover:bg-accentHover md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-tertiary bg-accent hover:bg-accentHover md:py-4 md:text-lg md:px-10"
                   >
                     Read the notes
                   </Link>

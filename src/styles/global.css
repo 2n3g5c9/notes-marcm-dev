@@ -5,14 +5,15 @@
 .dark {
     --color-bg-primary: #2D3748;
     --color-bg-secondary: #283141;
-    --color-bg-accent: #1B8375;
-    --color-bg-accentHover: #11554C;
-    --color-bg-accentLight: #BFF3ED;
-    --color-bg-accentLightHover: #9CECE2;
+    --color-bg-accent: #F6D001;
+    --color-bg-accentHover: #E6C300;
+    --color-bg-accentLight: #FFF5BD;
+    --color-bg-accentLightHover: #FEEC86;
     --color-text-primary: #F7FAFC;
     --color-text-secondary: #E2E8F0;
-    --color-text-accent: #81e6d9;
-    --color-text-accentDark: #11554C;
+    --color-text-tertiary: #111827;
+    --color-text-accent: #F6D001;
+    --color-text-accentDark: #473C00;
 }
 
 .light {
@@ -24,6 +25,7 @@
     --color-bg-accentLightHover: #FECACA;
     --color-text-primary: #111827;
     --color-text-secondary: #6B7280;
+    --color-text-tertiary: #F7FAFC;
     --color-text-accent: #EF4444;
     --color-text-accentDark: #B91C1C;
 }
