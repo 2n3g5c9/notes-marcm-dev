@@ -35,6 +35,7 @@ module.exports = {
         directives: {
           'script-src': "'self' 'unsafe-inline'",
           'style-src': "'self' 'unsafe-inline'",
+          'connect-src': "'self' vitals.vercel-analytics.com",
         },
       },
     },
