@@ -39,7 +39,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-no-sourcemaps`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-react-svg',
