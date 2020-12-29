@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
 import React, { ReactElement, useState } from 'react'
 import { Link } from 'gatsby'
+import Hamburger from 'hamburger-react'
 
-import { NavDarkToggle, NavLink, NavMenuLink, NavMenuToggle } from '@components'
+import { NavDarkToggle, NavLink, NavMenuLink } from '@components'
 import { LogoSVG } from '@images'
 
 interface Props {
@@ -30,7 +31,20 @@ const NavBar = ({ title }: Props): ReactElement => {
           </div>
           <div className="flex items-center">
             <NavDarkToggle />
-            <NavMenuToggle isToggled={isToggled} setIsToggled={setIsToggled} />
+            <div
+              className={`${
+                isToggled ? 'text-white' : 'text-gray-400'
+              } ml-3 -mr-2 sm:hidden`}
+            >
+              <Hamburger
+                rounded
+                toggled={isToggled}
+                toggle={setIsToggled}
+                direction="right"
+                size={20}
+                label="Toggle menu"
+              />
+            </div>
           </div>
         </div>
       </div>
