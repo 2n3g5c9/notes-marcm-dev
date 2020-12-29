@@ -3,16 +3,16 @@
 }
 
 .dark {
-    --color-bg-primary: #2d3748;
+    --color-bg-primary: #2D3748;
     --color-bg-secondary: #283141;
-    --color-bg-accent: #10B981;
-    --color-bg-accentHover: #047857;
-    --color-bg-accentLight: #D1FAE5;
-    --color-bg-accentLightHover: #A7F3D0;
-    --color-text-primary: #f7fafc;
-    --color-text-secondary: #e2e8f0;
-    --color-text-accent: #10B981;
-    --color-text-accentDark: #047857;
+    --color-bg-accent: #DB2777;
+    --color-bg-accentHover: #BE185D;
+    --color-bg-accentLight: #FCE7F3;
+    --color-bg-accentLightHover: #FBCFE8;
+    --color-text-primary: #F7FAFC;
+    --color-text-secondary: #E2E8F0;
+    --color-text-accent: #EC4899;
+    --color-text-accentDark: #BE185D;
 }
 
 .light {
@@ -24,7 +24,7 @@
     --color-bg-accentLightHover: #FECACA;
     --color-text-primary: #111827;
     --color-text-secondary: #6B7280;
-    --color-text-accent: #DC2626;
+    --color-text-accent: #EF4444;
     --color-text-accentDark: #B91C1C;
 }
 

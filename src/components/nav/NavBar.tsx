@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { ReactElement, useState } from 'react'
+import { Link } from 'gatsby'
 
 import { NavDarkToggle, NavLink, NavMenuLink, NavMenuToggle } from '@components'
 import { LogoSVG } from '@images'
@@ -16,9 +17,9 @@ const NavBar = ({ title }: Props): ReactElement => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
+            <Link to="/" aria-label="Home" className="flex-shrink-0">
               <LogoSVG className="lg:block h-8 w-auto" alt={title} />
-            </div>
+            </Link>
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
                 <NavLink to="/" text="Home" />
