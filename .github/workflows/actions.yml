@@ -46,5 +46,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Code 🛎
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: Deploy to Vercel 🚀
-        run: curl -X POST ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.ORG_ID}}
+          vercel-project-id: ${{ secrets.PROJECT_ID}} 
