@@ -19,9 +19,7 @@ const NavDarkToggle = (): ReactElement => {
     <Switch
       checked={theme === 'light'}
       onChange={handleThemeToggle}
-      className={`${
-        theme === 'light' ? 'bg-yellow-500' : 'bg-purple-800'
-      } relative inline-flex flex-shrink-0 p-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none`}
+      className="bg-accent relative inline-flex flex-shrink-0 p-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none"
     >
       <span className="sr-only">Toggle Dark Mode</span>
       <span
@@ -37,7 +35,7 @@ const NavDarkToggle = (): ReactElement => {
           } absolute inset-0 h-full w-full flex items-center justify-center transition-opacity`}
           aria-hidden="true"
         >
-          <MoonSVG className="h-3 w-3 text-purple-800" fill="currentColor" />
+          <MoonSVG className="h-3 w-3 text-accent" fill="currentColor" />
         </span>
         <span
           className={`${
@@ -47,7 +45,7 @@ const NavDarkToggle = (): ReactElement => {
           } absolute inset-0 h-full w-full flex items-center justify-center transition-opacity`}
           aria-hidden="true"
         >
-          <SunSVG className="h-3 w-3 text-yellow-500" fill="currentColor" />
+          <SunSVG className="h-3 w-3 text-accent" fill="currentColor" />
         </span>
       </span>
     </Switch>
