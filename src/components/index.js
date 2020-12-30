@@ -1,3 +1,4 @@
+import AboutSection from './AboutSection'
 import Footer from './Footer'
 import HeroSection from './HeroSection'
 import Layout from './Layout'
@@ -8,6 +9,7 @@ import NavMenuLink from './nav/NavMenuLink'
 import SEO from './SEO'
 
 export {
+  AboutSection,
   Footer,
   HeroSection,
   Layout,

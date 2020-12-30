@@ -25,7 +25,7 @@ const NavBar = ({ title }: Props): ReactElement => {
               <div className="flex space-x-4">
                 <NavLink to="/" text="Home" />
                 <NavLink to="#" text="Notes" />
-                <NavLink to="#" text="About" />
+                <NavLink to="/about" text="About" />
               </div>
             </div>
           </div>
@@ -52,7 +52,7 @@ const NavBar = ({ title }: Props): ReactElement => {
         <div className="px-2 pt-2 pb-3 space-y-1">
           <NavMenuLink to="/" icon="🏡" text="Home" />
           <NavMenuLink to="#" icon="📝" text="Notes" />
-          <NavMenuLink to="#" icon="👨🏻‍💻" text="About️" />
+          <NavMenuLink to="/about" icon="👨🏻‍💻" text="About️" />
         </div>
       </div>
     </nav>

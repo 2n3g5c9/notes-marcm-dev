@@ -56,7 +56,7 @@ exports[`HeroSection renders correctly 1`] = `
             >
               <a
                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-accentDark bg-accentLight hover:bg-accentLightHover md:py-4 md:text-lg md:px-10"
-                href="#"
+                href="/about"
               >
                 More about me
               </a>
