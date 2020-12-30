@@ -18,7 +18,7 @@ const getInitialTheme = _ => {
   return 'light'
 }
 
-export const ThemeContext = React.createContext()
+export const ThemeContext = React.createContext<Partial<Props>>({})
 
 export const ThemeProvider = ({ initialTheme, children }) => {
   const [theme, setTheme] = React.useState(getInitialTheme)

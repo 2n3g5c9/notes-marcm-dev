@@ -59,11 +59,21 @@ const HeroSection = ({ home }: Props): ReactElement => {
 HeroSection.propTypes = {
   home: PropTypes.shape({
     frontmatter: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      hashtag: PropTypes.string.isRequired,
-      subtitle: PropTypes.string.isRequired,
+      title: PropTypes.string,
+      hashtag: PropTypes.string,
+      subtitle: PropTypes.string,
     }),
   }),
+}
+
+HeroSection.defaultProps = {
+  home: {
+    frontmatter: {
+      title: 'Title',
+      hashtag: 'Hashtag',
+      subtitle: 'Subtitle',
+    },
+  },
 }
 
 export default HeroSection
