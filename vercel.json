@@ -21,7 +21,7 @@
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET",
         "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
-        "Content-Security-Policy": "script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' vitals.vercel-analytics.com; frame-ancestors 'none';",
+        "Content-Security-Policy": "script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; frame-ancestors 'none';",
         "Feature-Policy": "geolocation 'none'; microphone 'none'; camera 'none'",
         "Referrer-Policy": "no-referrer",
         "Strict-Transport-Security": "max-age=31536000",
