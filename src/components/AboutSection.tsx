@@ -11,12 +11,11 @@ interface Props {
     frontmatter: {
       title: string
     }
+    html: any // eslint-disable-line
   }
 }
 
 const AboutSection = ({ site, about }: Props): ReactElement => {
-  console.log('site:', site)
-  console.log('about:', about)
   const { email } = site.siteMetadata
   const { title } = about.frontmatter
 
@@ -37,6 +36,9 @@ const AboutSection = ({ site, about }: Props): ReactElement => {
           </a>
         </div>
       </div>
+      <div className="max-w-7xl mx-auto my-6 sm:my-8 px-8">
+        <div dangerouslySetInnerHTML={{ __html: about.html }} />
+      </div>
     </div>
   )
 }
@@ -51,6 +53,7 @@ AboutSection.propTypes = {
     frontmatter: PropTypes.shape({
       title: PropTypes.string,
     }),
+    html: PropTypes.any,
   }),
 }
 
@@ -64,6 +67,7 @@ AboutSection.defaultProps = {
     frontmatter: {
       title: 'Title',
     },
+    html: 'Content',
   },
 }
 

@@ -13,7 +13,7 @@ exports[`AboutSection renders correctly 1`] = `
       <h2
         className="text-2xl font-bold leading-7 text-primary sm:text-3xl sm:truncate"
       >
-        Hi there 🖖
+        Title
       </h2>
     </div>
     <div
@@ -26,6 +26,17 @@ exports[`AboutSection renders correctly 1`] = `
         Get in touch
       </a>
     </div>
+  </div>
+  <div
+    className="max-w-7xl mx-auto my-6 sm:my-8 px-8"
+  >
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "Content",
+        }
+      }
+    />
   </div>
 </div>
 `;

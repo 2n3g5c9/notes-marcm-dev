@@ -7,13 +7,13 @@
     --color-bg-secondary: #2D3748;
     --color-bg-accent: #F6D001;
     --color-bg-accentHover: #E6C300;
-    --color-bg-accentLight: #FFF5BD;
+    --color-bg-accentLight: #FFF3B0;
     --color-bg-accentLightHover: #FEEC86;
     --color-text-primary: #F7FAFC;
     --color-text-secondary: #E2E8F0;
     --color-text-tertiary: #000000;
     --color-text-accent: #F6D001;
-    --color-text-accentDark: #473C00;
+    --color-text-accentDark: #7D6A00;
 }
 
 .light {
