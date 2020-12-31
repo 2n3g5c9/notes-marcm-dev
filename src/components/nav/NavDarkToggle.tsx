@@ -19,7 +19,7 @@ const NavDarkToggle = (): ReactElement => {
     <Switch
       checked={theme === 'light'}
       onChange={handleThemeToggle}
-      className="bg-accent relative inline-flex flex-shrink-0 p-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none"
+      className="bg-accent relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none"
     >
       <span className="sr-only">Toggle Dark Mode</span>
       <span
