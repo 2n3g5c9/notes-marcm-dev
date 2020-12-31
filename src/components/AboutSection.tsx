@@ -2,22 +2,30 @@ import React, { ReactElement } from 'react'
 import PropTypes from 'prop-types'
 
 interface Props {
+  site: {
+    siteMetadata: {
+      email: string
+    }
+  }
   about: {
     frontmatter: {
-      email: string
+      title: string
     }
   }
 }
 
-const AboutSection = ({ about }: Props): ReactElement => {
-  const { email } = about.frontmatter
+const AboutSection = ({ site, about }: Props): ReactElement => {
+  console.log('site:', site)
+  console.log('about:', about)
+  const { email } = site.siteMetadata
+  const { title } = about.frontmatter
 
   return (
     <div className="max-w-full mx-auto relative overflow-hidden">
       <div className="max-w-7xl mx-auto my-6 sm:my-8 px-8 flex items-center justify-between">
         <div className="flex-1 min-w-0">
           <h2 className="text-2xl font-bold leading-7 text-primary sm:text-3xl sm:truncate">
-            Hi there 🖖
+            {title}
           </h2>
         </div>
         <div className="flex">
@@ -34,17 +42,27 @@ const AboutSection = ({ about }: Props): ReactElement => {
 }
 
 AboutSection.propTypes = {
+  site: PropTypes.shape({
+    siteMetadata: PropTypes.shape({
+      title: PropTypes.string,
+    }),
+  }),
   about: PropTypes.shape({
     frontmatter: PropTypes.shape({
-      email: PropTypes.string,
+      title: PropTypes.string,
     }),
   }),
 }
 
 AboutSection.defaultProps = {
+  site: {
+    siteMetadata: {
+      email: '',
+    },
+  },
   about: {
     frontmatter: {
-      email: '',
+      title: 'Title',
     },
   },
 }

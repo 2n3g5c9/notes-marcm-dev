@@ -28,5 +28,10 @@ export const pageQuery = graphql`
         email
       }
     }
+    about: markdownRemark(fileAbsolutePath: { regex: "/about/" }) {
+      frontmatter {
+        title
+      }
+    }
   }
 `

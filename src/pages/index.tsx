@@ -34,7 +34,6 @@ export const pageQuery = graphql`
       }
     }
     home: markdownRemark(fileAbsolutePath: { regex: "/home/" }) {
-      html
       frontmatter {
         title
         hashtag
