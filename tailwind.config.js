@@ -1,12 +1,5 @@
 module.exports = {
-  purge: {
-    content: ['./src/**/*.{js,jsx,ts,tsx}'],
-    options: {
-      safelist: {
-        standard: [/m[x-y]?-\d+/, /p[x-y]?-\d+/, /text-\w+/],
-      },
-    },
-  },
+  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false,
   variants: {
     extend: {},

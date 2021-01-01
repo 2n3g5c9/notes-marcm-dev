@@ -3,17 +3,17 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
 interface Props {
-  home: {
+  md: {
     frontmatter: {
       title: string
-      hashtag: string
       subtitle: string
+      hashtag: string
     }
   }
 }
 
-const HeroSection = ({ home }: Props): ReactElement => {
-  const { title, hashtag, subtitle } = home.frontmatter
+const HeroSection = ({ md }: Props): ReactElement => {
+  const { title, hashtag, subtitle } = md.frontmatter
 
   return (
     <div className="bg-secondary max-w-full mx-auto my-0 pt-0 px-4 pb-6">
@@ -57,21 +57,21 @@ const HeroSection = ({ home }: Props): ReactElement => {
 }
 
 HeroSection.propTypes = {
-  home: PropTypes.shape({
+  md: PropTypes.shape({
     frontmatter: PropTypes.shape({
       title: PropTypes.string,
-      hashtag: PropTypes.string,
       subtitle: PropTypes.string,
+      hashtag: PropTypes.string,
     }),
   }),
 }
 
 HeroSection.defaultProps = {
-  home: {
+  md: {
     frontmatter: {
       title: 'Title',
-      hashtag: 'Hashtag',
       subtitle: 'Subtitle',
+      hashtag: 'Hashtag',
     },
   },
 }

@@ -5,7 +5,25 @@ import PropTypes from 'prop-types'
 import { HeroSection, Layout, SEO } from '@components'
 
 interface Props {
-  data?: any // eslint-disable-line
+  data: {
+    site: {
+      siteMetadata: {
+        title: string
+        author: string
+        email: string
+        githubUrl: string
+        keybaseUrl: string
+        linkedInUrl: string
+      }
+      md: {
+        frontmatter: {
+          title: string
+          subtitle: string
+          hashtag: string
+        }
+      }
+    }
+  }
 }
 
 const IndexPage = ({ data }: Props): ReactElement => (
@@ -33,11 +51,11 @@ export const pageQuery = graphql`
         linkedInUrl
       }
     }
-    home: markdownRemark(fileAbsolutePath: { regex: "/home/" }) {
+    md: markdownRemark(fileAbsolutePath: { regex: "/home/" }) {
       frontmatter {
         title
-        hashtag
         subtitle
+        hashtag
       }
     }
   }

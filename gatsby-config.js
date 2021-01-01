@@ -26,7 +26,7 @@ module.exports = {
         mergeStyleHashes: false,
         mergeDefaultDirectives: true,
         directives: {
-          'script-src': "'self' 'unsafe-inline'",
+          'script-src': "'self' 'unsafe-eval' 'unsafe-inline'",
           'style-src': "'self' 'unsafe-inline'",
         },
       },
@@ -54,6 +54,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-mdx`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
@@ -102,20 +103,7 @@ module.exports = {
         footnotes: true,
         pedantic: true,
         gfm: true,
-        plugins: [
-          {
-            resolve: `gatsby-remark-classes`,
-            options: {
-              classMap: {
-                'heading[depth=1]': 'text-2xl',
-                'heading[depth=2]': 'text-xl',
-                paragraph: 'my-3 text-primary text-sm sm:text-base',
-                inlineCode:
-                  'px-1.5 py-1 rounded bg-accentLight text-accentDark text-xs sm:text-sm',
-              },
-            },
-          },
-        ],
+        plugins: [],
       },
     },
   ],

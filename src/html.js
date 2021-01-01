@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function HTML(props) {
+const HTML = props => {
   return (
     <html {...props.htmlAttributes}>
       <head>
@@ -27,6 +27,8 @@ export default function HTML(props) {
     </html>
   )
 }
+
+export default HTML
 
 HTML.propTypes = {
   htmlAttributes: PropTypes.object,
