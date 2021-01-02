@@ -17,6 +17,7 @@ const Layout = ({ children, siteMetadata }: Props): ReactElement => {
       <NavBar title={siteMetadata.title} />
       <main>{children}</main>
       <Footer
+        author={siteMetadata.author}
         urls={{
           github: siteMetadata.githubUrl,
           keybase: siteMetadata.keybaseUrl,

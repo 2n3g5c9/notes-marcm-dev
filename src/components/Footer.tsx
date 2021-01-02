@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { GitHubSVG, KeybaseSVG, LinkedInSVG } from '@images'
 
 interface Props {
+  author: string
   urls: {
     github: string
     keybase: string
@@ -11,7 +12,7 @@ interface Props {
   }
 }
 
-const Footer = ({ urls }: Props): ReactElement => {
+const Footer = ({ author, urls }: Props): ReactElement => {
   return (
     <footer>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
@@ -49,7 +50,16 @@ const Footer = ({ urls }: Props): ReactElement => {
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
           <p className="text-center text-base text-secondary">
-            &copy; 2020 Marc Molina. All rights reserved.
+            &copy; 2021 {author}. Made with{' '}
+            <a
+              href="https://github.com/2n3g5c9/gatsby-starter-typescript-tailwindcss"
+              aria-label="Gatsby"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Gatsby
+            </a>
+            .
           </p>
         </div>
       </div>
@@ -58,6 +68,7 @@ const Footer = ({ urls }: Props): ReactElement => {
 }
 
 Footer.propTypes = {
+  author: PropTypes.string,
   urls: PropTypes.shape({
     github: PropTypes.string,
     keybase: PropTypes.string,
@@ -66,10 +77,11 @@ Footer.propTypes = {
 }
 
 Footer.defaultProps = {
+  author: 'John Doe',
   urls: {
-    github: `#`,
-    keybase: `#`,
-    linkedIn: `#`,
+    github: '#',
+    keybase: '#',
+    linkedIn: '#',
   },
 }
 
