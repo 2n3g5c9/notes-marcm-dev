@@ -7,6 +7,9 @@ module.exports = {
   plugins: [],
   theme: {
     extend: {
+      backgroundImage: {
+        hero: 'var(--image-bg-hero)',
+      },
       backgroundColor: {
         accent: 'var(--color-bg-accent)',
         accentHover: 'var(--color-bg-accentHover)',
