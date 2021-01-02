@@ -7,7 +7,7 @@ interface Props {
 
 const BlockQuote = ({ children }: Props): ReactElement => {
   return (
-    <div className="inline-block my-2 px-4 py-3 rounded bg-secondary font-mono text-xs sm:text-sm text-secondary">
+    <div className="whitespace-pre inline-block my-2 px-4 py-3 rounded bg-secondary font-mono text-xs sm:text-sm text-secondary">
       {children}
     </div>
   )
