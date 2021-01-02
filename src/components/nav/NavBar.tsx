@@ -1,16 +1,13 @@
-import PropTypes from 'prop-types'
 import React, { ReactElement, useState } from 'react'
+import PropTypes from 'prop-types'
+import { InferPropTypes } from '@shared/types'
 import { Link } from 'gatsby'
 import Hamburger from 'hamburger-react'
 
 import { NavDarkToggle, NavLink, NavMenuLink } from '@components'
 import { LogoSVG } from '@images'
 
-interface Props {
-  title: string
-}
-
-const NavBar = ({ title }: Props): ReactElement => {
+const NavBar = ({ title }: NavBarProps): ReactElement => {
   const [isToggled, setIsToggled] = useState(false)
 
   return (
@@ -59,12 +56,21 @@ const NavBar = ({ title }: Props): ReactElement => {
   )
 }
 
-NavBar.propTypes = {
+export default NavBar
+
+const navBarPropTypes = {
   title: PropTypes.string,
 }
 
-NavBar.defaultProps = {
+NavBar.propTypes = navBarPropTypes
+
+const navBarDefaultProps = {
   title: `Title`,
 }
 
-export default NavBar
+NavBar.defaultProps = navBarDefaultProps
+
+type NavBarProps = InferPropTypes<
+  typeof navBarPropTypes,
+  typeof navBarDefaultProps
+>

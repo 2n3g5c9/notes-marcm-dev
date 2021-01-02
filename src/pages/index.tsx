@@ -15,12 +15,12 @@ interface Props {
         keybaseUrl: string
         linkedInUrl: string
       }
-      md: {
-        frontmatter: {
-          title: string
-          subtitle: string
-          hashtag: string
-        }
+    }
+    md: {
+      frontmatter: {
+        title: string
+        subtitle: string
+        hashtag: string
       }
     }
   }
@@ -34,7 +34,14 @@ const IndexPage = ({ data }: Props): ReactElement => (
 )
 
 IndexPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.objectOf(PropTypes.string),
+    }),
+    md: PropTypes.shape({
+      frontmatter: PropTypes.objectOf(PropTypes.string),
+    }),
+  }),
 }
 
 export default IndexPage

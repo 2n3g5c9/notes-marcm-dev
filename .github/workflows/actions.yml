@@ -31,11 +31,11 @@ jobs:
       - name: Run ESLint Checks ✅
         run: yarn lint
 
-#      - name: Run TypeScript Checks ✅
-#        run: yarn type-check
+      - name: Run TypeScript Checks ✅
+        run: yarn type-check
 
-#      - name: Run Jest Tests 🧪
-#        run: yarn test
+      - name: Run Jest Tests 🧪
+        run: yarn test
 
       - name: Build Gatsby Site ⚙️
         run: yarn build

@@ -1,21 +1,19 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import React, { ReactElement } from 'react'
 import PropTypes from 'prop-types'
+import { InferPropTypes } from '@shared/types'
 
 import { ThemeProvider } from '@context/ThemeContext'
 import { NavBar, Footer } from '@components'
 
-interface Props {
-  children: any // eslint-disable-line
-  siteMetadata: any // eslint-disable-line
-}
-
-const Layout = ({ children, siteMetadata }: Props): ReactElement => {
+const Layout = ({ children, siteMetadata }: LayoutProps): ReactElement => {
   return (
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     <ThemeProvider>
       <NavBar title={siteMetadata.title} />
-      <main>{children}</main>
+      <main>
+        <>{children}</>
+      </main>
       <Footer
         author={siteMetadata.author}
         urls={{
@@ -28,9 +26,16 @@ const Layout = ({ children, siteMetadata }: Props): ReactElement => {
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-  siteMetadata: PropTypes.object.isRequired,
+export default Layout
+
+const layoutPropTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  siteMetadata: PropTypes.objectOf(PropTypes.string).isRequired,
 }
 
-export default Layout
+Layout.propTypes = layoutPropTypes
+
+type LayoutProps = InferPropTypes<typeof layoutPropTypes>

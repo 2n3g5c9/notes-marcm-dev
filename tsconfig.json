@@ -8,7 +8,7 @@
     "jsx": "react",
     "noEmit": true,
     "strict": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "noUnusedLocals": false,
     "esModuleInterop": true,
     "skipLibCheck": true,

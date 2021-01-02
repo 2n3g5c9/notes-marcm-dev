@@ -11,6 +11,7 @@ exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
         '@hooks': path.resolve(__dirname, 'src/hooks'),
         '@images': path.resolve(__dirname, 'src/images'),
         '@pages': path.resolve(__dirname, 'src/pages'),
+        '@shared': path.resolve(__dirname, 'src/shared'),
         '@styles': path.resolve(__dirname, 'src/styles'),
       },
     },

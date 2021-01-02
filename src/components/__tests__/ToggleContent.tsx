@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import { NavBar } from '@components'
+import { ToggleContent } from '@components'
 
 jest.mock('gatsby-plugin-mdx', () => {
   return {
@@ -12,9 +12,9 @@ jest.mock('gatsby-plugin-mdx', () => {
   }
 })
 
-describe('NavBar', () => {
+describe('ToggleContent', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<NavBar />).toJSON()
+    const tree = renderer.create(<ToggleContent />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

@@ -1,14 +1,9 @@
 import React, { ReactElement } from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import { InferPropTypes } from '@shared/types'
 
-interface Props {
-  to: string
-  icon: string
-  text: string
-}
-
-const NavMenuLink = ({ to, icon, text }: Props): ReactElement => {
+const NavMenuLink = ({ to, icon, text }: NavMenuLinkProps): ReactElement => {
   return (
     <Link
       to={to}
@@ -21,16 +16,25 @@ const NavMenuLink = ({ to, icon, text }: Props): ReactElement => {
   )
 }
 
-NavMenuLink.propTypes = {
-  to: PropTypes.string,
-  icon: PropTypes.string,
-  text: PropTypes.string,
+export default NavMenuLink
+
+const navMenuLinkPropTypes = {
+  to: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 }
 
-NavMenuLink.defaultProps = {
+NavMenuLink.propTypes = navMenuLinkPropTypes
+
+const navMenuLinkDefaultProps = {
   to: `#`,
   icon: `🟢`,
   text: `Placeholder`,
 }
 
-export default NavMenuLink
+NavMenuLink.defaultProps = navMenuLinkDefaultProps
+
+type NavMenuLinkProps = InferPropTypes<
+  typeof navMenuLinkPropTypes,
+  typeof navMenuLinkDefaultProps
+>

@@ -1,64 +1,22 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-import React from 'react'
+import React, { ReactElement } from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import { BlockQuote, Layout, SEO, ToggleContent } from '@components'
-import PropTypes from 'prop-types'
+import { Layout, SEO } from '@components'
+import { InferPropTypes } from '@shared/types'
+import * as DesignSystem from '../components/mdx/DesignSystem'
 
 const shortcodes = {
-  BlockQuote,
-  ToggleContent,
-
-  // eslint-disable-next-line react/display-name
-  h2: (props: any) => (
-    <h2
-      {...props}
-      className="pt-2 sm:pt-4 text-xl font-bold leading-7 text-primary sm:text-2xl"
-    />
-  ),
-
-  // eslint-disable-next-line react/display-name
-  p: (props: any) => (
-    <p {...props} className="my-3 text-primary text-sm sm:text-base" />
-  ),
-
-  // eslint-disable-next-line react/display-name
-  inlineCode: (props: any) => (
-    <code
-      {...props}
-      className="px-1.5 py-1 rounded bg-secondary text-secondary text-xs sm:text-sm"
-    />
-  ),
+  h2: DesignSystem.H2,
+  inlineCode: DesignSystem.inlineCode,
+  p: DesignSystem.p,
 }
 
-interface Props {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string
-        author: string
-        email: string
-        githubUrl: string
-        keybaseUrl: string
-        linkedInUrl: string
-      }
-    }
-    mdx: {
-      body: any // eslint-disable-line
-      frontmatter: {
-        title: string
-        contact: string
-      }
-    }
-  }
-}
-
-const AboutLayout = ({ data }: Props) => {
+const AboutLayout = ({ data }: AboutLayoutProps): ReactElement => {
   return (
-    <Layout {...data.site}>
+    <Layout siteMetadata={data.site.siteMetadata}>
       <SEO title="About" />
       <div className="max-w-full mx-auto relative overflow-hidden">
         <div className="max-w-7xl mx-auto my-7 sm:my-8 px-8 flex items-center justify-between">
@@ -89,12 +47,6 @@ const AboutLayout = ({ data }: Props) => {
   )
 }
 
-export default AboutLayout
-
-AboutLayout.propTypes = {
-  data: PropTypes.object.isRequired,
-}
-
 export const pageQuery = graphql`
   query {
     site: site {
@@ -116,3 +68,46 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default AboutLayout
+
+const aboutLayoutPropTypes = {
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
+    }).isRequired,
+    mdx: PropTypes.shape({
+      body: PropTypes.any,
+      frontmatter: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
+    }).isRequired,
+  }).isRequired,
+}
+
+const aboutLayoutDefaultProps = {
+  data: {
+    site: {
+      siteMetadata: {
+        title: 'Title',
+        author: 'Author',
+        email: 'author@domain.com',
+        githubUrl: '#',
+        keybaseUrl: '#',
+        linkedinUrl: '#',
+      },
+    },
+    mdx: {
+      body: '',
+      frontmatter: {
+        title: 'Title',
+        contact: '#',
+      },
+    },
+  },
+}
+
+AboutLayout.defaultProps = aboutLayoutDefaultProps
+
+type AboutLayoutProps = InferPropTypes<
+  typeof aboutLayoutPropTypes,
+  typeof aboutLayoutDefaultProps
+>

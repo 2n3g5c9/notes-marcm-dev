@@ -1,18 +1,9 @@
 import React, { ReactElement } from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import { InferPropTypes } from '@shared/types'
 
-interface Props {
-  md: {
-    frontmatter: {
-      title: string
-      subtitle: string
-      hashtag: string
-    }
-  }
-}
-
-const HeroSection = ({ md }: Props): ReactElement => {
+const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
   const { title, hashtag, subtitle } = md.frontmatter
 
   return (
@@ -56,17 +47,21 @@ const HeroSection = ({ md }: Props): ReactElement => {
   )
 }
 
-HeroSection.propTypes = {
+export default HeroSection
+
+const heroSectionPropTypes = {
   md: PropTypes.shape({
     frontmatter: PropTypes.shape({
-      title: PropTypes.string,
-      subtitle: PropTypes.string,
-      hashtag: PropTypes.string,
-    }),
-  }),
+      title: PropTypes.string.isRequired,
+      subtitle: PropTypes.string.isRequired,
+      hashtag: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 }
 
-HeroSection.defaultProps = {
+HeroSection.propTypes = heroSectionPropTypes
+
+const heroSectionDefaultProps = {
   md: {
     frontmatter: {
       title: 'Title',
@@ -76,4 +71,9 @@ HeroSection.defaultProps = {
   },
 }
 
-export default HeroSection
+HeroSection.defaultProps = heroSectionDefaultProps
+
+type HeroSectionProps = InferPropTypes<
+  typeof heroSectionPropTypes,
+  typeof heroSectionDefaultProps
+>

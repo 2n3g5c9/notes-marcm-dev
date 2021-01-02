@@ -1,8 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 import React from 'react'
 
-export default function useToggle(initialValue = false) {
+const useToggle = (initialValue = false): [boolean, () => void] => {
   const [value, setValue] = React.useState(initialValue)
 
   const toggle = React.useCallback(() => {
@@ -11,3 +9,5 @@ export default function useToggle(initialValue = false) {
 
   return [value, toggle]
 }
+
+export default useToggle

@@ -1,13 +1,9 @@
 import React, { ReactElement } from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
+import { InferPropTypes } from '@shared/types'
 
-interface Props {
-  to: string
-  text: string
-}
-
-const NavLink = ({ to, text }: Props): ReactElement => {
+const NavLink = ({ to, text }: NavLinkProps): ReactElement => {
   return (
     <Link
       to={to}
@@ -20,14 +16,23 @@ const NavLink = ({ to, text }: Props): ReactElement => {
   )
 }
 
-NavLink.propTypes = {
-  to: PropTypes.string,
-  text: PropTypes.string,
+export default NavLink
+
+const navLinkPropTypes = {
+  to: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
 }
 
-NavLink.defaultProps = {
+NavLink.propTypes = navLinkPropTypes
+
+const navLinkDefaultProps = {
   to: `#`,
   text: `Placeholder`,
 }
 
-export default NavLink
+NavLink.defaultPropTypes = navLinkDefaultProps
+
+type NavLinkProps = InferPropTypes<
+  typeof navLinkPropTypes,
+  typeof navLinkDefaultProps
+>

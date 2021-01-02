@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer>
+  <div
+    className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8"
+  >
+    <div
+      className="flex justify-center space-x-6 md:order-2"
+    >
+      <a
+        aria-label="Keybase"
+        className="text-secondary hover:text-primary"
+        href="#"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span
+          className="sr-only"
+        >
+          Keybase
+        </span>
+        <test-file-stub
+          aria-hidden="true"
+          className="h-6 w-6"
+        />
+      </a>
+      <a
+        aria-label="GitHub"
+        className="text-secondary hover:text-primary"
+        href="#"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span
+          className="sr-only"
+        >
+          GitHub
+        </span>
+        <test-file-stub
+          aria-hidden="true"
+          className="h-6 w-6"
+        />
+      </a>
+      <a
+        aria-label="LinkedIn"
+        className="text-secondary hover:text-primary"
+        href="#"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span
+          className="sr-only"
+        >
+          LinkedIn
+        </span>
+        <test-file-stub
+          aria-hidden="true"
+          className="h-6 w-6"
+        />
+      </a>
+    </div>
+    <div
+      className="mt-8 md:mt-0 md:order-1"
+    >
+      <p
+        className="text-center text-base text-secondary"
+      >
+        © 2021 
+        John Doe
+        . Made with
+         
+        <a
+          aria-label="Gatsby"
+          href="https://github.com/2n3g5c9/gatsby-starter-typescript-tailwindcss"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Gatsby
+        </a>
+        .
+      </p>
+    </div>
+  </div>
+</footer>
+`;

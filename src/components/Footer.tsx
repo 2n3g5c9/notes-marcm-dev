@@ -1,18 +1,10 @@
 import React, { ReactElement } from 'react'
 import PropTypes from 'prop-types'
+import { InferPropTypes } from '@shared/types'
 
 import { GitHubSVG, KeybaseSVG, LinkedInSVG } from '@images'
 
-interface Props {
-  author: string
-  urls: {
-    github: string
-    keybase: string
-    linkedIn: string
-  }
-}
-
-const Footer = ({ author, urls }: Props): ReactElement => {
+const Footer = ({ author, urls }: FooterProps): ReactElement => {
   return (
     <footer>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
@@ -67,16 +59,20 @@ const Footer = ({ author, urls }: Props): ReactElement => {
   )
 }
 
-Footer.propTypes = {
-  author: PropTypes.string,
+export default Footer
+
+const footerPropTypes = {
+  author: PropTypes.string.isRequired,
   urls: PropTypes.shape({
-    github: PropTypes.string,
-    keybase: PropTypes.string,
-    linkedIn: PropTypes.string,
-  }),
+    github: PropTypes.string.isRequired,
+    keybase: PropTypes.string.isRequired,
+    linkedIn: PropTypes.string.isRequired,
+  }).isRequired,
 }
 
-Footer.defaultProps = {
+Footer.propTypes = footerPropTypes
+
+const footerDefaultProps = {
   author: 'John Doe',
   urls: {
     github: '#',
@@ -85,4 +81,9 @@ Footer.defaultProps = {
   },
 }
 
-export default Footer
+Footer.defaultProps = footerDefaultProps
+
+type FooterProps = InferPropTypes<
+  typeof footerPropTypes,
+  typeof footerDefaultProps
+>

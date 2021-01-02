@@ -1,5 +1,5 @@
-import AboutSection from './AboutSection'
-import BlockQuote from './md/BlockQuote'
+import BlockQuote from './mdx/BlockQuote'
+import DesignSystem from './mdx/DesignSystem'
 import Footer from './Footer'
 import HeroSection from './HeroSection'
 import Layout from './Layout'
@@ -8,11 +8,11 @@ import NavDarkToggle from './nav/NavDarkToggle'
 import NavLink from './nav/NavLink'
 import NavMenuLink from './nav/NavMenuLink'
 import SEO from './SEO'
-import ToggleContent from './ToggleContent'
+import ToggleContent from './mdx/ToggleContent'
 
 export {
-  AboutSection,
   BlockQuote,
+  DesignSystem,
   Footer,
   HeroSection,
   Layout,
