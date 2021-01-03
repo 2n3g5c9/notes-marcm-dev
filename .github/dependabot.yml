@@ -3,22 +3,15 @@ updates:
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: 'monthly'
-    reviewers:
-      - '2n3g5c9'
+      interval: 'daily'
     labels:
-      - 'github-actions'
-    commit-message:
-      prefix: 'actions'
+      - 'actions'
 
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'monthly'
-    reviewers:
-      - '2n3g5c9'
+      interval: 'daily'
+    rebase-strategy: 'auto'
     labels:
-      - 'npm-dependencies'
-    commit-message:
-      prefix: 'npm'
-      include: 'scope'
+      - 'security'
+      - 'dependencies'
