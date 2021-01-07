@@ -3,7 +3,7 @@
 exports[`ToggleContent renders correctly 1`] = `
 Array [
   <button
-    className="text-primary text-sm sm:text-base"
+    className="text-left text-primary text-sm sm:text-base"
     onClick={[Function]}
   >
     ▶
