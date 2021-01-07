@@ -1,4 +1,11 @@
 import React, { ReactElement } from 'react'
+import { BlockQuote } from '@components'
+
+const blockquote = (props: never): ReactElement => <BlockQuote {...props} />
+
+const a = (props: never): ReactElement => (
+  <a {...props} className="text-secondary" />
+)
 
 const H2 = (props: never): ReactElement => (
   <h2
@@ -19,4 +26,4 @@ const p = (props: never): ReactElement => (
 )
 
 export default p
-export { H2, inlineCode, p }
+export { a, blockquote, H2, inlineCode, p }

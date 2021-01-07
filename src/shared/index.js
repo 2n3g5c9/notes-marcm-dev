@@ -1,3 +1,4 @@
+import copyToClipboard from './utils'
 import types from './types'
 
-export { types }
+export { copyToClipboard, types }

@@ -1,4 +1,5 @@
 import BlockQuote from './mdx/BlockQuote'
+import CopyButton from './mdx/CopyButton'
 import DesignSystem from './mdx/DesignSystem'
 import Footer from './Footer'
 import HeroSection from './HeroSection'
@@ -12,6 +13,7 @@ import ToggleContent from './mdx/ToggleContent'
 
 export {
   BlockQuote,
+  CopyButton,
   DesignSystem,
   Footer,
   HeroSection,

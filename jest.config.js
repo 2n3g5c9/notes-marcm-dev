@@ -12,7 +12,9 @@ module.exports = {
     '^@shared$': '<rootDir>/src/shared',
   },
   testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
-  transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
+  transformIgnorePatterns: [
+    `/node_modules/(?!(react-children-utilities|gatsby))`,
+  ],
   globals: {
     __PATH_PREFIX__: ``,
   },

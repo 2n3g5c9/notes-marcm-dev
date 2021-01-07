@@ -68,7 +68,7 @@ exports[`Footer renders correctly 1`] = `
       >
         © 2021 
         John Doe
-        . Made with
+        . Built with
          
         <a
           aria-label="Gatsby"

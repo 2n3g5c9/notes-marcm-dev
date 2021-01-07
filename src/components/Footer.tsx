@@ -42,7 +42,7 @@ const Footer = ({ author, urls }: FooterProps): ReactElement => {
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
           <p className="text-center text-base text-secondary">
-            &copy; 2021 {author}. Made with{' '}
+            &copy; 2021 {author}. Built with{' '}
             <a
               href="https://github.com/2n3g5c9/gatsby-starter-typescript-tailwindcss"
               aria-label="Gatsby"

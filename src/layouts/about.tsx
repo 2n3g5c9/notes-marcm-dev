@@ -1,18 +1,10 @@
 import React, { ReactElement } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import { Layout, SEO } from '@components'
 import { InferPropTypes } from '@shared/types'
-import * as DesignSystem from '../components/mdx/DesignSystem'
-
-const shortcodes = {
-  h2: DesignSystem.H2,
-  inlineCode: DesignSystem.inlineCode,
-  p: DesignSystem.p,
-}
 
 const AboutLayout = ({ data }: AboutLayoutProps): ReactElement => {
   return (
@@ -38,9 +30,7 @@ const AboutLayout = ({ data }: AboutLayoutProps): ReactElement => {
           </div>
         </div>
         <div className="max-w-7xl mx-auto my-6 sm:my-7 px-8">
-          <MDXProvider components={shortcodes}>
-            <MDXRenderer>{data.mdx.body}</MDXRenderer>
-          </MDXProvider>
+          <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </div>
       </div>
     </Layout>
