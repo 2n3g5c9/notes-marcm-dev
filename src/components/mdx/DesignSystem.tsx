@@ -4,7 +4,12 @@ import { BlockQuote } from '@components'
 const blockquote = (props: never): ReactElement => <BlockQuote {...props} />
 
 const a = (props: never): ReactElement => (
-  <a {...props} className="text-secondary" />
+  <a
+    {...props}
+    className="text-accent"
+    target="_blank"
+    rel="noopener noreferrer"
+  />
 )
 
 const H2 = (props: never): ReactElement => (
