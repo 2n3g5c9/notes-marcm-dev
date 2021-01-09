@@ -1,0 +1,60 @@
+name: Checks on Pull Requests
+
+on: pull_request
+
+jobs:
+  checks:
+    name: Automated Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code 🛎
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Cache Dependencies 💽
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install Packages 📦
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn install
+
+      - name: Run ESLint Checks ✅
+        run: yarn lint
+
+      - name: Run TypeScript Checks ✅
+        run: yarn type-check
+
+      - name: Run Jest Tests 🧪
+        run: yarn test
+
+      - name: Build Gatsby Site ⚙️
+        run: yarn build
+
+  merge:
+    name: Automated Merge
+    needs: checks
+    runs-on: ubuntu-latest
+
+    if: github.actor == 'dependabot[bot]'
+    steps:
+        - name: Automerge Dependabot PR 🤖
+          uses: actions/github-script@v3
+          with:
+            script: |
+              github.pulls.createReview({
+                owner: context.payload.repository.owner.login,
+                repo: context.payload.repository.name,
+                pull_number: context.payload.pull_request.number,
+                event: 'APPROVE'
+              })
+              github.pulls.merge({
+                owner: context.payload.repository.owner.login,
+                repo: context.payload.repository.name,
+                pull_number: context.payload.pull_request.number,
+                merge_method: 'squash'
+              })
