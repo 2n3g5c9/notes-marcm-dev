@@ -1,15 +1,9 @@
 module.exports = {
   purge: {
-    content: ['./src/**/*.{js,jsx,ts,tsx}'],
+    content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
     options: {
       safelist: {
-        standard: [
-          /grid(?:-\w+)?/,
-          /h[x-y]?-\d+/,
-          /m[x-y]?-\d+/,
-          /p[x-y]?-\d+/,
-          /text-\w+/,
-        ],
+        standard: [/grid(?:-\w+)?/, /h[x-y]?-\d+/, 'py-8'],
       },
     },
   },
