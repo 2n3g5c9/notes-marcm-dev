@@ -1,5 +1,5 @@
 {
-  "name": "marcm-dev-next",
+  "name": "marcm-dev",
   "private": true,
   "description": "Marc Molina's personal space",
   "version": "1.0.0",
@@ -83,9 +83,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/2n3g5c9/marcm-dev-next"
+    "url": "https://github.com/2n3g5c9/marcm-dev"
   },
   "bugs": {
-    "url": "https://github.com/2n3g5c9/marcm-dev-next/issues"
+    "url": "https://github.com/2n3g5c9/marcm-dev/issues"
   }
 }
