@@ -23,7 +23,7 @@ jobs:
 
       - name: Install Packages 📦
         if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn install
+        run: yarn install --frozen-lockfile
 
       - name: Run ESLint Checks ✅
         run: yarn lint
