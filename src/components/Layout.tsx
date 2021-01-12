@@ -5,12 +5,13 @@ import PropTypes from 'prop-types'
 import { InferPropTypes } from '@shared/types'
 
 import { ThemeProvider } from '@context/ThemeContext'
-import { NavBar, Footer } from '@components'
+import { Banner, NavBar, Footer } from '@components'
 
 const Layout = ({ children, siteMetadata }: LayoutProps): ReactElement => {
   return (
     <ThemeProvider>
       <NavBar title={siteMetadata.title} />
+      <Banner text={siteMetadata.bannerText} />
       <main>
         <>{children}</>
       </main>

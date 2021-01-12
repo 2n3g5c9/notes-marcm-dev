@@ -1,3 +1,4 @@
+import Banner from './Banner'
 import BlockQuote from './mdx/BlockQuote'
 import CopyButton from './mdx/CopyButton'
 import DesignSystem from './mdx/DesignSystem'
@@ -12,6 +13,7 @@ import SEO from './SEO'
 import ToggleContent from './mdx/ToggleContent'
 
 export {
+  Banner,
   BlockQuote,
   CopyButton,
   DesignSystem,

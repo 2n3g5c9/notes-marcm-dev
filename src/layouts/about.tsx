@@ -13,9 +13,9 @@ const AboutLayout = ({ data }: AboutLayoutProps): ReactElement => {
       <div className="max-w-full mx-auto relative overflow-hidden">
         <div className="max-w-7xl mx-auto my-7 sm:my-8 px-8 flex items-center justify-between">
           <div className="flex-1 min-w-0">
-            <h2 className="text-2xl font-bold leading-7 text-primary sm:text-3xl sm:truncate">
+            <h1 className="text-2xl font-bold leading-7 text-primary sm:text-3xl sm:truncate">
               {data.mdx.frontmatter.title}
-            </h2>
+            </h1>
           </div>
           <div className="flex">
             <a
@@ -44,6 +44,7 @@ export const pageQuery = graphql`
         title
         author
         email
+        bannerText
         githubUrl
         keybaseUrl
         linkedInUrl

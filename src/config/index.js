@@ -8,6 +8,7 @@ module.exports = {
   siteLanguage: 'en_UK',
   name: 'Marc Molina',
   email: 'contact@marcm.dev',
+  bannerText: 'First note coming in February 2021.',
   githubUrl: 'https://github.com/2n3g5c9',
   keybaseUrl: 'https://keybase.io/2n3g5c9',
   linkedInUrl: 'https://www.linkedin.com/in/marc-molina',

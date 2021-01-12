@@ -11,6 +11,7 @@ interface Props {
         title: string
         author: string
         email: string
+        banner: string
         githubUrl: string
         keybaseUrl: string
         linkedInUrl: string
@@ -53,6 +54,7 @@ export const pageQuery = graphql`
         title
         author
         email
+        bannerText
         githubUrl
         keybaseUrl
         linkedInUrl
