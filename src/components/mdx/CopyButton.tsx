@@ -26,7 +26,7 @@ const CopyButton = ({ text }: CopyButtonProps): ReactElement => {
 
   return (
     <button
-      className="absolute top-0 right-0 m-2 px-2 py-1 rounded bg-primary font-sans"
+      className="absolute top-0 right-0 m-2 px-2 py-1 select-none rounded bg-primary font-sans"
       onClick={() => {
         copyToClipboard(text)
         setIsCopied(true)

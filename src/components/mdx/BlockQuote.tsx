@@ -9,9 +9,9 @@ import Children from 'react-children-utilities'
 
 const BlockQuote = ({ children }: BlockQuoteProps): ReactElement => {
   return (
-    <div className="relative inline-block w-full sm:w-auto overflow-x-auto whitespace-pre my-2 px-4 py-3 border-l-2 sm:border-l-4 bg-secondary text-xs sm:text-sm text-secondary font-mono">
+    <div className="relative inline-block w-full sm:w-auto my-2 px-4 py-3 border-l-2 sm:border-l-4 bg-secondary text-xs sm:text-sm text-secondary font-mono">
+      <div className="overflow-x-auto whitespace-pre">{children}</div>
       <CopyButton text={Children.onlyText(children)} />
-      {children}
     </div>
   )
 }
