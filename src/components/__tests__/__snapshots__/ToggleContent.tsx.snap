@@ -6,7 +6,7 @@ Array [
     className="text-left text-primary text-sm sm:text-base"
     onClick={[Function]}
   >
-    ▶
+    ▶️
       
     Show placeholder
   </button>,
