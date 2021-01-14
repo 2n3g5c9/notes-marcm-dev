@@ -22,7 +22,7 @@ const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
                 <div className="rounded-md shadow">
                   <Link
                     to="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-tertiary bg-accent hover:bg-accentHover md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-tertiary bg-accent hover:bg-accentHover md:px-8 md:py-3 md:text-lg"
                   >
                     Read the notes
                   </Link>
@@ -30,7 +30,7 @@ const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <Link
                     to="/about"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-accentDark bg-accentLight hover:bg-accentLightHover md:py-4 md:text-lg md:px-10"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-accentDark bg-accentLight hover:bg-accentLightHover md:px-8 md:py-3 md:text-lg"
                   >
                     More about me
                   </Link>
