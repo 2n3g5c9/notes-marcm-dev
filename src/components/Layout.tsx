@@ -4,6 +4,12 @@ import React, { ReactElement } from 'react'
 import PropTypes from 'prop-types'
 import { InferPropTypes } from '@shared/types'
 
+import 'fontsource-dm-sans'
+import 'fontsource-dm-sans/500.css'
+import 'fontsource-dm-sans/700.css'
+import 'fontsource-dm-serif-display'
+import 'fontsource-dm-mono'
+
 import { ThemeProvider } from '@context/ThemeContext'
 import { Banner, NavBar, Footer } from '@components'
 

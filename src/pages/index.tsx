@@ -21,7 +21,6 @@ interface Props {
       frontmatter: {
         title: string
         subtitle: string
-        hashtag: string
       }
     }
   }
@@ -64,7 +63,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
-        hashtag
       }
     }
   }
