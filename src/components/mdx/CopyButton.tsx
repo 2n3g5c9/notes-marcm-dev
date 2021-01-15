@@ -18,7 +18,7 @@ const config = {
   width: '10px',
   height: '10px',
   perspective: '500px',
-  colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a'],
+  colors: ['#DC3030', '#F6D001'],
 }
 
 const CopyButton = ({ text }: CopyButtonProps): ReactElement => {

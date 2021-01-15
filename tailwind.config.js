@@ -3,7 +3,7 @@ module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
     options: {
       safelist: {
-        standard: [/gap-0.5/, /grid(?:-\w+)?/, /h[x-y]?-\d+/, 'py-8'],
+        standard: [/gap-0.5/, /grid(?:-\w+)?/, /h[x-y]?-\d+/, /p[x-y]?-\d+/],
       },
     },
   },
