@@ -11,7 +11,7 @@ const AboutLayout = ({ data }: AboutLayoutProps): ReactElement => {
     <Layout siteMetadata={data.site.siteMetadata}>
       <SEO title="About" />
       <div className="max-w-full mx-auto relative overflow-hidden">
-        <div className="max-w-6xl mx-auto my-7 sm:my-8 px-8 sm:px-12 xl:px-8 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto my-7 px-8 flex items-center justify-between sm:my-8 sm:px-12 xl:px-8">
           <div className="flex-1 min-w-0">
             <h1 className="text-2xl font-bold leading-7 text-primary sm:text-3xl sm:truncate">
               {data.mdx.frontmatter.title}
@@ -20,7 +20,7 @@ const AboutLayout = ({ data }: AboutLayoutProps): ReactElement => {
           <div className="flex">
             <a
               href={data.mdx.frontmatter.contact}
-              className="m-auto inline-flex items-center px-3 sm:px-4 py-1 sm:py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-tertiary bg-accent hover:bg-accentHover"
+              className="m-auto inline-flex items-center px-3 py-1 border border-transparent rounded-md shadow-sm text-sm font-medium text-tertiary bg-accent hover:bg-accentHover sm:px-4 sm:py-2"
               aria-label="Get in touch"
               target="_blank"
               rel="noopener noreferrer"
@@ -29,7 +29,7 @@ const AboutLayout = ({ data }: AboutLayoutProps): ReactElement => {
             </a>
           </div>
         </div>
-        <div className="max-w-6xl mx-auto my-6 sm:my-7 px-8 sm:px-12 xl:px-8">
+        <div className="max-w-6xl mx-auto my-6 px-8 sm:my-7 sm:px-12 xl:px-8">
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </div>
       </div>
