@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import PropTypes from 'prop-types'
 import { InferPropTypes } from '@shared/types'
 
-import { GitHubSVG, KeybaseSVG, LinkedInSVG } from '@images'
+import { GitHubSVG, KeybaseSVG, LinkedInSVG } from '@assets/images'
 
 const Footer = ({ author, urls }: FooterProps): ReactElement => {
   return (

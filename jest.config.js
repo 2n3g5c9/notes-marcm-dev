@@ -9,7 +9,7 @@ module.exports = {
     '^@context/(.*)$': '<rootDir>/src/context/$1',
     '^@components$': '<rootDir>/src/components',
     '^@hooks$': '<rootDir>/src/hooks',
-    '^@images$': '<rootDir>/src/images',
+    '^@assets/images$': '<rootDir>/src/assets/images',
     '^@shared$': '<rootDir>/src/shared',
   },
   testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],

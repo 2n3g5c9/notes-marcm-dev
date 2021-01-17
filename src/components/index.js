@@ -9,7 +9,6 @@ import NavBar from './nav/NavBar'
 import NavDarkToggle from './nav/NavDarkToggle'
 import NavLink from './nav/NavLink'
 import NavMenuLink from './nav/NavMenuLink'
-import NotesSVG from './svg/NotesSVG'
 import SEO from './SEO'
 import ToggleContent from './mdx/ToggleContent'
 
@@ -25,7 +24,6 @@ export {
   NavDarkToggle,
   NavLink,
   NavMenuLink,
-  NotesSVG,
   SEO,
   ToggleContent,
 }

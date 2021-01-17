@@ -1,50 +1,37 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import React, { ReactElement } from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
+import { InferPropTypes } from '@shared/types'
 
 import { HeroSection, Layout, SEO } from '@components'
 
-interface Props {
-  data: {
-    site: {
-      siteMetadata: {
-        title: string
-        author: string
-        email: string
-        banner: string
-        githubUrl: string
-        keybaseUrl: string
-        linkedInUrl: string
-      }
-    }
-    md: {
-      frontmatter: {
-        title: string
-        subtitle: string
-      }
-    }
-  }
-}
-
-const IndexPage = ({ data }: Props): ReactElement => (
+const IndexPage = ({ data }: IndexPageProps): ReactElement => (
   <Layout {...data.site}>
     <SEO title="Home" />
     <HeroSection {...data} />
   </Layout>
 )
 
-IndexPage.propTypes = {
+const indexPagePropTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
       siteMetadata: PropTypes.objectOf(PropTypes.string),
     }),
-    md: PropTypes.shape({
-      frontmatter: PropTypes.objectOf(PropTypes.string),
+    frontmatter: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      subtitle: PropTypes.string.isRequired,
+      images: PropTypes.arrayOf(PropTypes.object),
     }),
   }),
 }
 
 export default IndexPage
+
+IndexPage.propTypes = indexPagePropTypes
+
+type IndexPageProps = InferPropTypes<typeof indexPagePropTypes>
 
 export const pageQuery = graphql`
   query {
@@ -63,6 +50,22 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
+        images {
+          light {
+            childImageSharp {
+              fixed(quality: 100, width: 365) {
+                ...GatsbyImageSharpFixed_withWebp_noBase64
+              }
+            }
+          }
+          dark {
+            childImageSharp {
+              fixed(quality: 100, width: 365) {
+                ...GatsbyImageSharpFixed_withWebp_noBase64
+              }
+            }
+          }
+        }
       }
     }
   }

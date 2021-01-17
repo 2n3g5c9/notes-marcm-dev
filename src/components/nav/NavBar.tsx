@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import Hamburger from 'hamburger-react'
 
 import { NavDarkToggle, NavLink, NavMenuLink } from '@components'
-import { LogoSVG } from '@images'
+import { LogoSVG } from '@assets/images'
 
 const NavBar = ({ title }: NavBarProps): ReactElement => {
   const [isToggled, setIsToggled] = useState(false)

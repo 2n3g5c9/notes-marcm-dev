@@ -49,7 +49,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: `minimal-ui`,
-        icon: `src/images/icon.webp`,
+        icon: `src/assets/images/icon.webp`,
         icon_options: {
           purpose: `maskable`,
         },
@@ -71,15 +71,17 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: config.siteUrl,
+        sitemap: `${config.siteUrl}/sitemap.xml`,
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     {

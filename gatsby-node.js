@@ -9,7 +9,7 @@ exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
         '@config': path.resolve(__dirname, 'src/config'),
         '@context': path.resolve(__dirname, 'src/context'),
         '@hooks': path.resolve(__dirname, 'src/hooks'),
-        '@images': path.resolve(__dirname, 'src/images'),
+        '@assets/images': path.resolve(__dirname, 'src/assets/images'),
         '@pages': path.resolve(__dirname, 'src/pages'),
         '@shared': path.resolve(__dirname, 'src/shared'),
         '@styles': path.resolve(__dirname, 'src/styles'),

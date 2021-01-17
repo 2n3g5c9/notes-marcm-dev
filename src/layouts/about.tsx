@@ -20,7 +20,7 @@ const AboutLayout = ({ data }: AboutLayoutProps): ReactElement => {
           <div className="flex">
             <a
               href={data.mdx.frontmatter.contact}
-              className="m-auto inline-flex items-center px-3 py-1 border border-transparent rounded-md shadow-sm text-sm font-medium text-tertiary bg-accent hover:bg-accentHover sm:px-4 sm:py-2"
+              className="m-auto inline-flex items-center px-3 py-1 border border-transparent rounded-md shadow-sm text-sm font-medium text-tertiary bg-accent hover:bg-accent-hover sm:px-4 sm:py-2"
               aria-label="Get in touch"
               target="_blank"
               rel="noopener noreferrer"

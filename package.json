@@ -24,6 +24,7 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-robots-txt": "^1.5.5",
     "gatsby-plugin-sharp": "^2.12.1",
+    "gatsby-plugin-sitemap": "^2.10.0",
     "gatsby-plugin-sri": "^1.1.0",
     "gatsby-plugin-typescript": "^2.10.0",
     "gatsby-source-filesystem": "^2.9.0",

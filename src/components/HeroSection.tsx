@@ -1,18 +1,27 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import React, { ReactElement } from 'react'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import { InferPropTypes } from '@shared/types'
 
-import { NotesSVG } from '@components'
+import { Link } from 'gatsby'
+import Img from 'gatsby-image'
+
+import { ThemeContext } from '@context/ThemeContext'
 
 const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
-  const { title, subtitle } = md.frontmatter
+  const { title, subtitle, images } = md.frontmatter
+  const { theme } = React.useContext(ThemeContext)
+
+  function isDark() {
+    return theme === 'dark'
+  }
 
   return (
-    <div className="bg-hero bg-secondary max-w-full px-4 py-10 sm:py-12 md:py-16 lg:py-20">
+    <div className="bg-hero bg-secondary max-w-full px-4 py-10 sm:py-12 md:py-16 lg:py-20 xl:py-9">
       <div className="max-w-6xl mx-auto pb-5 relative overflow-hidden">
         <div className="flex content-center max-w-6xl relative z-10 lg:max-w-3xl lg:w-full">
-          <div className="flex-grow px-4 lg:px-8">
+          <div className="flex-grow m-auto px-4 lg:px-8">
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl font-normal text-primary font-serif sm:text-5xl md:text-6xl">
                 <span className="inline">{title}&nbsp;</span>
@@ -24,7 +33,7 @@ const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
                 <div className="rounded-md shadow">
                   <Link
                     to="#"
-                    className="w-full flex items-center justify-center border border-transparent rounded-md text-tertiary bg-accent hover:bg-accentHover px-8 py-3 md:py-3.5 md:text-lg"
+                    className="w-full flex items-center justify-center border border-transparent rounded-md text-tertiary bg-accent hover:bg-hover-accent px-8 py-3 md:py-3.5 md:text-lg"
                   >
                     Read the notes
                   </Link>
@@ -32,7 +41,7 @@ const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <Link
                     to="/about"
-                    className="w-full flex items-center justify-center border border-transparent rounded-md text-accentDark bg-accentLight hover:bg-accentLightHover px-8 py-3 md:py-3.5 md:text-lg"
+                    className="w-full flex items-center justify-center border border-transparent rounded-md text-dark-accent bg-light-accent hover:bg-hover-light px-8 py-3 md:py-3.5 md:text-lg"
                   >
                     More about me
                   </Link>
@@ -40,8 +49,16 @@ const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
               </div>
             </div>
           </div>
-          <div className="flex-none w-8 hidden xl:block">
-            <NotesSVG />
+          <div className="flex-none w-6 hidden xl:block">
+            {images ? (
+              <Img
+                fixed={
+                  isDark()
+                    ? images[1].dark.childImageSharp.fixed
+                    : images[0].light.childImageSharp.fixed
+                }
+              />
+            ) : null}
           </div>
         </div>
       </div>
@@ -56,7 +73,8 @@ const heroSectionPropTypes = {
     frontmatter: PropTypes.shape({
       title: PropTypes.string.isRequired,
       subtitle: PropTypes.string.isRequired,
-    }).isRequired,
+      images: PropTypes.arrayOf(PropTypes.object),
+    }),
   }).isRequired,
 }
 

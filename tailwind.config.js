@@ -11,7 +11,6 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
   theme: {
     extend: {
       backgroundImage: {
@@ -19,18 +18,24 @@ module.exports = {
       },
       backgroundColor: {
         accent: 'var(--color-bg-accent)',
-        accentHover: 'var(--color-bg-accentHover)',
-        accentLight: 'var(--color-bg-accentLight)',
-        accentLightHover: 'var(--color-bg-accentLightHover)',
         primary: 'var(--color-bg-primary)',
         secondary: 'var(--color-bg-secondary)',
+        hover: {
+          accent: 'var(--color-bg-hover-accent)',
+          light: 'var(--color-bg-hover-light)',
+        },
+        light: {
+          accent: 'var(--color-bg-light-accent)',
+        },
       },
       textColor: {
         accent: 'var(--color-text-accent)',
-        accentDark: 'var(--color-text-accentDark)',
         primary: 'var(--color-text-primary)',
         secondary: 'var(--color-text-secondary)',
         tertiary: 'var(--color-text-tertiary)',
+        dark: {
+          accent: 'var(--color-text-dark-accent)',
+        },
       },
     },
     fontFamily: {
@@ -39,4 +44,5 @@ module.exports = {
       mono: ['DM Mono', 'monospace'],
     },
   },
+  plugins: [],
 }

@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { Switch } from '@headlessui/react'
 
 import { ThemeContext } from '@context/ThemeContext'
-import { MoonSVG, SunSVG } from '@images'
+import { MoonSVG, SunSVG } from '@assets/images'
 
 const NavDarkToggle = (): ReactElement => {
   const { theme, setTheme } = React.useContext(ThemeContext)
