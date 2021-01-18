@@ -44,5 +44,5 @@ module.exports = {
       mono: ['DM Mono', 'monospace'],
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-padding-safe')()],
 }
