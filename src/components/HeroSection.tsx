@@ -18,22 +18,22 @@ const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
   }
 
   return (
-    <div className="bg-hero bg-secondary max-w-full px-4-safe py-10 sm:py-12 md:py-16 lg:py-20 xl:py-9">
+    <div className="bg-hero bg-secondary max-w-full px-4 md:px-14 py-10 sm:py-12 md:py-14 lg:py-20 xl:py-9">
       <div className="max-w-6xl mx-auto pb-5 relative overflow-hidden">
         <div className="flex content-center max-w-6xl relative z-10 lg:max-w-3xl lg:w-full">
           <div className="flex-grow m-auto px-4 lg:px-8">
             <div className="sm:text-center lg:text-left">
-              <h1 className="text-4xl font-normal text-primary font-serif sm:text-5xl md:text-6xl">
+              <h1 className="font-normal text-primary font-serif text-4xl sm:text-5xl lg:text-6xl">
                 <span className="inline">{title}&nbsp;</span>
               </h1>
-              <p className="mt-3 text-base text-secondary sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              <p className="mt-3 text-base text-secondary sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-lg lg:mx-0">
                 {subtitle}
               </p>
               <div className="text-base font-medium mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
                   <Link
                     to="#"
-                    className="w-full flex items-center justify-center border border-transparent rounded-md text-tertiary bg-accent hover:bg-hover-accent px-8 py-3 md:py-3.5 md:text-lg"
+                    className="w-full flex items-center justify-center border border-transparent rounded-md text-tertiary bg-accent hover:bg-hover-accent px-8 py-3 lg:py-3.5 lg:text-lg"
                   >
                     Read the notes
                   </Link>
@@ -41,7 +41,7 @@ const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <Link
                     to="/about"
-                    className="w-full flex items-center justify-center border border-transparent rounded-md text-dark-accent bg-light-accent hover:bg-hover-light px-8 py-3 md:py-3.5 md:text-lg"
+                    className="w-full flex items-center justify-center border border-transparent rounded-md text-dark-accent bg-light-accent hover:bg-hover-light px-8 py-3 lg:py-3.5 lg:text-lg"
                   >
                     More about me
                   </Link>
