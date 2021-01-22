@@ -17,7 +17,7 @@ exports[`HeroSection renders correctly 1`] = `
           className="sm:text-center lg:text-left"
         >
           <h1
-            className="font-normal text-primary font-serif text-4xl sm:text-5xl lg:text-6xl"
+            className="font-normal sm:font-semibold font-serif text-primary text-4xl sm:text-5xl lg:text-6xl"
           >
             <span
               className="inline"
