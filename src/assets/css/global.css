@@ -1,5 +1,15 @@
 :root {
-    @apply light;
+    scroll-behavior: smooth;
+}
+
+::-moz-selection {
+    background: var(--color-bg-light-accent);
+    color: var(--color-text-dark-accent);
+}
+
+::selection {
+    background: var(--color-bg-light-accent);
+    color: var(--color-text-dark-accent);
 }
 
 .dark {
@@ -8,6 +18,7 @@
     --color-bg-accent: #F6D001;
     --color-bg-primary: #283141;
     --color-bg-secondary: #2D3748;
+
     --color-bg-hover-accent: #E6C300;
     --color-bg-hover-light: #FEEC86;
     --color-bg-light-accent: #FFF3B0;
@@ -26,6 +37,7 @@
     --color-bg-accent: #DC2626;
     --color-bg-primary: #FFFFFF;
     --color-bg-secondary: #F9FAFB;
+
     --color-bg-hover-accent: #B91C1C;
     --color-bg-hover-light: #FECACA;
     --color-bg-light-accent: #FEE2E2;
@@ -41,3 +53,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    @apply antialiased;
+}

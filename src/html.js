@@ -15,7 +15,7 @@ const HTML = props => {
         />
         {props.headComponents}
       </head>
-      <body {...props.bodyAttributes} className="bg-primary">
+      <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <div
           key={`body`}
