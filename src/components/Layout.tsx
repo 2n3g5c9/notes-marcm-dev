@@ -7,8 +7,9 @@ import { InferPropTypes } from '@shared/types'
 import 'fontsource-dm-sans/400.css'
 import 'fontsource-dm-sans/500.css'
 import 'fontsource-dm-sans/700.css'
-import 'fontsource-dm-serif-display/400.css'
 import 'fontsource-dm-mono/400.css'
+
+import 'fontsource-playfair-display/700.css'
 
 import { ThemeProvider } from '@context/ThemeContext'
 import { Banner, NavBar, Footer } from '@components'

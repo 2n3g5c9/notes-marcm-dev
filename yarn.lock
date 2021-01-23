@@ -6909,10 +6909,10 @@ fontsource-dm-sans@^4.0.0:
   resolved "https://registry.yarnpkg.com/fontsource-dm-sans/-/fontsource-dm-sans-4.0.0.tgz#09b359aba137201d9599f335f18b05244e2f52c4"
   integrity sha512-WzzLma3uSnCeFNg8Pz87FaJuuHzHdSdzADI/kIj5r1K7otHYQV/p9RUhLteykvJY2JIgOEbLCVPTyqteBNvOqg==
 
-fontsource-dm-serif-display@^4.0.0:
+fontsource-playfair-display@^4.0.0:
   version "4.0.0"
-  resolved "https://registry.yarnpkg.com/fontsource-dm-serif-display/-/fontsource-dm-serif-display-4.0.0.tgz#35864f18f2e895f4effab96cdb9faf013ae16584"
-  integrity sha512-TJ5Kjzd7J7fRhCTZIeIdFSdaAZgl53YIUpo+alV+MscDg016ZEqI31g6UTjeEWlYvWAKMQyLOjfzjMYUN3e8tw==
+  resolved "https://registry.yarnpkg.com/fontsource-playfair-display/-/fontsource-playfair-display-4.0.0.tgz#ae65207e42089385c2b8d378982f1e680ca4e3fd"
+  integrity sha512-n6Q7jEFuRSgRprdPsIOT622gDpEuUCV/y99RK/ZBAhPjCBhjpmuxJahX8Vx53GmSm3h7WaIVuE4vsgPLWShkqQ==
 
 for-in@^1.0.2:
   version "1.0.2"

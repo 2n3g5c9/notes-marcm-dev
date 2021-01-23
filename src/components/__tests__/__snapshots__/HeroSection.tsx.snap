@@ -11,13 +11,13 @@ exports[`HeroSection renders correctly 1`] = `
       className="flex content-center max-w-6xl relative z-10 lg:max-w-3xl lg:w-full"
     >
       <div
-        className="flex-grow m-auto px-4 lg:px-8"
+        className="flex-grow m-auto px-2 lg:px-8"
       >
         <div
           className="sm:text-center lg:text-left"
         >
           <h1
-            className="font-normal sm:font-semibold font-serif text-primary text-4xl sm:text-5xl lg:text-6xl"
+            className="font-bold font-serif text-primary text-4xl sm:text-5xl lg:text-6xl"
           >
             <span
               className="inline"

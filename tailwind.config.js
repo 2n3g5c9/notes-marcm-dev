@@ -40,7 +40,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['DM Sans', 'sans-serif'],
-      serif: ['DM Serif Display', 'serif'],
+      serif: ['Playfair Display', 'serif'],
       mono: ['DM Mono', 'monospace'],
     },
   },

@@ -21,9 +21,9 @@ const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
     <div className="bg-hero bg-secondary max-w-full px-4 md:px-14 py-10 sm:py-12 md:py-14 lg:py-20 xl:py-9">
       <div className="max-w-6xl mx-auto pb-5 relative overflow-hidden">
         <div className="flex content-center max-w-6xl relative z-10 lg:max-w-3xl lg:w-full">
-          <div className="flex-grow m-auto px-4 lg:px-8">
+          <div className="flex-grow m-auto px-2 lg:px-8">
             <div className="sm:text-center lg:text-left">
-              <h1 className="font-normal sm:font-semibold font-serif text-primary text-4xl sm:text-5xl lg:text-6xl">
+              <h1 className="font-bold font-serif text-primary text-4xl sm:text-5xl lg:text-6xl">
                 <span className="inline">{title}&nbsp;</span>
               </h1>
               <p className="mt-3 text-base text-secondary sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-lg lg:mx-0">

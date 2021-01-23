@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import CrossSVG from './cross.svg'
 import DashlaneSVG from './logos/dashlane.svg'
