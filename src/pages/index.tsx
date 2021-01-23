@@ -41,9 +41,11 @@ export const pageQuery = graphql`
         author
         email
         bannerText
-        githubUrl
-        keybaseUrl
-        linkedInUrl
+        urls {
+          github
+          keybase
+          linkedIn
+        }
       }
     }
     md: markdownRemark(fileAbsolutePath: { regex: "/home/" }) {

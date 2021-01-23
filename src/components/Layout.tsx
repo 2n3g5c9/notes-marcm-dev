@@ -22,14 +22,7 @@ const Layout = ({ children, siteMetadata }: LayoutProps): ReactElement => {
       <main>
         <>{children}</>
       </main>
-      <Footer
-        author={siteMetadata.author}
-        urls={{
-          github: siteMetadata.githubUrl,
-          keybase: siteMetadata.keybaseUrl,
-          linkedIn: siteMetadata.linkedInUrl,
-        }}
-      />
+      <Footer author={siteMetadata.author} urls={siteMetadata.urls} />
     </ThemeProvider>
   )
 }

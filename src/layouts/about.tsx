@@ -45,9 +45,11 @@ export const pageQuery = graphql`
         author
         email
         bannerText
-        githubUrl
-        keybaseUrl
-        linkedInUrl
+        urls {
+          github
+          keybase
+          linkedIn
+        }
       }
     }
     mdx: mdx(fileAbsolutePath: { regex: "/about/" }) {
@@ -81,9 +83,7 @@ const aboutLayoutDefaultProps = {
         title: 'Title',
         author: 'Author',
         email: 'author@domain.com',
-        githubUrl: '#',
-        keybaseUrl: '#',
-        linkedinUrl: '#',
+        urls: {},
       },
     },
     mdx: {

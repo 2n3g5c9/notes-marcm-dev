@@ -11,7 +11,7 @@ exports[`HeroSection renders correctly 1`] = `
       className="flex content-center max-w-6xl relative z-10 lg:max-w-3xl lg:w-full"
     >
       <div
-        className="flex-grow m-auto px-2 lg:px-8"
+        className="flex-grow m-auto px-3 lg:px-8"
       >
         <div
           className="sm:text-center lg:text-left"
@@ -58,7 +58,7 @@ exports[`HeroSection renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="flex-none w-6 hidden xl:block"
+        className="flex-none animate-wiggle w-6 hidden xl:block"
       />
     </div>
   </div>

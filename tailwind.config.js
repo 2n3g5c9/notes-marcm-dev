@@ -37,6 +37,19 @@ module.exports = {
           accent: 'var(--color-text-dark-accent)',
         },
       },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': {
+            transform: 'translateY(-0.25rem)',
+          },
+          '50%': {
+            transform: 'translateY(0.25rem)',
+          },
+        },
+      },
+      animation: {
+        wiggle: 'wiggle 2s ease-in-out infinite',
+      },
     },
     fontFamily: {
       sans: ['DM Sans', 'sans-serif'],
