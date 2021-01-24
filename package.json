@@ -1,7 +1,7 @@
 {
   "name": "marcm-dev",
   "private": true,
-  "description": "Marc Molina's personal space",
+  "description": "Tech notes with words and code",
   "version": "1.0.0",
   "author": "Marc Molina <contact@marcm.dev>",
   "dependencies": {
@@ -15,6 +15,7 @@
     "gatsby": "^2.31.1",
     "gatsby-image": "^2.10.0",
     "gatsby-plugin-csp": "^1.1.3",
+    "gatsby-plugin-google-gtag": "^2.7.0",
     "gatsby-plugin-manifest": "^2.11.0",
     "gatsby-plugin-mdx": "^1.9.0",
     "gatsby-plugin-offline": "^3.9.0",

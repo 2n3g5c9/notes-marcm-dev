@@ -15,6 +15,21 @@ module.exports = {
     `gatsby-plugin-postcss`,
     // TypeScript
     `gatsby-plugin-typescript`,
+    // Analytics
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          'G-W914B98C2Y', // Google Analytics
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+        },
+        pluginConfig: {
+          respectDNT: true,
+        },
+      },
+    },
     // Security
     {
       resolve: `gatsby-plugin-csp`,
@@ -25,8 +40,10 @@ module.exports = {
         mergeStyleHashes: false,
         mergeDefaultDirectives: true,
         directives: {
-          'script-src': "'self' 'unsafe-eval' 'unsafe-inline'",
+          'script-src':
+            "'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com",
           'style-src': "'self' 'unsafe-inline'",
+          'img-src': 'www.googletagmanager.com',
         },
       },
     },
