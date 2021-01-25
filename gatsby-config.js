@@ -20,7 +20,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-          'G-W914B98C2Y', // Google Analytics
+          'G-G11QYKS7W4', // Google Analytics
         ],
         gtagConfig: {
           anonymize_ip: true,
