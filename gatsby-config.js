@@ -2,8 +2,8 @@ const config = require('./src/config')
 
 module.exports = {
   siteMetadata: {
-    title: config.siteTitle,
     siteUrl: config.siteUrl,
+    title: config.siteTitle,
     description: config.siteDescription,
     author: config.name,
     email: config.email,

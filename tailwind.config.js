@@ -7,7 +7,6 @@ module.exports = {
       },
     },
   },
-  darkMode: false,
   variants: {
     extend: {},
   },
