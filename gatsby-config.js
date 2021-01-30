@@ -43,6 +43,7 @@ module.exports = {
           'script-src':
             "'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com",
           'style-src': "'self' 'unsafe-inline'",
+          'prefetch-src': "'self' https://www.googletagmanager.com",
         },
       },
     },
