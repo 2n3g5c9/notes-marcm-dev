@@ -32,22 +32,6 @@ module.exports = {
     },
     // Security
     {
-      resolve: `gatsby-plugin-csp`,
-      options: {
-        disableOnDev: true,
-        reportOnly: false,
-        mergeScriptHashes: false,
-        mergeStyleHashes: false,
-        mergeDefaultDirectives: true,
-        directives: {
-          'script-src':
-            "'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com",
-          'style-src': "'self' 'unsafe-inline'",
-          'prefetch-src': "'self' https://www.googletagmanager.com",
-        },
-      },
-    },
-    {
       resolve: 'gatsby-plugin-sri',
       options: {
         hash: 'sha256',
