@@ -18,7 +18,7 @@ const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
   }
 
   return (
-    <div className="bg-hero bg-secondary max-w-full px-4 md:px-14 py-10 sm:py-12 md:py-14 lg:py-20 xl:py-9">
+    <div className="bg-hero bg-secondary max-w-full px-4 md:px-14 py-10 sm:py-12 md:py-14 lg:py-20 xlish:py-9">
       <div className="max-w-6xl mx-auto pb-5 relative overflow-hidden">
         <div className="flex content-center max-w-6xl relative z-10 lg:max-w-3xl lg:w-full">
           <div className="flex-grow m-auto px-3 lg:px-8">
@@ -49,7 +49,7 @@ const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
               </div>
             </div>
           </div>
-          <div className="flex-none animate-wiggle w-6 hidden xl:block">
+          <div className="flex-none animate-wiggle w-6 hidden xlish:block">
             {images ? (
               <Img
                 fixed={

@@ -50,6 +50,9 @@ module.exports = {
       animation: {
         wiggle: 'wiggle 2s ease-in-out infinite',
       },
+      screens: {
+        xlish: '1200px',
+      },
     },
     fontFamily: {
       sans: ['DM Sans', 'sans-serif'],
