@@ -12,7 +12,7 @@ const a = (props: never): ReactElement => (
   />
 )
 
-const H2 = (props: never): ReactElement => (
+const h2 = (props: never): ReactElement => (
   <h2
     {...props}
     className="pt-1 sm:pt-2 text-xl font-bold leading-7 text-primary sm:text-2xl"
@@ -30,5 +30,4 @@ const p = (props: never): ReactElement => (
   <p {...props} className="my-3 text-primary text-sm sm:text-base" />
 )
 
-export default p
-export { a, blockquote, H2, inlineCode, p }
+export { a, blockquote, h2, inlineCode, p }

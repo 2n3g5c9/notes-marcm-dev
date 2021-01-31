@@ -8,7 +8,7 @@ import * as DesignSystem from './components/mdx/DesignSystem'
 const shortcodes = {
   a: DesignSystem.a,
   blockquote: DesignSystem.blockquote,
-  h2: DesignSystem.H2,
+  h2: DesignSystem.h2,
   inlineCode: DesignSystem.inlineCode,
   p: DesignSystem.p,
 }

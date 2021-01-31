@@ -35,7 +35,7 @@ const NavDarkToggle = (): ReactElement => {
           } absolute inset-0 h-full w-full flex items-center justify-center transition-opacity`}
           aria-hidden="true"
         >
-          <MoonSVG className="h-3 w-3 text-accent" fill="currentColor" />
+          <MoonSVG className="h-3 w-3 text-accent" />
         </span>
         <span
           className={`${
@@ -45,7 +45,7 @@ const NavDarkToggle = (): ReactElement => {
           } absolute inset-0 h-full w-full flex items-center justify-center transition-opacity`}
           aria-hidden="true"
         >
-          <SunSVG className="h-3 w-3 text-accent" fill="currentColor" />
+          <SunSVG className="h-3 w-3 text-accent" />
         </span>
       </span>
     </Switch>

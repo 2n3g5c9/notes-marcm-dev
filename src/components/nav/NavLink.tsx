@@ -7,8 +7,8 @@ const NavLink = ({ to, text }: NavLinkProps): ReactElement => {
   return (
     <Link
       to={to}
-      className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-      activeClassName="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+      className="font-medium text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md px-3 py-2"
+      activeClassName="font-medium text-white text-sm bg-gray-900 rounded-md px-3 py-2"
       aria-label={text}
     >
       {text}

@@ -31,21 +31,21 @@ exports[`NavBar renders correctly 1`] = `
           >
             <a
               aria-label="Home"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              className="font-medium text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md px-3 py-2"
               href="/"
             >
               Home
             </a>
             <a
               aria-label="Notes (Coming Soon)"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              className="font-medium text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md px-3 py-2"
               href="#"
             >
               Notes (Coming Soon)
             </a>
             <a
               aria-label="About"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              className="font-medium text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md px-3 py-2"
               href="/about"
             >
               About
@@ -79,7 +79,6 @@ exports[`NavBar renders correctly 1`] = `
             >
               <test-file-stub
                 className="h-3 w-3 text-accent"
-                fill="currentColor"
               />
             </span>
             <span
@@ -88,7 +87,6 @@ exports[`NavBar renders correctly 1`] = `
             >
               <test-file-stub
                 className="h-3 w-3 text-accent"
-                fill="currentColor"
               />
             </span>
           </span>
@@ -174,7 +172,7 @@ exports[`NavBar renders correctly 1`] = `
     >
       <a
         aria-label="Home"
-        className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        className="font-medium text-base text-gray-300 hover:text-white hover:bg-gray-700 rounded-md block px-3 py-2"
         href="/"
       >
         🏡
@@ -183,7 +181,7 @@ exports[`NavBar renders correctly 1`] = `
       </a>
       <a
         aria-label="Notes (Coming Soon)"
-        className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        className="font-medium text-base text-gray-300 hover:text-white hover:bg-gray-700 rounded-md block px-3 py-2"
         href="#"
       >
         📝
@@ -192,7 +190,7 @@ exports[`NavBar renders correctly 1`] = `
       </a>
       <a
         aria-label="About️"
-        className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        className="font-medium text-base text-gray-300 hover:text-white hover:bg-gray-700 rounded-md block px-3 py-2"
         href="/about"
       >
         👨🏻‍💻

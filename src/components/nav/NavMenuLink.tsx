@@ -7,8 +7,8 @@ const NavMenuLink = ({ to, icon, text }: NavMenuLinkProps): ReactElement => {
   return (
     <Link
       to={to}
-      className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-      activeClassName="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+      className="font-medium text-base text-gray-300 hover:text-white hover:bg-gray-700 rounded-md block px-3 py-2"
+      activeClassName="font-medium text-base text-white bg-gray-900 rounded-md block px-3 py-2"
       aria-label={text}
     >
       {icon}&nbsp;&nbsp;{text}

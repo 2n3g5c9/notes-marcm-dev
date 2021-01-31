@@ -4,7 +4,8 @@ import React, { ReactElement } from 'react'
 import PropTypes from 'prop-types'
 import Confetti from 'react-dom-confetti'
 
-import { copyToClipboard } from '@shared'
+import { useToggle } from '@hooks'
+import { copyToClipboard } from '@shared/utils'
 import { InferPropTypes } from '@shared/types'
 
 const config = {
@@ -22,15 +23,15 @@ const config = {
 }
 
 const CopyButton = ({ text }: CopyButtonProps): ReactElement => {
-  const [isCopied, setIsCopied] = React.useState(false)
+  const [isCopied, setIsCopied] = useToggle(false)
 
   return (
     <button
       className="absolute top-0 right-0 m-2 px-2 py-1 select-none rounded bg-primary font-sans"
       onClick={() => {
         copyToClipboard(text)
-        setIsCopied(true)
-        setTimeout(() => setIsCopied(false), config.duration)
+        setIsCopied()
+        setTimeout(() => setIsCopied(), config.duration)
       }}
     >
       <Confetti active={isCopied} config={config} />
@@ -45,6 +46,6 @@ const copyButtonPropTypes = {
   text: PropTypes.string.isRequired,
 }
 
-copyButtonPropTypes.propTypes = copyButtonPropTypes
+CopyButton.propTypes = copyButtonPropTypes
 
 type CopyButtonProps = InferPropTypes<typeof copyButtonPropTypes>

@@ -1,4 +1,4 @@
-import copyToClipboard from './utils'
+import * as utils from './utils'
 import types from './types'
 
-export { copyToClipboard, types }
+export { utils, types }

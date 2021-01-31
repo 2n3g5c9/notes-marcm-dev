@@ -4,23 +4,27 @@ import React, { ReactElement } from 'react'
 import PropTypes from 'prop-types'
 import { InferPropTypes } from '@shared/types'
 
+import { ThemeProvider } from '@context/ThemeContext'
+import { Banner, NavBar, Footer } from '@components'
+
+// Serif font
+import '@fontsource/playfair-display/700.css'
+
+// Sans font
 import '@fontsource/dm-sans/400.css'
 import '@fontsource/dm-sans/500.css'
 import '@fontsource/dm-sans/700.css'
+
+// Mono font
 import '@fontsource/dm-mono/400.css'
-
-import '@fontsource/playfair-display/700.css'
-
-import { ThemeProvider } from '@context/ThemeContext'
-import { Banner, NavBar, Footer } from '@components'
 
 const Layout = ({ children, siteMetadata }: LayoutProps): ReactElement => {
   return (
     <ThemeProvider>
       <NavBar title={siteMetadata.title} />
-      <Banner text={siteMetadata.bannerText} />
       <main>
-        <>{children}</>
+        <Banner text={siteMetadata.bannerText} />
+        {children}
       </main>
       <Footer author={siteMetadata.author} urls={siteMetadata.urls} />
     </ThemeProvider>

@@ -26,7 +26,7 @@ const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
               <h1 className="font-bold font-serif text-primary text-4xl sm:text-5xl lg:text-6xl">
                 <span className="inline">{title}&nbsp;</span>
               </h1>
-              <p className="mt-3 text-base text-secondary sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-lg lg:mx-0">
+              <p className="mt-3 text-base text-secondary sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0">
                 {subtitle}
               </p>
               <div className="text-base font-medium mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
@@ -49,7 +49,7 @@ const HeroSection = ({ md }: HeroSectionProps): ReactElement => {
               </div>
             </div>
           </div>
-          <div className="flex-none animate-wiggle w-6 hidden xlish:block">
+          <div className="animate-wiggle flex-none w-6 hidden xlish:block">
             {images ? (
               <Img
                 fixed={

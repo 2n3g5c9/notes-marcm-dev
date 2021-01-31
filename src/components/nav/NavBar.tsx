@@ -1,14 +1,15 @@
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement } from 'react'
 import PropTypes from 'prop-types'
 import { InferPropTypes } from '@shared/types'
 import { Link } from 'gatsby'
 import Hamburger from 'hamburger-react'
 
 import { NavDarkToggle, NavLink, NavMenuLink } from '@components'
+import { useToggle } from '@hooks'
 import { LogoSVG } from '@assets/images'
 
 const NavBar = ({ title }: NavBarProps): ReactElement => {
-  const [isToggled, setIsToggled] = useState(false)
+  const [isToggled, setIsToggled] = useToggle(false)
 
   return (
     <nav className="bg-gray-800">

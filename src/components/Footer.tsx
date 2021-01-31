@@ -45,7 +45,7 @@ const Footer = ({ author, urls }: FooterProps): ReactElement => {
             &copy; 2021 {author}. Built with{' '}
             <a
               href="https://github.com/2n3g5c9/gatsby-starter-typescript-tailwindcss"
-              aria-label="Gatsby"
+              aria-label="Gatsby Starter"
               target="_blank"
               rel="noopener noreferrer"
             >
