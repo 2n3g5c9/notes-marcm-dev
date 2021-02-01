@@ -8,7 +8,7 @@
     "@headlessui/react": "^0.2.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "autoprefixer": "^10.2.3",
+    "autoprefixer": "^10.2.4",
     "@fontsource/dm-mono": "^4.0.0",
     "@fontsource/dm-sans": "^4.0.0",
     "@fontsource/playfair-display": "^4.0.0",
