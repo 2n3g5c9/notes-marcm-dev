@@ -3,7 +3,16 @@ module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
     options: {
       safelist: {
-        standard: [/gap-1/, /grid(?:-\w+)?/, /h[x-y]?-\d+/, /p[x-y]?-\d+/],
+        standard: [
+          /gap-1/,
+          /grid(?:-\w+)?/,
+          /h[xy]?-\d+/,
+          /m\w?-\d+/,
+          /opacity-\d+/,
+          /p[xy]?-\d+/,
+          /self-center/,
+          /-translate-[xy]-\d+/,
+        ],
       },
     },
   },
