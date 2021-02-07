@@ -1,25 +1,5 @@
 module.exports = {
-  purge: {
-    content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
-    options: {
-      safelist: {
-        standard: [
-          /absolute/,
-          /flex(?:\w+)?/,
-          /gap-1/,
-          /grid(?:-\w+)?/,
-          /h[xy]?-\d+/,
-          /justify-center/,
-          /m\w?-\d+/,
-          /opacity-\d+/,
-          /p[xy]?-\d+/,
-          /relative/,
-          /self-center/,
-          /-translate-[xy]-\d+/,
-        ],
-      },
-    },
-  },
+  purge: false,
   variants: {
     extend: {},
   },

@@ -1,4 +1,5 @@
 const config = require('./src/config')
+const path = require('path')
 
 module.exports = {
   siteMetadata: {
@@ -13,6 +14,16 @@ module.exports = {
   plugins: [
     // CSS
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        purgeOnly: ['src/assets/css/global.css'],
+        content: [
+          path.join(process.cwd(), 'src/**/!(*.d).{js,ts,jsx,tsx,mdx}'),
+        ],
+      },
+    },
     // TypeScript
     `gatsby-plugin-typescript`,
     // Analytics
