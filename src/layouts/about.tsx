@@ -67,7 +67,12 @@ export default AboutLayout
 const aboutLayoutPropTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
-      siteMetadata: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+        urls: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
+      }).isRequired,
     }).isRequired,
     mdx: PropTypes.shape({
       body: PropTypes.any,

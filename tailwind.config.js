@@ -4,12 +4,16 @@ module.exports = {
     options: {
       safelist: {
         standard: [
+          /absolute/,
+          /flex(?:\w+)?/,
           /gap-1/,
           /grid(?:-\w+)?/,
           /h[xy]?-\d+/,
+          /justify-center/,
           /m\w?-\d+/,
           /opacity-\d+/,
           /p[xy]?-\d+/,
+          /relative/,
           /self-center/,
           /-translate-[xy]-\d+/,
         ],

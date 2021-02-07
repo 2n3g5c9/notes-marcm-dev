@@ -17,7 +17,12 @@ const IndexPage = ({ data }: IndexPageProps): ReactElement => (
 const indexPagePropTypes = {
   data: PropTypes.shape({
     site: PropTypes.shape({
-      siteMetadata: PropTypes.objectOf(PropTypes.string),
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+        urls: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
+      }).isRequired,
     }),
     frontmatter: PropTypes.shape({
       title: PropTypes.string.isRequired,

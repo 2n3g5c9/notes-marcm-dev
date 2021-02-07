@@ -38,7 +38,12 @@ const layoutPropTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  siteMetadata: PropTypes.objectOf(PropTypes.string).isRequired,
+  siteMetadata: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    urls: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
+  }).isRequired,
 }
 
 Layout.propTypes = layoutPropTypes
