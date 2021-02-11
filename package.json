@@ -7,7 +7,7 @@
   "dependencies": {
     "@fontsource/dm-mono": "^4.2.0",
     "@fontsource/dm-sans": "^4.2.1",
-    "@fontsource/playfair-display": "^4.2.0",
+    "@fontsource/playfair-display": "^4.2.1",
     "@headlessui/react": "^0.3.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
