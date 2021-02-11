@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "Marc Molina <contact@marcm.dev>",
   "dependencies": {
-    "@fontsource/dm-mono": "^4.2.0",
+    "@fontsource/dm-mono": "^4.2.1",
     "@fontsource/dm-sans": "^4.2.1",
     "@fontsource/playfair-display": "^4.2.0",
     "@headlessui/react": "^0.3.0",
