@@ -1048,10 +1048,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/dm-mono/-/dm-mono-4.2.0.tgz#dc6f1f6bbe363ffc8f789531d890b4e650c82bb5"
   integrity sha512-a98FuCfQAoINo+yco2OhSFdZSUKr77aCI7N4nK4as2NrfHVzJukQo3TTNzgnvliGVKsnZhB8K+QZ4xeBCBLNIg==
 
-"@fontsource/dm-sans@^4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/dm-sans/-/dm-sans-4.2.0.tgz#bf9b4c740d1657b550e838c4c21e325bf9795739"
-  integrity sha512-gC8gqbzS+RruOFcbqojtdF7JFsGacxZiMo2qRPL4ycR5/8P89Y5w6aVAcflaLIhqa9EbPurWFuh5cFj8c6vIhg==
+"@fontsource/dm-sans@^4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/dm-sans/-/dm-sans-4.2.1.tgz#76cc8a6dca92c196b00cec20460bea05942e61b7"
+  integrity sha512-kLPBImOXWzRulMHJEHKrnhaEDcck4Qoc0b2N4qKy94DKDeUdoU3kcb/y9279Ak3GZ+by3JmzT6OMC4f6M5gjeg==
 
 "@fontsource/playfair-display@^4.2.0":
   version "4.2.0"
