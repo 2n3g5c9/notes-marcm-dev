@@ -1053,10 +1053,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/dm-sans/-/dm-sans-4.2.1.tgz#76cc8a6dca92c196b00cec20460bea05942e61b7"
   integrity sha512-kLPBImOXWzRulMHJEHKrnhaEDcck4Qoc0b2N4qKy94DKDeUdoU3kcb/y9279Ak3GZ+by3JmzT6OMC4f6M5gjeg==
 
-"@fontsource/playfair-display@^4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/playfair-display/-/playfair-display-4.2.0.tgz#6510efa7aaba5c6a1f314783a97b458b4cbbb9df"
-  integrity sha512-LpLOKFLdREOdy46MM8bXkMIA+MF9nhjihWjuqcq7ULRZavpPobdVPAPQaCkArD3g71sgTiQZz+vIhTIGr0dO1g==
+"@fontsource/playfair-display@^4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/playfair-display/-/playfair-display-4.2.1.tgz#7886e3b9514912703fc03354a799b024d72e1370"
+  integrity sha512-ja2sXyRvMJypJfWE8dnayUEDRsl5CJ3F2JEDpAoiwEcXTWWgHNm2L2Qd4/LQ1U8+4LdGZ4EDmGHMYE5re9nBvQ==
 
 "@fullhuman/postcss-purgecss@^3.1.3":
   version "3.1.3"
