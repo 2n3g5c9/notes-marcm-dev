@@ -8,7 +8,7 @@ module.exports = {
   siteLanguage: 'en_UK',
   name: 'Marc Molina',
   email: 'contact@marcm.dev',
-  bannerText: 'First note coming in February 2021.',
+  bannerText: 'First note coming in March 2021.',
   urls: {
     github: 'https://github.com/2n3g5c9',
     keybase: 'https://keybase.io/2n3g5c9',

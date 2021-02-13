@@ -22,7 +22,7 @@ const h2 = (props: never): ReactElement => (
 const inlineCode = (props: never): ReactElement => (
   <code
     {...props}
-    className="px-1.5 py-1 rounded bg-secondary text-secondary text-xs sm:text-sm"
+    className="px-2 py-1 rounded bg-secondary text-secondary text-xs sm:text-sm"
   />
 )
 
