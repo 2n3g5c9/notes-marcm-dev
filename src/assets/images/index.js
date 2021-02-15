@@ -6,6 +6,7 @@ import KeybaseSVG from './keybase.svg'
 import LinkedInSVG from './linkedIn.svg'
 import LogoSVG from './logo.svg'
 import MoonSVG from './moon.svg'
+import QuoteSVG from './quote.svg'
 import SunSVG from './sun.svg'
 
 export {
@@ -16,5 +17,6 @@ export {
   LinkedInSVG,
   LogoSVG,
   MoonSVG,
+  QuoteSVG,
   SunSVG,
 }
