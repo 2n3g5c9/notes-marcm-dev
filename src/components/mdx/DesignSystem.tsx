@@ -15,7 +15,7 @@ const a = (props: never): ReactElement => (
 const h2 = (props: never): ReactElement => (
   <h2
     {...props}
-    className="pt-1 sm:pt-2 text-xl font-bold leading-7 text-primary sm:text-2xl"
+    className="pt-3 sm:pt-6 text-xl font-bold leading-7 text-primary sm:text-2xl"
   />
 )
 
