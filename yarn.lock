@@ -1049,10 +1049,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/dm-mono@^4.2.1":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/dm-mono/-/dm-mono-4.2.1.tgz#5e1b3c9d9aafeb4f19389fafe0e3f143d41a14ec"
-  integrity sha512-X/4schjzmA/shUy9yl8UF/K/HrwpCCjEN+02/DEOXk6+fJZP95ZCVqdZLxJ8vzI6GrpdcBtIwleTdTPAW0cMmA==
+"@fontsource/dm-mono@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/dm-mono/-/dm-mono-4.2.2.tgz#d4329280761345337a8c2f621fd404c2ee4df096"
+  integrity sha512-J9ipdC75E1NTu/tActMV4MXTGV0AH/PY00Q29ABLOu86eMXR7n6UGLzR8chEm60NoauZNJk9X1Ry/z9O7VUlvQ==
 
 "@fontsource/dm-sans@^4.2.1":
   version "4.2.1"
