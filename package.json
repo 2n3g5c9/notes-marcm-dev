@@ -6,7 +6,7 @@
   "author": "Marc Molina <contact@marcm.dev>",
   "dependencies": {
     "@fontsource/dm-mono": "^4.2.2",
-    "@fontsource/dm-sans": "^4.2.1",
+    "@fontsource/dm-sans": "^4.2.2",
     "@fontsource/playfair-display": "^4.2.2",
     "@headlessui/react": "^0.3.1",
     "@mdx-js/mdx": "^1.6.22",
