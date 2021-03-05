@@ -7,8 +7,8 @@ import { GitHubSVG, KeybaseSVG, LinkedInSVG } from '@assets/images'
 const Footer = ({ author, urls }: FooterProps): ReactElement => {
   return (
     <footer>
-      <div className="max-w-6xl mx-auto pt-10 sm:pt-12 pb-6 sm:pb-8 px-4-safe sm:px-6-safe md:flex md:items-center md:justify-between lg:px-8">
-        <div className="flex justify-center space-x-6 md:order-2">
+      <div className="md:flex md:items-center md:justify-between max-w-6xl mx-auto pb-6 sm:pb-8 pt-6 sm:pt-8 px-4-safe sm:px-6-safe lg:px-8">
+        <div className="flex justify-center md:order-2 space-x-6">
           <a
             href={urls.keybase}
             aria-label="Keybase"
@@ -41,7 +41,7 @@ const Footer = ({ author, urls }: FooterProps): ReactElement => {
           </a>
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
-          <p className="text-center text-sm sm:text-base text-secondary">
+          <p className="text-center text-secondary text-sm sm:text-base">
             &copy; 2021 {author}. Built with{' '}
             <a
               href="https://github.com/2n3g5c9/gatsby-starter-typescript-tailwindcss"
@@ -62,18 +62,18 @@ const Footer = ({ author, urls }: FooterProps): ReactElement => {
 export default Footer
 
 const footerPropTypes = {
-  author: PropTypes.string.isRequired,
+  author: PropTypes.string,
   urls: PropTypes.shape({
-    github: PropTypes.string.isRequired,
-    keybase: PropTypes.string.isRequired,
-    linkedIn: PropTypes.string.isRequired,
-  }).isRequired,
+    github: PropTypes.string,
+    keybase: PropTypes.string,
+    linkedIn: PropTypes.string,
+  }),
 }
 
 Footer.propTypes = footerPropTypes
 
 const footerDefaultProps = {
-  author: 'John Doe',
+  author: 'Random author',
   urls: {
     github: '#',
     keybase: '#',

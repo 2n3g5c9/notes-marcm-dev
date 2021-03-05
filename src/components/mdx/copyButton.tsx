@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 import React, { ReactElement } from 'react'
 import PropTypes from 'prop-types'
 import Confetti from 'react-dom-confetti'
@@ -27,7 +25,7 @@ const CopyButton = ({ text }: CopyButtonProps): ReactElement => {
 
   return (
     <button
-      className="absolute top-0 right-0 m-2 px-2 py-1 select-none rounded bg-primary font-sans"
+      className="absolute bg-primary font-sans m-2 px-2 py-1 right-0 rounded select-none top-0"
       onClick={() => {
         copyToClipboard(text)
         setIsCopied()
@@ -43,9 +41,18 @@ const CopyButton = ({ text }: CopyButtonProps): ReactElement => {
 export default CopyButton
 
 const copyButtonPropTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
 }
 
 CopyButton.propTypes = copyButtonPropTypes
 
-type CopyButtonProps = InferPropTypes<typeof copyButtonPropTypes>
+const copyButtonDefaultProps = {
+  text: 'There was nothing to copy.',
+}
+
+CopyButton.defaultProps = copyButtonDefaultProps
+
+type CopyButtonProps = InferPropTypes<
+  typeof copyButtonPropTypes,
+  typeof copyButtonDefaultProps
+>

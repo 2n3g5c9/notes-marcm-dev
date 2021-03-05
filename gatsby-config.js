@@ -8,8 +8,8 @@ module.exports = {
     description: config.siteDescription,
     author: config.name,
     email: config.email,
-    bannerText: config.bannerText,
     urls: config.urls,
+    banner: config.banner,
   },
   plugins: [
     // CSS
@@ -22,6 +22,7 @@ module.exports = {
         content: [
           path.join(process.cwd(), 'src/**/!(*.d).{js,ts,jsx,tsx,mdx}'),
         ],
+        whitelistPatterns: [/bg-pink-[18]00/, /text-pink-[18]00/],
       },
     },
     // TypeScript
@@ -50,6 +51,7 @@ module.exports = {
       },
     },
     // Gatsby & React
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -66,6 +68,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-mdx`,
+    `gatsby-remark-reading-time`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
@@ -106,6 +109,13 @@ module.exports = {
       options: {
         name: 'about',
         path: `${__dirname}/content/about`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'notes',
+        path: `${__dirname}/content/notes`,
       },
     },
     `gatsby-transformer-sharp`,

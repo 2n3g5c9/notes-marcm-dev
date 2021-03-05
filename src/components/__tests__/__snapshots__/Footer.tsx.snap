@@ -3,10 +3,10 @@
 exports[`Footer renders correctly 1`] = `
 <footer>
   <div
-    className="max-w-6xl mx-auto pt-10 sm:pt-12 pb-6 sm:pb-8 px-4-safe sm:px-6-safe md:flex md:items-center md:justify-between lg:px-8"
+    className="md:flex md:items-center md:justify-between max-w-6xl mx-auto pb-6 sm:pb-8 pt-6 sm:pt-8 px-4-safe sm:px-6-safe lg:px-8"
   >
     <div
-      className="flex justify-center space-x-6 md:order-2"
+      className="flex justify-center md:order-2 space-x-6"
     >
       <a
         aria-label="Keybase"
@@ -64,10 +64,10 @@ exports[`Footer renders correctly 1`] = `
       className="mt-8 md:mt-0 md:order-1"
     >
       <p
-        className="text-center text-sm sm:text-base text-secondary"
+        className="text-center text-secondary text-sm sm:text-base"
       >
         © 2021 
-        John Doe
+        Random author
         . Built with
          
         <a

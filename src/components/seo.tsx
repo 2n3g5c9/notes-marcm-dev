@@ -57,9 +57,10 @@ const SEO = ({ description, lang, meta, title }: Props): ReactElement => {
 }
 
 SEO.defaultProps = {
+  description: ``,
   lang: `en`,
   meta: [],
-  description: ``,
+  title: ``,
 }
 
 SEO.propTypes = {

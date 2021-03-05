@@ -3,7 +3,7 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
-import * as DesignSystem from './components/mdx/DesignSystem'
+import * as DesignSystem from './components/mdx/designSystem'
 
 const shortcodes = {
   a: DesignSystem.a,

@@ -45,6 +45,9 @@ module.exports = {
       screens: {
         xlish: '1200px',
       },
+      margin: {
+        '50-screen': '-50vw',
+      },
     },
     fontFamily: {
       sans: ['DM Sans', 'sans-serif'],

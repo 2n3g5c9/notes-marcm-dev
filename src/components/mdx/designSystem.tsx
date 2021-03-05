@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react'
+
 import { BlockQuote } from '@components'
 
 const blockquote = (props: never): ReactElement => <BlockQuote {...props} />
@@ -15,14 +16,14 @@ const a = (props: never): ReactElement => (
 const h2 = (props: never): ReactElement => (
   <h2
     {...props}
-    className="pt-3 sm:pt-6 text-xl font-bold leading-7 text-primary sm:text-2xl"
+    className="font-bold leading-7 pt-3 sm:pt-6 text-primary text-xl sm:text-2xl"
   />
 )
 
 const inlineCode = (props: never): ReactElement => (
   <code
     {...props}
-    className="px-2 py-1 rounded bg-secondary text-secondary text-xs sm:text-sm"
+    className="bg-secondary px-2 py-1 rounded text-secondary text-xs sm:text-sm"
   />
 )
 

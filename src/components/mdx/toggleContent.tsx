@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react'
 import PropTypes from 'prop-types'
-import { InferPropTypes } from '@shared/types'
 
 import { useToggle } from '@hooks'
+import { InferPropTypes } from '@shared/types'
 
 const ToggleContent = ({
   text,
@@ -30,7 +30,7 @@ const ToggleContent = ({
 export default ToggleContent
 
 const toggleContentPropTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   altText: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
