@@ -18,7 +18,6 @@ exports[`Quote renders correctly 1`] = `
       <test-file-stub
         className="absolute h-9 sm:h-10 opacity-20 text-accent transform -translate-x-6 -translate-y-1 sm:-translate-y-2 w-9 sm:w-10"
       />
-      Test
     </div>
   </div>
 </div>

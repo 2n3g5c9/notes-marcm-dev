@@ -2,7 +2,7 @@
 
 exports[`HeroSection renders correctly 1`] = `
 <div
-  className="bg-hero bg-secondary left-1/2 ml-50-screen -mt-8 px-4 sm:px-14 py-12 sm:py-16 lg:py-10 relative w-screen"
+  className="bg-hero bg-secondary left-1/2 ml-50-screen -mt-8 px-4 sm:px-14 py-12 sm:py-14 lg:py-8 relative w-screen"
 >
   <div
     className="content-center m-auto flex max-w-6xl lg:w-full z-10"

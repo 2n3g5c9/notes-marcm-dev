@@ -6,9 +6,7 @@ exports[`BlockQuote renders correctly 1`] = `
 >
   <div
     className="overflow-x-auto whitespace-pre"
-  >
-    Test
-  </div>
+  />
   <button
     className="absolute bg-primary font-sans m-2 px-2 py-1 right-0 rounded select-none top-0"
     onClick={[Function]}

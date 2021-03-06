@@ -8,7 +8,7 @@ import { ThemeProvider } from '@context/themeContext'
 import { Banner, NavBar, Footer } from '@components'
 import { InferPropTypes } from '@shared/types'
 
-const Layout = ({ children, data }: LayoutProps): ReactElement => (
+export const PureLayout = ({ children, data }: LayoutProps): ReactElement => (
   <ThemeProvider>
     <NavBar title={data.site.siteMetadata.title} />
     <Banner
@@ -27,20 +27,20 @@ const Layout = ({ children, data }: LayoutProps): ReactElement => (
   </ThemeProvider>
 )
 
-const MyLayout = ({ children }: ChildrenProps): ReactElement => (
+export const Layout = ({ children }: ChildrenProps): ReactElement => (
   <StaticQuery
     query={layoutQuery}
-    render={data => <Layout data={data} children={children} />}
+    render={data => <PureLayout data={data} children={children} />}
   />
 )
 
-export default MyLayout
+export default Layout
 
 const childrenPropTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
-  ]).isRequired,
+  ]),
 }
 
 type ChildrenProps = InferProps<typeof childrenPropTypes>
@@ -62,7 +62,7 @@ const layoutPropTypes = {
   }),
 }
 
-Layout.propTypes = layoutPropTypes
+PureLayout.propTypes = layoutPropTypes
 
 const layoutDefaultProps = {
   data: {
@@ -84,7 +84,7 @@ const layoutDefaultProps = {
   },
 }
 
-Layout.defaultProps = layoutDefaultProps
+PureLayout.defaultProps = layoutDefaultProps
 
 type LayoutProps = InferPropTypes<
   typeof layoutPropTypes,
