@@ -12,44 +12,6 @@ module.exports = {
     banner: config.banner,
   },
   plugins: [
-    // CSS
-    `gatsby-plugin-postcss`,
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        tailwind: true,
-        purgeOnly: ['src/assets/css/global.css'],
-        content: [
-          path.join(process.cwd(), 'src/**/!(*.d).{js,ts,jsx,tsx,mdx}'),
-        ],
-        whitelistPatterns: [/bg-pink-[18]00/, /text-pink-[18]00/],
-      },
-    },
-    // TypeScript
-    `gatsby-plugin-typescript`,
-    // Analytics
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          'G-G11QYKS7W4', // Google Analytics
-        ],
-        gtagConfig: {
-          anonymize_ip: true,
-        },
-        pluginConfig: {
-          respectDNT: true,
-        },
-      },
-    },
-    // Security
-    {
-      resolve: 'gatsby-plugin-sri',
-      options: {
-        hash: 'sha256',
-        crossorigin: false,
-      },
-    },
     // Gatsby & React
     `gatsby-plugin-image`,
     {
@@ -127,6 +89,68 @@ module.exports = {
         pedantic: true,
         gfm: true,
         plugins: [],
+      },
+    },
+    // TypeScript
+    `gatsby-plugin-typescript`,
+    // CSS
+    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true,
+        purgeOnly: ['src/assets/css/global.css'],
+        content: [
+          path.join(process.cwd(), 'src/**/!(*.d).{js,ts,jsx,tsx,mdx}'),
+        ],
+        whitelistPatterns: [/bg-pink-[18]00/, /text-pink-[18]00/],
+      },
+    },
+    // Security
+    {
+      resolve: 'gatsby-plugin-sri',
+      options: {
+        hash: 'sha256',
+        crossorigin: false,
+      },
+    },
+    // Analytics
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          'G-G11QYKS7W4', // Google Analytics
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+        },
+        pluginConfig: {
+          respectDNT: true,
+        },
+      },
+    },
+    // Gatsby Cloud
+    {
+      resolve: `gatsby-plugin-gatsby-cloud`,
+      options: {
+        headers: {
+          '/*': [
+            'Access-Control-Allow-Origin: *',
+            'Access-Control-Allow-Methods: GET',
+            'Access-Control-Allow-Headers: X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
+            'Cache-Control: max-age=31536000',
+            "Content-Security-Policy: script-src 'self' 'unsafe-eval' 'unsafe-inline' www.googletagmanager.com; style-src 'self' 'unsafe-inline'; prefetch-src 'self' www.googletagmanager.com; frame-ancestors 'none';",
+            'Permissions-Policy: camera=(), geolocation=(), microphone=()',
+            'Referrer-Policy: no-referrer',
+            'Strict-Transport-Security: max-age=31536000; includeSubDomains;',
+            'X-Content-Type-Options: nosniff',
+            'X-Frame-Options: SAMEORIGIN',
+            'X-XSS-Protection: 1; mode=block',
+          ],
+          '/sw.js': ['Cache-Control: public, max-age=0, must-revalidate'],
+        },
+        mergeLinkHeaders: false,
+        mergeCachingHeaders: true,
       },
     },
   ],

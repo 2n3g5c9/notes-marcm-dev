@@ -1,0 +1,36 @@
+name: Checks on Push and Pull Requests
+
+on: [push, pull_request]
+
+jobs:
+  checks:
+    name: Automated Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code 🛎
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Cache Dependencies 💽
+        uses: actions/cache@v2.1.4
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install Packages 📦
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Run ESLint Checks ✅
+        run: yarn lint
+
+      - name: Run TypeScript Checks ✅
+        run: yarn type-check
+
+      - name: Run Jest Tests 🧪
+        run: yarn test
+
+      - name: Build Gatsby Site ⚙️
+        run: yarn build

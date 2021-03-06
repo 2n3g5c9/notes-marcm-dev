@@ -19,7 +19,7 @@ const NoteSummary = ({
     <div>
       <div className="inline-block text-xs sm:text-sm">
         <span
-          className={`font-medium inline-flex items-center px-3 py-0.5 rounded-full ${categoryBg(
+          className={`font-medium inline-flex items-center px-3 py-1 rounded-full ${categoryBg(
             category,
             theme
           )} ${categoryText(category, theme)}`}
