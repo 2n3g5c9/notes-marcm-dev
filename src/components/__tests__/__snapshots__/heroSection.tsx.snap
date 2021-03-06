@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeroSection renders correctly 1`] = `
+<div
+  className="bg-hero bg-secondary left-1/2 ml-50-screen -mt-8 px-4 sm:px-14 py-12 sm:py-14 lg:py-8 relative w-screen"
+>
+  <div
+    className="content-center m-auto flex max-w-6xl lg:w-full z-10"
+  >
+    <div
+      className="flex-grow max-w-4xl lg:max-w-3xl my-auto px-3 lg:py-12 lg:pl-8"
+    >
+      <div
+        className="sm:text-center lg:text-left"
+      >
+        <h1
+          className="font-bold font-serif text-primary text-4xl sm:text-5xl lg:text-6xl"
+        >
+          <span
+            className="inline"
+          >
+            This is a default title
+             
+          </span>
+        </h1>
+        <p
+          className="sm:max-w-xl mt-3 sm:mt-5 md:mt-5 sm:mx-auto lg:mx-0 text-base sm:text-lg text-secondary"
+        >
+          This is a default subtitle
+        </p>
+        <div
+          className="sm:flex font-medium sm:justify-center lg:justify-start mt-5 sm:mt-8 text-base"
+        >
+          <div
+            className="rounded-md shadow"
+          >
+            <a
+              className="bg-accent hover:bg-hover-accent border border-transparent flex items-center justify-center px-8 py-3 lg:py-3.5 rounded-md text-tertiary lg:text-lg w-full"
+              href="/notes"
+            >
+              Read the notes
+            </a>
+          </div>
+          <div
+            className="sm:ml-3 mt-3 sm:mt-0"
+          >
+            <a
+              className="w-full flex items-center justify-center border border-transparent rounded-md text-dark-accent bg-light-accent hover:bg-hover-light px-8 py-3 lg:py-3.5 lg:text-lg"
+              href="/about"
+            >
+              More about me
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="animate-wiggle flex-none hidden pr-8 xlish:block"
+    />
+  </div>
+</div>
+`;

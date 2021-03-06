@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleContent renders correctly 1`] = `
+Array [
+  <button
+    className="text-left text-primary text-sm sm:text-base"
+    onClick={[Function]}
+  >
+    ▶️
+      
+    Show placeholder
+  </button>,
+  <div
+    className="hidden"
+  />,
+]
+`;

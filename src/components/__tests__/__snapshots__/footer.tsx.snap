@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer>
+  <div
+    className="md:flex md:items-center md:justify-between max-w-6xl mx-auto pb-6 sm:pb-8 pt-6 sm:pt-8 px-4-safe sm:px-6-safe lg:px-8"
+  >
+    <div
+      className="flex justify-center md:order-2 space-x-6"
+    >
+      <a
+        aria-label="Keybase"
+        className="text-secondary hover:text-primary"
+        href="#"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span
+          className="sr-only"
+        >
+          Keybase
+        </span>
+        <test-file-stub
+          aria-hidden="true"
+          className="h-6 w-6"
+        />
+      </a>
+      <a
+        aria-label="GitHub"
+        className="text-secondary hover:text-primary"
+        href="#"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span
+          className="sr-only"
+        >
+          GitHub
+        </span>
+        <test-file-stub
+          aria-hidden="true"
+          className="h-6 w-6"
+        />
+      </a>
+      <a
+        aria-label="LinkedIn"
+        className="text-secondary hover:text-primary"
+        href="#"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <span
+          className="sr-only"
+        >
+          LinkedIn
+        </span>
+        <test-file-stub
+          aria-hidden="true"
+          className="h-6 w-6"
+        />
+      </a>
+    </div>
+    <div
+      className="mt-8 md:mt-0 md:order-1"
+    >
+      <p
+        className="text-center text-secondary text-sm sm:text-base"
+      >
+        © 2021 
+        Random author
+        . Built with
+         
+        <a
+          aria-label="Gatsby Starter"
+          href="https://github.com/2n3g5c9/gatsby-starter-typescript-tailwindcss"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Gatsby
+        </a>
+        .
+      </p>
+    </div>
+  </div>
+</footer>
+`;
