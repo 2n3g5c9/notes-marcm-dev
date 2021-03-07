@@ -10,20 +10,24 @@ import { InferPropTypes } from '@shared/types'
 
 export const PureLayout = ({ children, data }: LayoutProps): ReactElement => (
   <ThemeProvider>
-    <NavBar title={data.site.siteMetadata.title} />
-    <Banner
-      text={data.site.siteMetadata.banner.text}
-      slug={data.site.siteMetadata.banner.slug}
-    />
+    <nav>
+      <NavBar title={data.site.siteMetadata.title} />
+      <Banner
+        text={data.site.siteMetadata.banner.text}
+        slug={data.site.siteMetadata.banner.slug}
+      />
+    </nav>
     <main className="max-w-full mx-auto overflow-hidden relative">
       <div className="max-w-6xl mx-auto my-7 sm:my-8 px-8 sm:px-12 xl:px-8">
         {children}
       </div>
     </main>
-    <Footer
-      author={data.site.siteMetadata.author}
-      urls={data.site.siteMetadata.urls}
-    />
+    <footer>
+      <Footer
+        author={data.site.siteMetadata.author}
+        urls={data.site.siteMetadata.urls}
+      />
+    </footer>
   </ThemeProvider>
 )
 

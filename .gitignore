@@ -70,6 +70,3 @@ yarn-error.log
 
 # IDE directory
 .idea/
-
-# Vercel directory
-.vercel/

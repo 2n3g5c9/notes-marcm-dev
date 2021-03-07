@@ -12,7 +12,7 @@ const NavBar = ({ title }: NavBarProps): ReactElement => {
   const [isToggled, setIsToggled] = useToggle(false)
 
   return (
-    <nav className="bg-gray-800">
+    <div className="bg-gray-800">
       <div className="max-w-6xl mx-auto px-4-safe sm:px-6-safe lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
@@ -53,7 +53,7 @@ const NavBar = ({ title }: NavBarProps): ReactElement => {
           <NavMenuLink to="/about" icon="👨🏻‍💻" text="About️" />
         </div>
       </div>
-    </nav>
+    </div>
   )
 }
 

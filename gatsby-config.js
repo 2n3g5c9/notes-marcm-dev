@@ -103,7 +103,9 @@ module.exports = {
         content: [
           path.join(process.cwd(), 'src/**/!(*.d).{js,ts,jsx,tsx,mdx}'),
         ],
-        whitelistPatterns: [/bg-pink-[18]00/, /text-pink-[18]00/],
+        purgeCSSOptions: {
+          safelist: [/bg-pink-[18]00/, /text-pink-[18]00/],
+        },
       },
     },
     // Security
