@@ -16,7 +16,7 @@ const HeroSection = ({ frontmatter }: HeroSectionProps): ReactElement => {
   }
 
   return (
-    <div className="bg-hero bg-secondary left-1/2 ml-50-screen -mt-8 px-4 sm:px-14 py-12 sm:py-14 lg:py-8 relative w-screen">
+    <div className="bg-hero bg-secondary left-1/2 ml-50-screen -mt-8 px-4 sm:px-14 py-8 sm:py-14 lg:py-8 relative w-screen">
       <div className="content-center m-auto flex max-w-6xl lg:w-full z-10">
         <div className="flex-grow max-w-4xl lg:max-w-3xl my-auto px-3 lg:py-12 lg:pl-8">
           <div className="sm:text-center lg:text-left">
