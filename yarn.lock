@@ -13081,10 +13081,10 @@ potrace@^2.1.8:
   dependencies:
     jimp "^0.14.0"
 
-preact-render-to-string@^5.1.13:
-  version "5.1.13"
-  resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-5.1.13.tgz#3314f807e5c69925e0085ca30d29f0ba8b796eb0"
-  integrity sha512-DJFcsVXEotFE5gfjZtMTKB8SUj7cFpA4XIgv+VDoGWjkCU2eczrZbq4KUheIgh+U/a+XAE6wN8p6/eVrF/kyDg==
+preact-render-to-string@^5.1.16:
+  version "5.1.16"
+  resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-5.1.16.tgz#379db30e51916d45a67c00163ef812ad376aa721"
+  integrity sha512-HvO3W29Sziz9r5FZGwl2e34XJKzyRLvjhouv3cpkCGszNPdnvkO8p4B6CBpe0MT/tzR+QVbmsAKLrMK222UXew==
   dependencies:
     pretty-format "^3.8.0"
 
