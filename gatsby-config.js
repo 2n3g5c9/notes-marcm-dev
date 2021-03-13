@@ -29,8 +29,22 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-mdx`,
-    `gatsby-remark-reading-time`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1024,
+              quality: 90,
+              withWebp: true,
+              withAvif: true,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
@@ -52,6 +66,15 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        backgroundColor: `transparent`,
+        disableBgImageOnAlpha: true,
+        linkImagesToOriginal: false,
+      },
+    },
+    `gatsby-remark-reading-time`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

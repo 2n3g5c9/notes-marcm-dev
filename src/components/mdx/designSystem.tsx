@@ -13,10 +13,17 @@ const a = (props: never): ReactElement => (
   />
 )
 
+const h1 = (props: never): ReactElement => (
+  <h1
+    {...props}
+    className="font-bold leading-7 pt-3 sm:pt-6 text-primary text-xl sm:text-2xl"
+  />
+)
+
 const h2 = (props: never): ReactElement => (
   <h2
     {...props}
-    className="font-bold leading-7 pt-3 sm:pt-6 text-primary text-xl sm:text-2xl"
+    className="font-bold leading-7 pt-3 sm:pt-6 text-primary text-lg sm:text-xl"
   />
 )
 
@@ -27,8 +34,19 @@ const inlineCode = (props: never): ReactElement => (
   />
 )
 
+const li = (props: never): ReactElement => (
+  <li {...props} className="list-disc my-2 text-primary text-sm sm:text-base" />
+)
+
 const p = (props: never): ReactElement => (
   <p {...props} className="my-3 text-primary text-sm sm:text-base" />
 )
 
-export { a, blockquote, h2, inlineCode, p }
+const ul = (props: never): ReactElement => (
+  <ul
+    {...props}
+    className="list-inside my-3 text-primary text-sm sm:text-base"
+  />
+)
+
+export { a, blockquote, h1, h2, inlineCode, li, p, ul }

@@ -29,6 +29,7 @@
     "gatsby-plugin-sitemap": "^3.0.0",
     "gatsby-plugin-sri": "^1.1.0",
     "gatsby-plugin-typescript": "^3.0.0",
+    "gatsby-remark-images": "^4.0.0",
     "gatsby-remark-reading-time": "^1.1.0",
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-remark": "^3.0.0",
@@ -64,7 +65,7 @@
     "cssnano": "^4.1.10",
     "cypress": "^6.6.0",
     "cypress-axe": "^0.12.2",
-    "eslint": "^7.21.0",
+    "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
@@ -96,7 +97,9 @@
     "type-check": "tsc --pretty --noEmit",
     "test": "jest",
     "cy:open": "cypress open",
-    "test:e2e": "start-server-and-test develop 8000 cy:open"
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test develop 8000 cy:open",
+    "test:e2e:cli": "start-server-and-test develop 8000 cy:run"
   },
   "repository": {
     "type": "git",

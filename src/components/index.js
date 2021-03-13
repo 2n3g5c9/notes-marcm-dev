@@ -1,6 +1,7 @@
 import * as Atoms from './atoms'
 import Banner from './banner'
 import BlockQuote from './mdx/blockQuote'
+import BlockWarning from './mdx/blockWarning'
 import CopyButton from './mdx/copyButton'
 import * as DesignSystem from './mdx/designSystem'
 import Footer from './footer'
@@ -19,6 +20,7 @@ export {
   Atoms,
   Banner,
   BlockQuote,
+  BlockWarning,
   CopyButton,
   DesignSystem,
   Footer,

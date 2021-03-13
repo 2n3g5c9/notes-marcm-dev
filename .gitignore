@@ -68,5 +68,9 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
+# Cypress
+cypress/videos
+cypress/screenshots
+
 # IDE directory
 .idea/
