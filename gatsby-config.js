@@ -127,7 +127,7 @@ module.exports = {
           path.join(process.cwd(), 'src/**/!(*.d).{js,ts,jsx,tsx,mdx}'),
         ],
         purgeCSSOptions: {
-          safelist: [/bg-pink-[18]00/, /items-center/, /text-pink-[18]00/],
+          safelist: [/bg-pink-[18]00/, /text-pink-[18]00/],
         },
       },
     },
@@ -152,30 +152,6 @@ module.exports = {
         pluginConfig: {
           respectDNT: true,
         },
-      },
-    },
-    // Gatsby Cloud
-    {
-      resolve: `gatsby-plugin-gatsby-cloud`,
-      options: {
-        headers: {
-          '/*': [
-            'Access-Control-Allow-Origin: *',
-            'Access-Control-Allow-Methods: GET',
-            'Access-Control-Allow-Headers: X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version',
-            'Cache-Control: max-age=31536000',
-            "Content-Security-Policy: script-src 'self' 'unsafe-eval' 'unsafe-inline' www.googletagmanager.com; style-src 'self' 'unsafe-inline'; prefetch-src 'self' www.googletagmanager.com; frame-ancestors 'none';",
-            'Permissions-Policy: camera=(), geolocation=(), microphone=()',
-            'Referrer-Policy: no-referrer',
-            'Strict-Transport-Security: max-age=31536000; includeSubDomains;',
-            'X-Content-Type-Options: nosniff',
-            'X-Frame-Options: SAMEORIGIN',
-            'X-XSS-Protection: 1; mode=block',
-          ],
-          '/sw.js': ['Cache-Control: public, max-age=0, must-revalidate'],
-        },
-        mergeLinkHeaders: false,
-        mergeCachingHeaders: true,
       },
     },
   ],
