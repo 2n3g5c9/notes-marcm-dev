@@ -127,7 +127,7 @@ module.exports = {
           path.join(process.cwd(), 'src/**/!(*.d).{js,ts,jsx,tsx,mdx}'),
         ],
         purgeCSSOptions: {
-          safelist: [/bg-pink-[18]00/, /text-pink-[18]00/],
+          safelist: [/bg-pink-[18]00/, /items-center/, /text-pink-[18]00/],
         },
       },
     },

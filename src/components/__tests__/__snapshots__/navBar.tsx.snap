@@ -15,7 +15,7 @@ exports[`NavBar renders correctly 1`] = `
       >
         <a
           aria-label="Home"
-          className="flex-shrink-0"
+          className="flex items-center"
           href="/"
         >
           <test-file-stub
