@@ -27,6 +27,13 @@ const h2 = (props: never): ReactElement => (
   />
 )
 
+const h3 = (props: never): ReactElement => (
+  <h3
+    {...props}
+    className="font-bold leading-7 pt-3 sm:pt-6 text-primary text-md sm:text-lg"
+  />
+)
+
 const inlineCode = (props: never): ReactElement => (
   <code
     {...props}
@@ -49,4 +56,4 @@ const ul = (props: never): ReactElement => (
   />
 )
 
-export { a, blockquote, h1, h2, inlineCode, li, p, ul }
+export { a, blockquote, h1, h2, h3, inlineCode, li, p, ul }

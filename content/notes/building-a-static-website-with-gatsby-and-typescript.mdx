@@ -16,23 +16,50 @@ import { BlockWarning } from '@components'
 
 ## Motivation
 
-* Keep up with React/TypeScript core concepts, and understand modern front-end web development workflows.
-* Maintain basic knowledge of web design, but without the overhead of writing layers of wrapper components.
+* Keep up with React/TypeScript core concepts, and modern front-end web development workflows.
+* Maintain basic knowledge of web design, without the overhead of writing layers of wrapper components.
 * Experiment with a web analytics tool, and understand what kind of insights can be derived.
 
 ## Requirements
 
-* Top-notch performance on all pages, no matter where the reader is: on all continents... or in the Tube.
-* Free hosting, since there is no need for server-side logic and low traffic is expected.
-* High security standards, because everyone should care.
-* Acceptable level of accessibility, to include all readers regardless of disabilities.
+* High performance ([Core Web Vitals](https://web.dev/vitals/)) on all pages, wherever the reader is: across the
+globe... or in the Tube.
+* Free hosting: no server-side logic and low traffic expected.
+* High security standards (X.509 certificate, HTTP Security Headers,
+[CSP](https://developers.google.com/web/fundamentals/security/csp), etc.), because everyone should care.
+* Acceptable level of accessibility ([aXe benchmark](https://www.deque.com/axe/)), to include all readers regardless
+of disabilities.
 * Automated dependency updates (not recommended in production), to minimise my time in JavaScript dependency hell.
 
 ## High-level design
 
-**Global CDN:**
-* Serves cached static assets from globally distributed PoPs, providing both high availability and performance.
-* Handles asset compression automatically (GZIP and Brotli).
-* Offers free TLS (via Let's Encrypt): HTTP/2, TLS 1.2 & 1.3 only, PFS.
+### Development
+
+### Operations
 
 ![High-level design](./images/marcm-dev-hld.png)
+
+**Version Control System (VCS):**
+* Organises, stores and versions the code.
+* Decouples and reconciles development workflows from "production" code.
+* Unlocks automation and Ops-oriented workflows with service integrations.
+
+**Continuous Integration (CI):**
+* Triggered on push/merge to all branches, gives enough confidence the code is in a stable state to be deployed.
+* Lint checks: detects structural problems and improves code quality with static code analysis.
+* Type checks: detects type mismatches with static code analysis.
+* Snapshot tests: detects unexpected changes in UI components rendering.
+* Accessibility tests: detects drift with basic aXe accessibility compliance checks.
+
+**Continuous Deployment (CD):**
+* Often offered by the CDN service, by passing an NPM script command.
+* Triggered by a push/merge on the production branch.
+
+**Dependency Management:**
+* Periodically looks for JavaScript package updates.
+* Triggers the CI pipeline and auto-merge to the production branch if all tests pass.
+
+**Global Content Delivery Nework (CDN):**
+* Serves cached static assets from globally distributed PoPs, providing both high availability and performance.
+* Handles asset compression (GZIP and Brotli).
+* Manages TLS for free (via Let's Encrypt): HTTP/2, TLS 1.2 & 1.3 only, PFS.
