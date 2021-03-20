@@ -5,6 +5,7 @@ module.exports = {
   moduleNameMapper: {
     '^@assets/images$': '<rootDir>/src/assets/images',
     '^@components$': '<rootDir>/src/components',
+    '^@components/(.*)$': '<rootDir>/src/components/$1',
     '^@context/(.*)$': '<rootDir>/src/context/$1',
     '^@fontsource/.*': `identity-obj-proxy`,
     '^@hooks$': '<rootDir>/src/hooks',

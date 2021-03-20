@@ -23,7 +23,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: `minimal-ui`,
-        icon: `src/assets/images/icon.webp`,
+        icon: `src/assets/images/icon.png`,
         icon_options: {
           purpose: `maskable`,
         },
@@ -127,7 +127,7 @@ module.exports = {
           path.join(process.cwd(), 'src/**/!(*.d).{js,ts,jsx,tsx,mdx}'),
         ],
         purgeCSSOptions: {
-          safelist: [/bg-pink-[18]00/, /text-pink-[18]00/],
+          safelist: [/bg-red-[5-70]0/, /text-red-[5-70]0/],
         },
       },
     },

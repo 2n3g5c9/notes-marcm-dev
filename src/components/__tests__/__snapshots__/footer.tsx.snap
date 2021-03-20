@@ -2,14 +2,14 @@
 
 exports[`Footer renders correctly 1`] = `
 <div
-  className="md:flex md:items-center md:justify-between max-w-6xl mx-auto pb-6 sm:pb-8 pt-6 sm:pt-8 px-4-safe sm:px-6-safe lg:px-8"
+  className="md:flex md:items-center md:justify-between max-w-6xl mx-auto px-4-safe sm:px-6-safe lg:px-8 py-6 sm:py-8"
 >
   <div
     className="flex justify-center md:order-2 space-x-6"
   >
     <a
       aria-label="Keybase"
-      className="text-secondary hover:text-primary"
+      className="hover:text-secondary"
       href="#"
       rel="noopener noreferrer"
       target="_blank"
@@ -26,7 +26,7 @@ exports[`Footer renders correctly 1`] = `
     </a>
     <a
       aria-label="GitHub"
-      className="text-secondary hover:text-primary"
+      className="hover:text-secondary"
       href="#"
       rel="noopener noreferrer"
       target="_blank"
@@ -43,7 +43,7 @@ exports[`Footer renders correctly 1`] = `
     </a>
     <a
       aria-label="LinkedIn"
-      className="text-secondary hover:text-primary"
+      className="hover:text-secondary"
       href="#"
       rel="noopener noreferrer"
       target="_blank"
@@ -63,7 +63,7 @@ exports[`Footer renders correctly 1`] = `
     className="mt-8 md:mt-0 md:order-1"
   >
     <p
-      className="text-center text-secondary text-sm sm:text-base"
+      className="text-center text-sm sm:text-base"
     >
       © 2021 
       Random author
@@ -75,7 +75,7 @@ exports[`Footer renders correctly 1`] = `
         rel="noopener noreferrer"
         target="_blank"
       >
-        Gatsby
+        React & Gatsby
       </a>
       .
     </p>

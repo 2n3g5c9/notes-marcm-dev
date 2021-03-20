@@ -10,7 +10,7 @@ const NotesPage = ({ data: { mdx } }: NotesPageProps): ReactElement => (
     <SEO title="Notes" />
     <NotesHeading
       title="Notes 📝"
-      subtitle="Things worth sharing with total beginners."
+      subtitle="Things worth sharing with complete beginners."
     />
     <NoteSummaries>
       {mdx.edges.map(({ node }, id) => (

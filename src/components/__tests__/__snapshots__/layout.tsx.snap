@@ -4,203 +4,195 @@ exports[`Layout renders correctly 1`] = `
 Array [
   <nav>
     <div
-      className="bg-gray-800"
+      className="max-w-6xl mx-auto px-4-safe sm:px-6-safe lg:px-8"
     >
       <div
-        className="max-w-6xl mx-auto px-4-safe sm:px-6-safe lg:px-8"
+        className="flex h-16 items-center justify-between"
       >
         <div
-          className="flex h-16 items-center justify-between"
+          className="flex items-center"
         >
-          <div
+          <a
+            aria-label="Home"
             className="flex items-center"
+            href="/"
+          >
+            <test-file-stub
+              alt="This is a default title"
+              className="lg:block h-8 w-auto"
+            />
+          </a>
+          <div
+            className="hidden sm:block sm:ml-6"
           >
             <a
               aria-label="Home"
-              className="flex items-center"
+              className="font-medium mx-4 my-2 p-1 text-sm"
               href="/"
             >
-              <test-file-stub
-                alt="This is a default title"
-                className="lg:block h-8 w-auto"
-              />
+              Home
             </a>
-            <div
-              className="hidden sm:block sm:ml-6"
+            <a
+              aria-label="Notes"
+              className="font-medium mx-4 my-2 p-1 text-sm"
+              href="/notes"
             >
-              <div
-                className="flex space-x-4"
-              >
-                <a
-                  aria-label="Home"
-                  className="hover:bg-gray-700 font-medium px-3 py-2 text-sm text-gray-300 hover:text-white rounded-md"
-                  href="/"
-                >
-                  Home
-                </a>
-                <a
-                  aria-label="Notes"
-                  className="hover:bg-gray-700 font-medium px-3 py-2 text-sm text-gray-300 hover:text-white rounded-md"
-                  href="/notes"
-                >
-                  Notes
-                </a>
-                <a
-                  aria-label="About"
-                  className="hover:bg-gray-700 font-medium px-3 py-2 text-sm text-gray-300 hover:text-white rounded-md"
-                  href="/about"
-                >
-                  About
-                </a>
-              </div>
-            </div>
+              Notes
+            </a>
+            <a
+              aria-label="About"
+              className="font-medium mx-4 my-2 p-1 text-sm"
+              href="/about"
+            >
+              About
+            </a>
           </div>
-          <div
-            className="flex items-center"
+        </div>
+        <div
+          className="flex items-center"
+        >
+          <button
+            aria-checked={true}
+            className="bg-accent border-2 border-transparent cursor-pointer duration-200 ease-in-out flex-shrink-0 h-6 inline-flex focus:outline-none relative rounded-full transition-colors w-11"
+            id="headlessui-switch-1"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            onKeyUp={[Function]}
+            role="switch"
+            tabIndex={0}
           >
-            <button
-              aria-checked={true}
-              className="bg-accent border-2 border-transparent cursor-pointer duration-200 ease-in-out flex-shrink-0 h-6 inline-flex focus:outline-none relative rounded-full transition-colors w-11"
-              id="headlessui-switch-1"
+            <span
+              className="sr-only"
+            >
+              Toggle Dark Mode
+            </span>
+            <span
+              className="translate-x-5 bg-primary duration-200 ease-in-out inline-block h-5 relative ring-0 rounded-full shadow transform transition w-5"
+            >
+              <span
+                aria-hidden="true"
+                className="duration-100 ease-out opacity-0 absolute flex h-full inset-0 items-center justify-center transition-opacity w-full"
+              >
+                <test-file-stub
+                  className="h-3 w-3"
+                />
+              </span>
+              <span
+                aria-hidden="true"
+                className="duration-200 ease-in opacity-100 absolute flex h-full inset-0 items-center justify-center transition-opacity w-full"
+              >
+                <test-file-stub
+                  className="h-3 w-3"
+                />
+              </span>
+            </span>
+          </button>
+          <div
+            className="text-primary sm:hidden ml-3 -mr-2"
+          >
+            <div
+              aria-label="Toggle menu"
+              className="hamburger-react"
               onClick={[Function]}
-              onKeyPress={[Function]}
               onKeyUp={[Function]}
-              role="switch"
+              role="button"
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "height": "48px",
+                  "outline": "none",
+                  "position": "relative",
+                  "transform": "none",
+                  "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+                  "userSelect": "none",
+                  "width": "48px",
+                }
+              }
               tabIndex={0}
             >
-              <span
-                className="sr-only"
-              >
-                Toggle Dark Mode
-              </span>
-              <span
-                className="translate-x-5 bg-white duration-200 ease-in-out inline-block h-5 relative ring-0 rounded-full shadow transform transition w-5"
-              >
-                <span
-                  aria-hidden="true"
-                  className="duration-100 ease-out opacity-0 absolute flex h-full inset-0 items-center justify-center transition-opacity w-full"
-                >
-                  <test-file-stub
-                    className="h-3 text-accent w-3"
-                  />
-                </span>
-                <span
-                  aria-hidden="true"
-                  className="duration-200 ease-in opacity-100 absolute flex h-full inset-0 items-center justify-center transition-opacity w-full"
-                >
-                  <test-file-stub
-                    className="h-3 text-accent w-3"
-                  />
-                </span>
-              </span>
-            </button>
-            <div
-              className="text-gray-400 sm:hidden ml-3 -mr-2"
-            >
               <div
-                aria-label="Toggle menu"
-                className="hamburger-react"
-                onClick={[Function]}
-                onKeyUp={[Function]}
-                role="button"
                 style={
                   Object {
-                    "cursor": "pointer",
-                    "height": "48px",
-                    "outline": "none",
-                    "position": "relative",
+                    "background": "currentColor",
+                    "borderRadius": "9em",
+                    "height": "2px",
+                    "left": "14px",
+                    "position": "absolute",
+                    "top": "17px",
                     "transform": "none",
                     "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
-                    "userSelect": "none",
-                    "width": "48px",
+                    "width": "20px",
                   }
                 }
-                tabIndex={0}
-              >
-                <div
-                  style={
-                    Object {
-                      "background": "currentColor",
-                      "borderRadius": "9em",
-                      "height": "2px",
-                      "left": "14px",
-                      "position": "absolute",
-                      "top": "17px",
-                      "transform": "none",
-                      "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
-                      "width": "20px",
-                    }
+              />
+              <div
+                style={
+                  Object {
+                    "background": "currentColor",
+                    "borderRadius": "9em",
+                    "height": "2px",
+                    "left": "14px",
+                    "position": "absolute",
+                    "top": "23px",
+                    "transform": "none",
+                    "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+                    "width": "20px",
                   }
-                />
-                <div
-                  style={
-                    Object {
-                      "background": "currentColor",
-                      "borderRadius": "9em",
-                      "height": "2px",
-                      "left": "14px",
-                      "position": "absolute",
-                      "top": "23px",
-                      "transform": "none",
-                      "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
-                      "width": "20px",
-                    }
+                }
+              />
+              <div
+                style={
+                  Object {
+                    "background": "currentColor",
+                    "borderRadius": "9em",
+                    "height": "2px",
+                    "left": "14px",
+                    "position": "absolute",
+                    "top": "29px",
+                    "transform": "none",
+                    "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+                    "width": "20px",
                   }
-                />
-                <div
-                  style={
-                    Object {
-                      "background": "currentColor",
-                      "borderRadius": "9em",
-                      "height": "2px",
-                      "left": "14px",
-                      "position": "absolute",
-                      "top": "29px",
-                      "transform": "none",
-                      "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
-                      "width": "20px",
-                    }
-                  }
-                />
-              </div>
+                }
+              />
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div
+      className="hidden sm:hidden"
+    >
       <div
-        className="hidden sm:hidden"
+        className="px-2 pt-2 pb-3 space-y-1"
       >
-        <div
-          className="px-2 pt-2 pb-3 space-y-1"
+        <a
+          aria-label="Home"
+          className="block font-medium px-3 py-2 text-base hover:text-white"
+          href="/"
         >
-          <a
-            aria-label="Home"
-            className="hover:bg-gray-700 block font-medium px-3 py-2 rounded-md text-base text-gray-300 hover:text-white"
-            href="/"
-          >
-            🏡
-              
-            Home
-          </a>
-          <a
-            aria-label="Notes"
-            className="hover:bg-gray-700 block font-medium px-3 py-2 rounded-md text-base text-gray-300 hover:text-white"
-            href="/notes"
-          >
-            📝
-              
-            Notes
-          </a>
-          <a
-            aria-label="About️"
-            className="hover:bg-gray-700 block font-medium px-3 py-2 rounded-md text-base text-gray-300 hover:text-white"
-            href="/about"
-          >
-            👨🏻‍💻
-              
-            About️
-          </a>
-        </div>
+          🏡
+            
+          Home
+        </a>
+        <a
+          aria-label="Notes"
+          className="block font-medium px-3 py-2 text-base hover:text-white"
+          href="/notes"
+        >
+          📝
+            
+          Notes
+        </a>
+        <a
+          aria-label="About️"
+          className="block font-medium px-3 py-2 text-base hover:text-white"
+          href="/about"
+        >
+          👨🏻‍💻
+            
+          About️
+        </a>
       </div>
     </div>
     <div
@@ -253,14 +245,14 @@ Array [
   </main>,
   <footer>
     <div
-      className="md:flex md:items-center md:justify-between max-w-6xl mx-auto pb-6 sm:pb-8 pt-6 sm:pt-8 px-4-safe sm:px-6-safe lg:px-8"
+      className="md:flex md:items-center md:justify-between max-w-6xl mx-auto px-4-safe sm:px-6-safe lg:px-8 py-6 sm:py-8"
     >
       <div
         className="flex justify-center md:order-2 space-x-6"
       >
         <a
           aria-label="Keybase"
-          className="text-secondary hover:text-primary"
+          className="hover:text-secondary"
           href="https://keybase.io/"
           rel="noopener noreferrer"
           target="_blank"
@@ -277,7 +269,7 @@ Array [
         </a>
         <a
           aria-label="GitHub"
-          className="text-secondary hover:text-primary"
+          className="hover:text-secondary"
           href="https://github.com/"
           rel="noopener noreferrer"
           target="_blank"
@@ -294,7 +286,7 @@ Array [
         </a>
         <a
           aria-label="LinkedIn"
-          className="text-secondary hover:text-primary"
+          className="hover:text-secondary"
           href="https://linkedin.com/"
           rel="noopener noreferrer"
           target="_blank"
@@ -314,7 +306,7 @@ Array [
         className="mt-8 md:mt-0 md:order-1"
       >
         <p
-          className="text-center text-secondary text-sm sm:text-base"
+          className="text-center text-sm sm:text-base"
         >
           © 2021 
           Default author
@@ -326,7 +318,7 @@ Array [
             rel="noopener noreferrer"
             target="_blank"
           >
-            Gatsby
+            React & Gatsby
           </a>
           .
         </p>

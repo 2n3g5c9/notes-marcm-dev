@@ -7,8 +7,8 @@ import { InferPropTypes } from '@shared/types'
 const NavLink = ({ to, text }: NavLinkProps): ReactElement => (
   <Link
     to={to}
-    className="hover:bg-gray-700 font-medium px-3 py-2 text-sm text-gray-300 hover:text-white rounded-md"
-    activeClassName="bg-gray-900 font-medium px-3 py-2 text-sm text-white rounded-md"
+    className="font-medium mx-4 my-2 p-1 text-sm"
+    activeClassName="border-b-2 border-accent"
     aria-label={text}
   >
     {text}

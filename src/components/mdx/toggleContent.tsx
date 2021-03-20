@@ -13,10 +13,7 @@ const ToggleContent = ({
 
   return (
     <>
-      <button
-        onClick={setIsToggled}
-        className="text-left text-primary text-sm sm:text-base"
-      >
+      <button onClick={setIsToggled} className="text-left text-sm sm:text-base">
         {isToggled ? '🔽' : '▶️'}&nbsp;&nbsp;
         {isToggled && altText ? altText : text}
       </button>

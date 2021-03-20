@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NavBar renders correctly 1`] = `
-<div
-  className="bg-gray-800"
->
+Array [
   <div
     className="max-w-6xl mx-auto px-4-safe sm:px-6-safe lg:px-8"
   >
@@ -26,31 +24,27 @@ exports[`NavBar renders correctly 1`] = `
         <div
           className="hidden sm:block sm:ml-6"
         >
-          <div
-            className="flex space-x-4"
+          <a
+            aria-label="Home"
+            className="font-medium mx-4 my-2 p-1 text-sm"
+            href="/"
           >
-            <a
-              aria-label="Home"
-              className="hover:bg-gray-700 font-medium px-3 py-2 text-sm text-gray-300 hover:text-white rounded-md"
-              href="/"
-            >
-              Home
-            </a>
-            <a
-              aria-label="Notes"
-              className="hover:bg-gray-700 font-medium px-3 py-2 text-sm text-gray-300 hover:text-white rounded-md"
-              href="/notes"
-            >
-              Notes
-            </a>
-            <a
-              aria-label="About"
-              className="hover:bg-gray-700 font-medium px-3 py-2 text-sm text-gray-300 hover:text-white rounded-md"
-              href="/about"
-            >
-              About
-            </a>
-          </div>
+            Home
+          </a>
+          <a
+            aria-label="Notes"
+            className="font-medium mx-4 my-2 p-1 text-sm"
+            href="/notes"
+          >
+            Notes
+          </a>
+          <a
+            aria-label="About"
+            className="font-medium mx-4 my-2 p-1 text-sm"
+            href="/about"
+          >
+            About
+          </a>
         </div>
       </div>
       <div
@@ -72,14 +66,14 @@ exports[`NavBar renders correctly 1`] = `
             Toggle Dark Mode
           </span>
           <span
-            className="translate-x-0 bg-white duration-200 ease-in-out inline-block h-5 relative ring-0 rounded-full shadow transform transition w-5"
+            className="translate-x-0 bg-primary duration-200 ease-in-out inline-block h-5 relative ring-0 rounded-full shadow transform transition w-5"
           >
             <span
               aria-hidden="true"
               className="duration-200 ease-in opacity-100 absolute flex h-full inset-0 items-center justify-center transition-opacity w-full"
             >
               <test-file-stub
-                className="h-3 text-accent w-3"
+                className="h-3 w-3"
               />
             </span>
             <span
@@ -87,13 +81,13 @@ exports[`NavBar renders correctly 1`] = `
               className="duration-100 ease-out opacity-0 absolute flex h-full inset-0 items-center justify-center transition-opacity w-full"
             >
               <test-file-stub
-                className="h-3 text-accent w-3"
+                className="h-3 w-3"
               />
             </span>
           </span>
         </button>
         <div
-          className="text-gray-400 sm:hidden ml-3 -mr-2"
+          className="text-primary sm:hidden ml-3 -mr-2"
         >
           <div
             aria-label="Toggle menu"
@@ -164,7 +158,7 @@ exports[`NavBar renders correctly 1`] = `
         </div>
       </div>
     </div>
-  </div>
+  </div>,
   <div
     className="hidden sm:hidden"
   >
@@ -173,7 +167,7 @@ exports[`NavBar renders correctly 1`] = `
     >
       <a
         aria-label="Home"
-        className="hover:bg-gray-700 block font-medium px-3 py-2 rounded-md text-base text-gray-300 hover:text-white"
+        className="block font-medium px-3 py-2 text-base hover:text-white"
         href="/"
       >
         🏡
@@ -182,7 +176,7 @@ exports[`NavBar renders correctly 1`] = `
       </a>
       <a
         aria-label="Notes"
-        className="hover:bg-gray-700 block font-medium px-3 py-2 rounded-md text-base text-gray-300 hover:text-white"
+        className="block font-medium px-3 py-2 text-base hover:text-white"
         href="/notes"
       >
         📝
@@ -191,7 +185,7 @@ exports[`NavBar renders correctly 1`] = `
       </a>
       <a
         aria-label="About️"
-        className="hover:bg-gray-700 block font-medium px-3 py-2 rounded-md text-base text-gray-300 hover:text-white"
+        className="block font-medium px-3 py-2 text-base hover:text-white"
         href="/about"
       >
         👨🏻‍💻
@@ -199,6 +193,6 @@ exports[`NavBar renders correctly 1`] = `
         About️
       </a>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;

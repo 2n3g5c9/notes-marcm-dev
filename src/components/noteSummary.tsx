@@ -32,16 +32,11 @@ const NoteSummary = ({
         <span className="text-secondary">{readingTime}</span>
       </div>
       <Link to={slug} className="block mt-3">
-        <p className="font-semibold font-serif text-primary text-xl sm:text-2xl ">
-          {title}
-        </p>
+        <p className="font-semibold font-serif text-xl sm:text-2xl ">{title}</p>
         <p className="mt-3 text-secondary text-sm sm:text-base">{summary}</p>
       </Link>
       <div className="mt-3">
-        <Link
-          to={slug}
-          className="font-semibold text-accent text-sm sm:text-base"
-        >
+        <Link to={slug} className="font-semibold text-sm sm:text-base">
           Read full note
         </Link>
       </div>

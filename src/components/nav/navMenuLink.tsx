@@ -7,8 +7,8 @@ import { InferPropTypes } from '@shared/types'
 const NavMenuLink = ({ to, icon, text }: NavMenuLinkProps): ReactElement => (
   <Link
     to={to}
-    className="hover:bg-gray-700 block font-medium px-3 py-2 rounded-md text-base text-gray-300 hover:text-white"
-    activeClassName="bg-gray-900 block font-medium px-3 py-2 rounded-md text-base text-white"
+    className="block font-medium px-3 py-2 text-base hover:text-white"
+    activeClassName="bg-accent block font-medium px-3 py-2 rounded text-base text-tertiary"
     aria-label={text}
   >
     {icon}&nbsp;&nbsp;{text}

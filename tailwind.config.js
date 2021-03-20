@@ -5,42 +5,19 @@ module.exports = {
   },
   theme: {
     extend: {
-      backgroundImage: {
-        hero: 'var(--image-bg-hero)',
-      },
       backgroundColor: {
         accent: 'var(--color-bg-accent)',
         primary: 'var(--color-bg-primary)',
         secondary: 'var(--color-bg-secondary)',
-        hover: {
-          accent: 'var(--color-bg-hover-accent)',
-          light: 'var(--color-bg-hover-light)',
-        },
-        light: {
-          accent: 'var(--color-bg-light-accent)',
-        },
       },
       textColor: {
-        accent: 'var(--color-text-accent)',
         primary: 'var(--color-text-primary)',
         secondary: 'var(--color-text-secondary)',
         tertiary: 'var(--color-text-tertiary)',
-        dark: {
-          accent: 'var(--color-text-dark-accent)',
-        },
       },
-      keyframes: {
-        wiggle: {
-          '0%, 100%': {
-            transform: 'translateY(-0.25rem)',
-          },
-          '50%': {
-            transform: 'translateY(0.25rem)',
-          },
-        },
-      },
-      animation: {
-        wiggle: 'wiggle 2s ease-in-out infinite',
+      borderColor: {
+        accent: 'var(--color-border-accent)',
+        primary: 'var(--color-border-primary)',
       },
       screens: {
         xlish: '1200px',
@@ -48,11 +25,26 @@ module.exports = {
       margin: {
         '50-screen': '-50vw',
       },
+      keyframes: {
+        'fade-in-down': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-5px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+      },
+      animation: {
+        'fade-in-down': 'fade-in-down 0.5s ease-out',
+      },
     },
     fontFamily: {
-      sans: ['DM Sans', 'sans-serif'],
-      serif: ['Playfair Display', 'serif'],
-      mono: ['DM Mono', 'monospace'],
+      sans: ['IBM Plex Sans', 'sans-serif'],
+      serif: ['IBM Plex Serif', 'serif'],
+      mono: ['IBM Plex Mono', 'monospace'],
     },
   },
   plugins: [require('tailwindcss-padding-safe')()],

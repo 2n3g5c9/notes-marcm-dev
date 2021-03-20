@@ -16,7 +16,7 @@ const BlockWarning = ({ children }: BlockWarningProps): ReactElement => {
         isDark()
           ? 'bg-yellow-800 border-yellow-600'
           : 'bg-yellow-100 border-yellow-300'
-      } border-l-2 sm:border-l-4 font-sans inline-block my-2 px-4 py-3 relative text-primary text-xs sm:text-sm sm:w-auto w-full`}
+      } border-l-2 sm:border-l-4 font-sans inline-block my-2 px-4 py-3 relative text-xs sm:text-sm sm:w-auto w-full`}
     >
       ⚠️ {children}
     </div>

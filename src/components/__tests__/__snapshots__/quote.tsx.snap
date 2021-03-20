@@ -8,7 +8,7 @@ exports[`Quote renders correctly 1`] = `
     className="flex-shrink-0 mb-4 self-center"
   >
     <test-file-stub
-      className="h-32 sm:h-36 mr-10 lg:mr-0 text-primary"
+      className="h-32 sm:h-36 mr-10 lg:mr-0"
     />
   </div>
   <div
@@ -16,7 +16,7 @@ exports[`Quote renders correctly 1`] = `
   >
     <div>
       <test-file-stub
-        className="absolute h-9 sm:h-10 opacity-20 text-accent transform -translate-x-6 -translate-y-1 sm:-translate-y-2 w-9 sm:w-10"
+        className="absolute h-9 sm:h-10 opacity-20 transform -translate-x-6 -translate-y-1 sm:-translate-y-2 w-9 sm:w-10"
       />
     </div>
   </div>

@@ -6,7 +6,7 @@ exports[`NoteSummary renders correctly 1`] = `
     className="inline-block text-xs sm:text-sm"
   >
     <span
-      className="font-medium inline-flex items-center px-3 py-1 rounded-full bg-undefined-100 text-undefined-800"
+      className="font-medium inline-flex items-center px-3 py-1 rounded-full bg-undefined-50 text-undefined-700"
     >
       Default
     </span>
@@ -27,7 +27,7 @@ exports[`NoteSummary renders correctly 1`] = `
     href="#"
   >
     <p
-      className="font-semibold font-serif text-primary text-xl sm:text-2xl "
+      className="font-semibold font-serif text-xl sm:text-2xl "
     >
       Default title
     </p>
@@ -41,7 +41,7 @@ exports[`NoteSummary renders correctly 1`] = `
     className="mt-3"
   >
     <a
-      className="font-semibold text-accent text-sm sm:text-base"
+      className="font-semibold text-sm sm:text-base"
       href="#"
     >
       Read full note
