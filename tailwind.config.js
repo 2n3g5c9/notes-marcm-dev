@@ -29,7 +29,7 @@ module.exports = {
         'fade-in-down': {
           '0%': {
             opacity: '0',
-            transform: 'translateY(-5px)',
+            transform: 'translateY(-8px)',
           },
           '100%': {
             opacity: '1',
@@ -38,7 +38,7 @@ module.exports = {
         },
       },
       animation: {
-        'fade-in-down': 'fade-in-down 0.5s ease-out',
+        'fade-in-down': 'fade-in-down 0.75s ease-out',
       },
     },
     fontFamily: {

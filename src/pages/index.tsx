@@ -29,28 +29,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
-        #        images {
-        #          light {
-        #            childImageSharp {
-        #              gatsbyImageData(
-        #                width: 365
-        #                quality: 90
-        #                placeholder: NONE
-        #                formats: [AUTO, WEBP, AVIF]
-        #              )
-        #            }
-        #          }
-        #          dark {
-        #            childImageSharp {
-        #              gatsbyImageData(
-        #                width: 365
-        #                quality: 90
-        #                placeholder: NONE
-        #                formats: [AUTO, WEBP, AVIF]
-        #              )
-        #            }
-        #          }
-        #        }
       }
     }
   }

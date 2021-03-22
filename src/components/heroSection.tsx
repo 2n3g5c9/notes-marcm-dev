@@ -2,23 +2,15 @@ import React, { ReactElement } from 'react'
 import PropTypes from 'prop-types'
 import { InferPropTypes } from '@shared/types'
 
-// import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-
 import { ButtonLink } from '@components/atoms'
-
-import { ThemeContext } from '@context/themeContext'
+import { ShapeSVG } from '@assets/images'
 
 const HeroSection = ({ frontmatter }: HeroSectionProps): ReactElement => {
   const { title, subtitle } = frontmatter
-  const { theme } = React.useContext(ThemeContext)
-
-  // const isDark = () => {
-  //   return theme === 'dark'
-  // }
 
   return (
     <div className="left-1/2 ml-50-screen -mt-8 px-4 sm:px-14 py-10 sm:py-14 lg:py-8 relative w-screen">
-      <div className="content-center m-auto flex max-w-6xl lg:w-full z-10">
+      <div className="content-center items-center m-auto flex max-w-6xl lg:w-full z-10">
         <div className="flex-grow max-w-4xl lg:max-w-2xl my-auto px-3 lg:py-12 lg:pl-8">
           <div className="sm:text-center lg:text-left">
             <div className="animate-fade-in-down">
@@ -35,18 +27,7 @@ const HeroSection = ({ frontmatter }: HeroSectionProps): ReactElement => {
             </div>
           </div>
         </div>
-        {/*<div className="animate-wiggle flex-none hidden pr-8 xlish:block">*/}
-        {/*  {'images' in frontmatter ? (*/}
-        {/*    <GatsbyImage*/}
-        {/*      image={*/}
-        {/*        isDark()*/}
-        {/*          ? getImage(frontmatter.images[1].dark)*/}
-        {/*          : getImage(frontmatter.images[0].light)*/}
-        {/*      }*/}
-        {/*      alt="Animated image"*/}
-        {/*    />*/}
-        {/*  ) : null}*/}
-        {/*</div>*/}
+        <ShapeSVG className="hidden xlish:block pl-8 text-primary w-1/3" />
       </div>
     </div>
   )
@@ -58,12 +39,6 @@ const heroSectionPropTypes = {
   frontmatter: PropTypes.shape({
     title: PropTypes.string,
     subtitle: PropTypes.string,
-    // images: PropTypes.arrayOf(
-    //   PropTypes.shape({
-    //     light: PropTypes.any,
-    //     dark: PropTypes.any,
-    //   })
-    // ),
   }),
 }
 
