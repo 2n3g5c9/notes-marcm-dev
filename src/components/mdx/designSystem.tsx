@@ -23,7 +23,7 @@ const h1 = (props: never): ReactElement => (
 const h2 = (props: never): ReactElement => (
   <h2
     {...props}
-    className="font-bold leading-7 pt-3 sm:pt-6 text-lg sm:text-xl"
+    className="font-bold leading-7 pt-2 sm:pt-4 text-lg sm:text-xl"
   />
 )
 
@@ -46,11 +46,11 @@ const li = (props: never): ReactElement => (
 )
 
 const p = (props: never): ReactElement => (
-  <p {...props} className="my-3 text-sm sm:text-base" />
+  <p {...props} className="my-2 sm:my-3 text-sm sm:text-base" />
 )
 
 const ul = (props: never): ReactElement => (
-  <ul {...props} className="list-inside my-2 sm:my-3 text-sm sm:text-base" />
+  <ul {...props} className="list-inside mb-4 text-sm sm:text-base" />
 )
 
 export { a, blockquote, h1, h2, h3, inlineCode, li, p, ul }

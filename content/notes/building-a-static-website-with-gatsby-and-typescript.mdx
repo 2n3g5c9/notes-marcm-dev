@@ -16,7 +16,7 @@ import { BlockWarning } from '@components'
 
 ## Motivation
 
-* Keep up with React/TypeScript core concepts, and modern front-end web development workflows.
+* Keep up with [React](https://reactjs.org/)/[TypeScript](https://www.typescriptlang.org/) core concepts, and modern front-end web development workflows.
 * Maintain basic knowledge of web design, without the overhead of writing layers of wrapper components.
 * Experiment with a web analytics tool, and understand what kind of insights can be derived.
 
@@ -30,12 +30,18 @@ globe... or in the Tube.
 * Acceptable level of accessibility ([aXe benchmark](https://www.deque.com/axe/)), to include all readers regardless
 of disabilities.
 * Automated dependency updates (not recommended in production), to minimise my time in JavaScript dependency hell.
+* Headless CMS integration is not an immediate requirement, but could be at some point.
 
-## High-level design
+# High-Level Design
 
-### Development
+## Development
 
-### Operations
+**Static Site Generator:**
+* Easy integration with React/TypeScript for modularity and aforementioned rationale.
+* Adheres to [Jamstack](https://jamstack.org/) architecture principles (JavaScript, APIs & Markup) and renders [MDX](https://mdxjs.com/) (Markdown with embedded JSX).
+* Bootstraps SEO, bundling, building, and many optimisation techniques (code splitting, image processing and serving ([WebP](https://developers.google.com/speed/webp) and/or [AVIF](https://aomedia.org/av1-features/get-started/)), preload/prefetch, tree shaking, etc.).
+
+## Operations
 
 ![High-level design](./images/marcm-dev-hld.png)
 
@@ -57,9 +63,15 @@ of disabilities.
 
 **Dependency Management:**
 * Periodically looks for JavaScript package updates.
-* Triggers the CI pipeline and auto-merge to the production branch if all tests pass.
+* Triggers the CI pipeline and auto-merges to the production branch if all tests pass.
 
 **Global Content Delivery Nework (CDN):**
 * Serves cached static assets from globally distributed PoPs, providing both high availability and performance.
-* Handles asset compression (GZIP and Brotli).
-* Manages TLS for free (via Let's Encrypt): HTTP/2, TLS 1.2 & 1.3 only, PFS.
+* Handles asset compression ([GZIP](https://www.gnu.org/software/gzip/) and [Brotli](https://github.com/google/brotli)).
+* Manages TLS for free (via [Let's Encrypt](https://letsencrypt.org/)): HTTP/2, TLS 1.2 & 1.3 only, PFS.
+
+# Tech Stack
+
+There is no silver bullet, and the tech stack doesn't matter as much as the high-level design ; as long as you stick
+with it long enough to understand it.
+
