@@ -16,9 +16,10 @@ import { BlockWarning } from '@components'
 
 ## Motivation
 
-* Keep up with [React](https://reactjs.org/)/[TypeScript](https://www.typescriptlang.org/) core concepts, and modern front-end web development workflows.
+* Keep up with [React](https://reactjs.org/)/[TypeScript](https://www.typescriptlang.org/) core concepts, and modern
+front-end web development workflows.
 * Maintain basic knowledge of web design, without the overhead of writing layers of wrapper components.
-* Experiment with a web analytics tool, and understand what kind of insights can be derived.
+* Experiment with a web analytics tool, and understand derived insights.
 
 ## Requirements
 
@@ -37,9 +38,19 @@ of disabilities.
 ## Development
 
 **Static Site Generator:**
-* Easy integration with React/TypeScript for modularity and aforementioned rationale.
-* Adheres to [Jamstack](https://jamstack.org/) architecture principles (JavaScript, APIs & Markup) and renders [MDX](https://mdxjs.com/) (Markdown with embedded JSX).
-* Bootstraps SEO, bundling, building, and many optimisation techniques (code splitting, image processing and serving ([WebP](https://developers.google.com/speed/webp) and/or [AVIF](https://aomedia.org/av1-features/get-started/)), preload/prefetch, tree shaking, etc.).
+* Integrates with React/TypeScript for modularity and aforementioned rationale.
+* Adheres to [Jamstack](https://jamstack.org/) architecture principles (JavaScript, APIs & Markup) and renders
+[MDX](https://mdxjs.com/) (Markdown with embedded JSX).
+* Bootstraps SEO, bundling, building and service worker ([PWA](https://developers.google.com/web/ilt/pwa))
+configurations, as well as many optimisation techniques (code splitting, image processing and serving
+([WebP](https://developers.google.com/speed/webp) and/or [AVIF](https://aomedia.org/av1-features/get-started/)),
+preload/prefetch, tree shaking, etc.).
+
+**CSS Framework:**
+* Bootstraps building blocks for standards-compliant web design elements.
+* Reduces the amount of written CSS code, while ensuring a degree of overall coherence in the web design.
+* Offers ability to write CSS-in-JS to embed conditional styling in components, and reduces the risk of unintended
+cascading style.
 
 ## Operations
 
@@ -47,7 +58,7 @@ of disabilities.
 
 **Version Control System (VCS):**
 * Organises, stores and versions the code.
-* Decouples and reconciles development workflows from "production" code.
+* Decouples and reconciles development workflows with "production" code.
 * Unlocks automation and Ops-oriented workflows with SaaS integrations.
 
 **Continuous Integration (CI):**
@@ -75,3 +86,8 @@ of disabilities.
 There is no silver bullet, and the tech stack doesn't matter as much as the high-level design ; as long as you stick
 with it long enough to understand it.
 
+## Static Site Generator
+
+Among the considered options are: Gatsby, Next.js and Eleventy (11ty).
+
+![Static Site Generator](./images/static-site-generator.png)
