@@ -1,4 +1,6 @@
 // @ts-nocheck
+import ButtonLeftSVG from './button-left.svg'
+import ButtonRightSVG from './button-right.svg'
 import CharacterSVG from './character.svg'
 import CrossSVG from './cross.svg'
 import GitHubSVG from './github.svg'
@@ -11,6 +13,8 @@ import ShapeSVG from './shape.svg'
 import SunSVG from './sun.svg'
 
 export {
+  ButtonLeftSVG,
+  ButtonRightSVG,
   CharacterSVG,
   CrossSVG,
   GitHubSVG,

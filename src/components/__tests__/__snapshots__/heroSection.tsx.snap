@@ -28,16 +28,26 @@ exports[`HeroSection renders correctly 1`] = `
           </p>
         </div>
         <div
-          className="sm:flex font-medium sm:justify-center lg:justify-start mt-5 sm:mt-8 sm:space-x-4 space-y-2 sm:space-y-0 text-base"
+          className="sm:flex font-medium sm:justify-center lg:justify-start mt-7 sm:mt-8 sm:space-x-6 space-y-3 sm:space-y-0 text-base"
         >
-          <div>
-            <a
-              aria-label="Read the notes"
-              className="bg-accent hover:bg-transparent text-tertiary hover:text-primary border border-accent flex items-center justify-center px-8 py-3 lg:py-3.5 rounded lg:text-lg w-full"
-              href="/notes"
-            >
-              Read the notes
-            </a>
+          <div
+            className="relative"
+          >
+            <test-file-stub
+              className="absolute animate-left-splash h-5 left-0 -m-3 text-primary"
+            />
+            <div>
+              <a
+                aria-label="Read the notes"
+                className="bg-accent hover:bg-transparent text-tertiary hover:text-primary border border-accent flex items-center justify-center px-8 py-3 lg:py-3.5 rounded lg:text-lg w-full"
+                href="/notes"
+              >
+                Read the notes
+              </a>
+            </div>
+            <test-file-stub
+              className="absolute animate-right-splash h-5 -m-3 right-0 text-primary"
+            />
           </div>
           <div>
             <a

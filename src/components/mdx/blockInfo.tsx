@@ -3,7 +3,7 @@ import PropTypes, { InferProps } from 'prop-types'
 
 import { ThemeContext } from '@context/themeContext'
 
-const BlockWarning = ({ children }: BlockWarningProps): ReactElement => {
+const BlockInfo = ({ children }: BlockInfoProps): ReactElement => {
   const { theme } = React.useContext(ThemeContext)
 
   const isDark = () => {
@@ -13,25 +13,23 @@ const BlockWarning = ({ children }: BlockWarningProps): ReactElement => {
   return (
     <div
       className={`${
-        isDark()
-          ? 'bg-yellow-800 border-yellow-600'
-          : 'bg-yellow-100 border-yellow-300'
+        isDark() ? 'bg-blue-800 border-blue-600' : 'bg-blue-50 border-blue-300'
       } border-l-2 sm:border-l-4 font-sans inline-block my-2 px-4 py-3 relative text-xs sm:text-sm sm:w-auto w-full`}
     >
-      ⚠️&nbsp;{children}
+      ℹ️&nbsp;{children}
     </div>
   )
 }
 
-export default BlockWarning
+export default BlockInfo
 
-const blockWarningPropTypes = {
+const blockInfoPropTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
 }
 
-BlockWarning.propTypes = blockWarningPropTypes
+BlockInfo.propTypes = blockInfoPropTypes
 
-type BlockWarningProps = InferProps<typeof blockWarningPropTypes>
+type BlockInfoProps = InferProps<typeof blockInfoPropTypes>

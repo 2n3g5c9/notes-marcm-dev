@@ -36,9 +36,39 @@ module.exports = {
             transform: 'translateY(0)',
           },
         },
+        'left-splash': {
+          '0%': {
+            opacity: '0',
+            transform: 'scale(0.5) translateX(4px) translateY(4px)',
+          },
+          '75%': {
+            opacity: '0',
+            transform: 'scale(0.5) translateX(4px) translateY(4px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'scale(1) translateX(0) translateY(0)',
+          },
+        },
+        'right-splash': {
+          '0%': {
+            opacity: '0',
+            transform: 'scale(0.5) translateX(-4px) translateY(-4px)',
+          },
+          '75%': {
+            opacity: '0',
+            transform: 'scale(0.5) translateX(-4px) translateY(-4px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'scale(1) translateX(0) translateY(0)',
+          },
+        },
       },
       animation: {
         'fade-in-down': 'fade-in-down 0.75s ease-out',
+        'left-splash': 'left-splash 1s',
+        'right-splash': 'right-splash 1s',
       },
     },
     fontFamily: {

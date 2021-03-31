@@ -7,7 +7,7 @@ import { CharacterSVG, QuoteSVG } from '@assets/images'
 const Quote = ({ children }: QuoteProps): ReactElement => {
   return (
     <div className="flex mt-6 sm:mt-7">
-      <div className="flex-shrink-0 mb-4 self-center">
+      <div className="flex-shrink-0 mb-0 sm:mb-4 self-center">
         <CharacterSVG className="h-32 sm:h-36 mr-10 lg:mr-0" />
       </div>
       <div className="flex md:flex-grow justify-center self-center">

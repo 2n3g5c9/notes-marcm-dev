@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { InferPropTypes } from '@shared/types'
 
 import { ButtonLink } from '@components/atoms'
-import { ShapeSVG } from '@assets/images'
+import { ButtonLeftSVG, ButtonRightSVG, ShapeSVG } from '@assets/images'
 
 const HeroSection = ({ frontmatter }: HeroSectionProps): ReactElement => {
   const { title, subtitle } = frontmatter
@@ -21,8 +21,12 @@ const HeroSection = ({ frontmatter }: HeroSectionProps): ReactElement => {
                 {subtitle}
               </p>
             </div>
-            <div className="sm:flex font-medium sm:justify-center lg:justify-start mt-5 sm:mt-8 sm:space-x-4 space-y-2 sm:space-y-0 text-base">
-              <ButtonLink text="Read the notes" slug="/notes" />
+            <div className="sm:flex font-medium sm:justify-center lg:justify-start mt-7 sm:mt-8 sm:space-x-6 space-y-3 sm:space-y-0 text-base">
+              <div className="relative">
+                <ButtonLeftSVG className="absolute animate-left-splash h-5 left-0 -m-3 text-primary" />
+                <ButtonLink text="Read the notes" slug="/notes" />
+                <ButtonRightSVG className="absolute animate-right-splash h-5 -m-3 right-0 text-primary" />
+              </div>
               <ButtonLink text="More about me" slug="/about" alt={true} />
             </div>
           </div>

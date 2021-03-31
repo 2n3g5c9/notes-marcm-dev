@@ -1,5 +1,6 @@
 import * as Atoms from './atoms'
 import Banner from './banner'
+import BlockInfo from './mdx/blockInfo'
 import BlockQuote from './mdx/blockQuote'
 import BlockWarning from './mdx/blockWarning'
 import CopyButton from './mdx/copyButton'
@@ -19,6 +20,7 @@ import ToggleContent from './mdx/toggleContent'
 export {
   Atoms,
   Banner,
+  BlockInfo,
   BlockQuote,
   BlockWarning,
   CopyButton,

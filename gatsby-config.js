@@ -25,7 +25,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/assets/images/icon.png`,
         icon_options: {
-          purpose: `maskable`,
+          purpose: `any maskable`,
         },
       },
     },
@@ -37,7 +37,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1024,
-              quality: 90,
+              quality: 95,
               withWebp: true,
               withAvif: true,
             },
@@ -46,7 +46,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-page-progress',
+      options: {
+        includePaths: [{ regex: '^/notes/.+' }],
+        height: 3,
+        color: `#666666`,
+      },
+    },
     `gatsby-plugin-preact`,
+    {
+      resolve: `gatsby-plugin-preload-fonts`,
+      options: {
+        crossOrigin: `anonymous`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-react-svg',

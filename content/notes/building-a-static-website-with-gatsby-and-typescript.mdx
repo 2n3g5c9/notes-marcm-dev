@@ -1,18 +1,20 @@
 ---
 title: Building a static website with Gatsby and TypeScript
-summary: The concepts and technical decisions made on this static website, as a non-Front-End Engineer. From requirements to implementation details.
+summary: The concepts and technical decisions I made on this static website, as a non-Front-End Engineer. From requirements to implementation details.
 category: Web / Frontend
 date: 2021-02-21
 ---
 
-import { BlockWarning } from '@components'
+import { BlockInfo, BlockWarning } from '@components'
 
 <BlockWarning>
-  <strong>Disclaimer:</strong> This website was built from the ground up as a hobby to maintain, or at best develop
-  my understanding. Feel free to contact me if you want to share some advice.
+  <strong>Disclaimer:</strong> this website was built from the ground up as a hobby to maintain, or at best develop
+  my understanding. Feel free to drop me a message if you want to share some advice.
 </BlockWarning>
 
 # Context
+
+![Process](./images/process.png)
 
 ## Motivation
 
@@ -25,10 +27,10 @@ front-end web development workflows.
 
 * High performance ([Core Web Vitals](https://web.dev/vitals/)) on all pages, wherever the reader is: across the
 globe... or in the Tube.
-* Free hosting: no server-side logic and low traffic expected.
+* Free hosting: no server-side logic and low traffic is expected.
 * High security standards (X.509 certificate, HTTP Security Headers,
 [CSP](https://developers.google.com/web/fundamentals/security/csp), etc.), because everyone should care.
-* Acceptable level of accessibility ([aXe benchmark](https://www.deque.com/axe/)), to include all readers regardless
+* Acceptable level of accessibility ([axe benchmark](https://www.deque.com/axe/)), to include all readers regardless
 of disabilities.
 * Automated dependency updates (not recommended in production), to minimise my time in JavaScript dependency hell.
 * Headless CMS integration is not an immediate requirement, but could be at some point.
@@ -37,7 +39,7 @@ of disabilities.
 
 ## Development
 
-**Static Site Generator:**
+### Static Site Generator
 * Integrates with React/TypeScript for modularity and aforementioned rationale.
 * Adheres to [Jamstack](https://jamstack.org/) architecture principles (JavaScript, APIs & Markup) and renders
 [MDX](https://mdxjs.com/) (Markdown with embedded JSX).
@@ -46,9 +48,9 @@ configurations, as well as many optimisation techniques (code splitting, image p
 ([WebP](https://developers.google.com/speed/webp) and/or [AVIF](https://aomedia.org/av1-features/get-started/)),
 preload/prefetch, tree shaking, etc.).
 
-**CSS Framework:**
+### CSS Library
 * Bootstraps building blocks for standards-compliant web design elements.
-* Reduces the amount of written CSS code, while ensuring a degree of overall coherence in the web design.
+* Reduces the amount of CSS code, while ensuring a degree of overall coherence in the web design.
 * Offers ability to write CSS-in-JS to embed conditional styling in components, and reduces the risk of unintended
 cascading style.
 
@@ -56,38 +58,278 @@ cascading style.
 
 ![High-level design](./images/marcm-dev-hld.png)
 
-**Version Control System (VCS):**
+### Version Control System (VCS)
 * Organises, stores and versions the code.
 * Decouples and reconciles development workflows with "production" code.
 * Unlocks automation and Ops-oriented workflows with SaaS integrations.
 
-**Continuous Integration (CI):**
-* Triggered on push/merge to all branches, gives enough confidence the code is in a stable state to be deployed.
+### Continuous Integration (CI)
+* Triggered on push/merge to all branches, gives enough confidence that the code is in a stable state to be deployed.
 * Lint checks: detects structural problems and improves code quality with static code analysis.
 * Type checks: detects type mismatches with static code analysis.
 * Snapshot tests: detects unexpected changes in UI components rendering.
-* Accessibility tests: detects drift with basic aXe accessibility compliance checks.
+* Accessibility tests: detects drift with basic axe accessibility compliance checks.
 
-**Continuous Deployment (CD):**
+### Continuous Deployment (CD)
 * Often offered by the CDN service, by passing an NPM script command.
 * Triggered by a push/merge on the production branch.
 
-**Dependency Management:**
+### Dependency Management
 * Periodically looks for JavaScript package updates.
 * Triggers the CI pipeline and auto-merges to the production branch if all tests pass.
 
-**Global Content Delivery Nework (CDN):**
+### Global Content Delivery Network (CDN)
 * Serves cached static assets from globally distributed PoPs, providing both high availability and performance.
-* Handles asset compression ([GZIP](https://www.gnu.org/software/gzip/) and [Brotli](https://github.com/google/brotli)).
+* Handles asset compression ([GZIP](https://www.gnu.org/software/gzip/) & [Brotli](https://github.com/google/brotli)).
 * Manages TLS for free (via [Let's Encrypt](https://letsencrypt.org/)): HTTP/2, TLS 1.2 & 1.3 only, PFS.
 
 # Tech Stack
 
-There is no silver bullet, and the tech stack doesn't matter as much as the high-level design ; as long as you stick
-with it long enough to understand it.
+<BlockInfo>
+  <strong>Note for beginners:</strong> there is no silver bullet, and the tech stack doesn't matter as much as the high-level design ; as long as
+  you stick with it long enough to understand it.
+</BlockInfo>
 
-## Static Site Generator
+## Development
 
-Among the considered options are: Gatsby, Next.js and Eleventy (11ty).
+### Static Site Generator
 
+Among the considered options were:
 ![Static Site Generator](./images/static-site-generator.png)
+
+* [Gatsby](https://www.gatsbyjs.com/): based on React, leverages [GraphQL](https://graphql.org/) for its unified data layer, relies on its
+ecosystem of plugins.
+* [Next.js](https://nextjs.org/): based on React, additionally handles SSR, maintained by [Vercel](https://vercel.com/).
+* [Eleventy (11ty)](https://www.11ty.dev/): able to inject React components, but meant to be simpler (based on
+independent template engines like [Nunjucks](https://mozilla.github.io/nunjucks/)).
+
+I went with Gatsby as I already had prior experience with the stack, but can't find any good reason not to recommend
+Next.js. Injecting React components with 11ty felt a bit bloated, but you should give it a go if you're looking for the
+simplest workflow. I first wrote a
+[TypeScript and Tailwind CSS minimal starter](https://github.com/2n3g5c9/gatsby-starter-typescript-tailwindcss) for
+Gatsby, and iteratively extended it to what it is today.
+
+`.prettierrc` defines formatting rules which are kept fairly close to [Prettier](https://prettier.io/)'s default
+directives.
+
+**Gatsby Browser APIs:**
+* The `wrapRootElement` API has been used to wrap the root element with the `MDXProvider` which includes `shortcodes` for
+the design system.
+* The `onServiceWorkerUpdateReady` API has been used for the service worker to auto-refresh the client cache on change,
+which sometimes conflicts with the MDX design system.
+
+**Gatsby Node APIs:**
+* The `onCreateWebpackConfig` API has been used to set Webpack aliases for module resolution, and remove the source maps
+that are included by default in production with Gatsby.
+* The `createPages` API has been used to create templated note pages based on existing MDX files: `/notes/*`
+* The `onCreateNode` API has been used to create GraphQL nodes that help reference existing notes: `/notes`
+
+### CSS Library
+
+Among the considered options were (not directly opposed):
+![CSS Library](./images/css-library.png)
+
+* [Tailwind CSS](https://tailwindcss.com/) (with [PostCSS](https://postcss.org/)): based on pre-baked utility-classes,
+reduces the amount of CSS code but highly opinionated and difficult to migrate from.
+* [Styled Components](https://styled-components.com/): based on injected CSS code in React components via tagged
+template literals.
+
+I went with Tailwind CSS and PostCSS as my previous experience with Styled Components ended up in writing layers of
+styled wrapper components which were hard to reason about. Utility-classes eventually made it slightly more compact and
+easier to read.
+
+**Configuration:**
+* `tailwind.config.js` is where custom utility-classes are declared to extend the base library (e.g. types of colors,
+margins, animations, fonts, etc.).
+* `src/assets/css/global.css` is where global CSS rules are defined, such as theme colors. I tried to stick to a
+minimalist color palette, as declining it for a dark theme and insuring contrast ratios match accessibility expectations
+is a lot of extra work.
+* `gatsby-config.js` is where [PurgeCSS](https://purgecss.com/) safelists are defined for a few utility-classes injected
+in MDX files that would get excluded by the purge algorithm.
+
+## Operations
+
+### Version Control System
+
+I wasn't really going for anything other than [Git](https://git-scm.com/), but for repository management, I considered:
+
+![Version Control System](./images/vcs.png)
+
+* [GitHub](https://github.com/): owned by Microsoft, free plan includes unlimited public/private repositories, unlimited
+Actions on public repositories and 2,000 Actions minutes/month on private repositories.
+* [GitLab](https://about.gitlab.com/): offers more integrated features out of the box, free plan includes unlimited
+public/private repositories, 400 CI/CD minutes/month.
+
+I sticked with GitHub which already hosts most of my Git repositories, but GitLab would have been an equally good fit.
+They are both compatible with a wide range of services, including the options I considered to build my CI/CD pipeline.
+
+**Repository organization:**
+* Overall it's a bit erratic, I'm mostly experimenting and I intend to be the sole contributor.
+* It's meant to have a protected `main` branch and manually merged feature branches triggering automated checks.
+
+### Continuous Integration (CI)
+
+Among the considered options were:
+
+![Continuous Integration](./images/ci.png)
+
+* [GitHub Actions](https://github.com/features/actions): out-of-the-box integration with GitHub, large collection of
+pre-built Actions, free plan includes unlimited Actions on public repositories and 2,000 Actions minutes/month on
+private repositories.
+* [Circle CI](https://circleci.com/): past experience with the product, free plan includes 2,500 free credits/week
+(~1,000 minutes in a Linux environment).
+* [Travis CI](https://travis-ci.org/): free plan includes 10,000 credits/month (~1,000 minutes in a Linux environment).
+
+It's ultimately a bit inconsistent to compare minutes or credits for different offerings, but given the potential of
+GitHub Actions and the fact that it was natively integrated with GitHub, I decided to give it a try.
+
+**Automated checks:**
+* `.github/workflows/checks.yml` is where automated checks on push and pull requests are defined (via NPM scripts).
+`node_modules` and the runner cache (including Cypress binaries) are cached with `actions/cache`.
+* `.eslintrc.js` is where linting rules are defined, in addition to the `@typescript-eslint` and `react` plugins.
+* Types are checked statically with TypeScript, and at runtime with `PropTypes`. To avoid typing duplication, TypeScript
+types are inferred from `PropTypes` via `InferProps` wherever possible.
+* `src/components/__tests__` is where simple snapshot tests are defined. Component rendering tests are written with
+[Jest](https://jestjs.io/) and default props for simplicity's sake.
+* `cypress/e2e/accessibility.test.js` is where accessibility tests are defined, and bootstrapped with
+[Cypress](https://www.cypress.io/). Strict compliance with axe web rules are checked on most pages.
+
+### Dependency Management
+
+Among the considered options were:
+
+![Dependency Management](./images/dependency-management.png)
+
+* [Dependabot](https://dependabot.com/): tight integration with GitHub, configuration from file, supports more
+languages, supports auto-merge, free for public and private repositories.
+* [Depfu](https://depfu.com/): previous experience with the product, gives more control over the update strategy like
+support for grouped updates, configuration from Web UI, supports auto-merge, free for public and private repositories.
+
+I went with Dependabot for the ability to describe the whole repository strategy with GitHub Actions, despite Depfu
+offering more advanced update strategies. The coverage of the aforementioned automated checks gave enough confidence
+about the ability to identify breaking changes on a specific dependency. Even if it breaks, rolling back is easy.
+
+### Global Content Delivery Network (CDN)
+
+Among the considered options were:
+
+![Content Delivery Network](./images/cdn.png)
+
+* [Vercel](https://vercel.com/): past experience with the product, supports TLS 1.2 & 1.3, supports GZIP & Brotli, free
+plan includes 100 GB bandwidth.
+* [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/): supports TLS 1.2, supports GZIP, faster incremental Gatsby
+builds, free plan includes 5M requests and 100 GB bandwidth per month.
+* [Netlify](https://www.netlify.com/): supports TLS 1.2 & 1.3, supports GZIP & Brotli, free plan includes 100 GB
+bandwidth per month.
+
+I tried both Vercel and Gatsby Cloud with Gatsby v3 and sticked with Vercel for the following reasons: consistently
+50% faster page loads in most regions (according to [WebPageTest](https://www.webpagetest.org/)), supports TLS 1.3 and
+Brotli, incremental builds were not really that fast.
+
+# Performance Goals
+
+To prevent falling in the rabbit hole of micro-optimization, I set quantitative performance goals from the start. Even
+if those are not representative of the overall user experience (most of the data is fetched on the first visit, content
+is preloaded, a service worker caches files locally), this will ensure a sufficient amount of good practices are in
+place (or at least guide me in the right direction).
+
+* **Largest Contentful Paint** (mesures loading performance) must be under 2.5s (p75) in the US West Coast (0.801s),
+US East Coast (1.054s), London (1.052s) and Tokyo (1.472s) ✅
+* **Cumulative Layout Shift** (measures visual stability) must be under 0.1 (p75) in the US West Coast (0), US East
+Coast (0), London (0) and Tokyo (0) ✅
+
+## Lighthouse
+
+If there is one well-known automated web auditing tool, it's
+[Lighthouse](https://developers.google.com/web/tools/lighthouse) by Google.
+
+![Lighthouse](./images/lighthouse-local.png)
+
+Achieving all perfect scores in Lighthouse (Chrome 89) wasn't that hard with Gatsby & Vercel. But it certainly became
+more challenging with things like service worker registration, or custom font preloading in the critical rendering path
+(to avoid flickering). Even if this improves the overall user experience on the website, it will impact the performance
+score negatively.
+
+Results from [web.dev/measure](https://web.dev/measure/) can vary a lot between runs (probably ran in containers with a
+small amount of resources from different locations), but it eventually gave some good results.
+
+![web.dev](./images/web-dev.png)
+
+If you want more consistent performance results from remote Lighthouse reports, have a look at
+[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
+
+## WebPageTest
+
+Another popular automated audit tool is [WebPageTest](https://www.webpagetest.org/). Here the goal was to get the
+highest possible scores in the regions I was interested it, which was fairly achievable with a static website
+served by a CDN.
+
+![WebPageTest](./images/webpagetest.png)
+
+# Security Goals
+
+Most attack vectors are taken care of by the Front-End framework's design, and the fact that only static content is
+served (although that also means client-side executable code):
+* **Cross-Site Scripting (XSS):** avoided by automatically escaping HTML in JSX elements, and adding a restrictive
+[Content Security Policy (CSP)](https://content-security-policy.com/).
+* **Cross-Site Request Forgery (CSRF):** avoided by only allowing `GET` requests (via the
+`Access-Control-Allow-Methods` HTTP header), and not using cookies (but if we were to, the `X-CSRF-Token` HTTP header is
+expected).
+* **Third-party scripts:** [Google Tag Manager](https://tagmanager.google.com/#/home) is the only one used, and the
+access to the service is restricted with a unique, high entropy password, plus MFA.
+* **Dependencies:** avoided by updating them daily to ensure the latest security fixes are applied as soon as they are
+available. In addition, Dependabot's GitHub integration will alert if a vulnerability has been found in one of the
+dependencies.
+* **DNS cache poisoning and spoofing:** avoided by enabling
+[DNSSEC](https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en) on
+[Google Domains](https://domains.google.com).
+* **Man-in-the-middle and TLS attacks:** avoided by delegating TLS to Vercel/Let's Encrypt (which only allows TLS 1.2 &
+1.3 negotiation), and enabling HTTP Strict Transport Security (HSTS).
+
+<BlockInfo>
+  <strong>Note:</strong> unfortunately at the time of writing, the Mozilla Observatory scanner only reads the CSP if
+  it's included in a meta tag, it ignores the HTTP header.
+</BlockInfo>
+
+## Snyk
+
+[Snyk](https://snyk.io/) will look for JavaScript libraries with vulnerabilities, and that the following HTTP security
+headers are set: `strict-transport-security`, `x-content-type-options`, `x-frame-options`, `content-security-policy` and
+`x-xss-protection`.
+
+![Snyk](./images/snyk.png)
+
+## Qualys SSL Labs
+
+[Qualys SSL Labs](https://www.ssllabs.com/ssltest/) will check that the certificate complies with a long list of
+industry-standard best practices.
+
+![Qualys SSL Labs](./images/qualys.png)
+
+## ImmuniWeb
+
+[ImmuniWeb](https://www.immuniweb.com/ssl/) is similar to Qualys SSL Labs, but also checks compliance with PCI DSS,
+HIPAA and NIST certifications.
+
+![ImmuniWeb](./images/immuniweb.png)
+
+## Security Headers
+
+[Security Headers](https://securityheaders.com/) will check that HTTP security headers are correctly set and enforce
+strong security practices.
+
+<BlockWarning>
+  <strong>Warning:</strong> two caveats about using a CDN are that the <code>access-control-allow-origin</code> header has
+  to be set to <code>*</code>, and that the CSP needs to contain <code>unsafe-inline</code> which will lower the score.
+</BlockWarning>
+
+![Security Headers](./images/security-headers.png)
+
+# Future Work
+
+* Add more implementation details to this page.
+* Implement a custom 404 page.
+* Implement a scroll tracking table of content for notes.
+* Improve dark mode switching.
+
+That's it, feel free to share some advice!

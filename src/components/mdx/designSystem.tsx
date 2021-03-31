@@ -30,7 +30,7 @@ const h2 = (props: never): ReactElement => (
 const h3 = (props: never): ReactElement => (
   <h3
     {...props}
-    className="font-bold leading-7 pt-3 sm:pt-6 text-md sm:text-lg"
+    className="font-bold leading-7 pt-1 sm:pt-2 text-md sm:text-lg"
   />
 )
 

@@ -5,7 +5,7 @@ exports[`Quote renders correctly 1`] = `
   className="flex mt-6 sm:mt-7"
 >
   <div
-    className="flex-shrink-0 mb-4 self-center"
+    className="flex-shrink-0 mb-0 sm:mb-4 self-center"
   >
     <test-file-stub
       className="h-32 sm:h-36 mr-10 lg:mr-0"
