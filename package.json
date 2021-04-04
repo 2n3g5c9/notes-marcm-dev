@@ -2,7 +2,7 @@
   "name": "marcm-dev",
   "private": true,
   "description": "Tech notes with words and code",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "author": "Marc Molina <contact@marcm.dev>",
   "dependencies": {
     "@fontsource/ibm-plex-mono": "^4.2.2",
