@@ -1,4 +1,5 @@
 const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
 
 // https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig
 exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
@@ -27,6 +28,7 @@ exports.onCreateWebpackConfig = ({ getConfig, actions }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
+  // Generate /about page
   const about = await graphql(`
     query {
       mdx(fileAbsolutePath: { regex: "/about/" }) {
@@ -38,11 +40,56 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `)
 
   if (about.errors) {
-    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+    reporter.panicOnBuild('🚨 ERROR: Creating /about page', about.errors)
+    return
   }
 
   createPage({
     path: about.data.mdx.frontmatter.slug,
-    component: path.resolve(`./src/layouts/about.tsx`),
+    component: path.resolve('./src/templates/about.tsx'),
   })
+
+  // Generate /notes/* pages
+  const notes = await graphql(`
+    query {
+      allMdx(
+        filter: { fileAbsolutePath: { regex: "/notes/" } }
+        sort: { fields: [frontmatter___date], order: ASC }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+  if (notes.errors) {
+    reporter.panicOnBuild('🚨 ERROR: Creating /notes/* pages', notes.errors)
+    return
+  }
+
+  notes.data.allMdx.edges.forEach(({ node }) => {
+    createPage({
+      path: `/notes/${node.slug}`,
+      component: path.resolve('./src/templates/note.tsx'),
+      context: {
+        slug: node.slug,
+      },
+    })
+  })
+}
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === 'Mdx') {
+    const slug = createFilePath({ node, getNode, basePath: 'notes' })
+    createNodeField({
+      node,
+      name: 'slug',
+      value: slug,
+    })
+  }
 }

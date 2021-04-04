@@ -8,11 +8,14 @@ module.exports = {
   siteLanguage: 'en_UK',
   name: 'Marc Molina',
   email: 'contact@marcm.dev',
-  bannerText: 'First note coming in March 2021.',
   urls: {
     github: 'https://github.com/2n3g5c9',
     keybase: 'https://keybase.io/2n3g5c9',
     linkedIn: 'https://www.linkedin.com/in/marc-molina',
+  },
+  banner: {
+    text: 'How to build a static website?',
+    slug: '/notes/building-a-static-website-with-gatsby-and-typescript',
   },
   backgroundColor: '#FFFFFF',
   themeColor: '#1F2937',

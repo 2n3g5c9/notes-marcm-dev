@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly 1`] = `
+Array [
+  <nav>
+    <div
+      className="max-w-6xl mx-auto px-4-safe sm:px-6-safe lg:px-8"
+    >
+      <div
+        className="flex h-16 items-center justify-between"
+      >
+        <div
+          className="flex items-center"
+        >
+          <a
+            aria-label="Home"
+            className="flex items-center"
+            href="/"
+          >
+            <test-file-stub
+              alt="This is a default title"
+              className="lg:block h-8 w-auto"
+            />
+          </a>
+          <div
+            className="hidden sm:block sm:ml-6"
+          >
+            <a
+              aria-label="Home"
+              className="font-medium mx-4 my-2 p-1 text-sm"
+              href="/"
+            >
+              Home
+            </a>
+            <a
+              aria-label="Notes"
+              className="font-medium mx-4 my-2 p-1 text-sm"
+              href="/notes"
+            >
+              Notes
+            </a>
+            <a
+              aria-label="About"
+              className="font-medium mx-4 my-2 p-1 text-sm"
+              href="/about"
+            >
+              About
+            </a>
+          </div>
+        </div>
+        <div
+          className="flex items-center"
+        >
+          <button
+            aria-checked={true}
+            className="bg-accent border-2 border-transparent cursor-pointer duration-200 ease-in-out flex-shrink-0 h-6 inline-flex focus:outline-none relative rounded-full transition-colors w-11"
+            id="headlessui-switch-1"
+            onClick={[Function]}
+            onKeyPress={[Function]}
+            onKeyUp={[Function]}
+            role="switch"
+            tabIndex={0}
+          >
+            <span
+              className="sr-only"
+            >
+              Toggle Dark Mode
+            </span>
+            <span
+              className="translate-x-5 bg-primary duration-200 ease-in-out inline-block h-5 relative ring-0 rounded-full shadow transform transition w-5"
+            >
+              <span
+                aria-hidden="true"
+                className="duration-100 ease-out opacity-0 absolute flex h-full inset-0 items-center justify-center transition-opacity w-full"
+              >
+                <test-file-stub
+                  className="h-3 w-3"
+                />
+              </span>
+              <span
+                aria-hidden="true"
+                className="duration-200 ease-in opacity-100 absolute flex h-full inset-0 items-center justify-center transition-opacity w-full"
+              >
+                <test-file-stub
+                  className="h-3 w-3"
+                />
+              </span>
+            </span>
+          </button>
+          <div
+            className="text-primary sm:hidden ml-3 -mr-2"
+          >
+            <div
+              aria-label="Toggle menu"
+              className="hamburger-react"
+              onClick={[Function]}
+              onKeyUp={[Function]}
+              role="button"
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "height": "48px",
+                  "outline": "none",
+                  "position": "relative",
+                  "transform": "none",
+                  "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+                  "userSelect": "none",
+                  "width": "48px",
+                }
+              }
+              tabIndex={0}
+            >
+              <div
+                style={
+                  Object {
+                    "background": "currentColor",
+                    "borderRadius": "9em",
+                    "height": "2px",
+                    "left": "14px",
+                    "position": "absolute",
+                    "top": "17px",
+                    "transform": "none",
+                    "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+                    "width": "20px",
+                  }
+                }
+              />
+              <div
+                style={
+                  Object {
+                    "background": "currentColor",
+                    "borderRadius": "9em",
+                    "height": "2px",
+                    "left": "14px",
+                    "position": "absolute",
+                    "top": "23px",
+                    "transform": "none",
+                    "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+                    "width": "20px",
+                  }
+                }
+              />
+              <div
+                style={
+                  Object {
+                    "background": "currentColor",
+                    "borderRadius": "9em",
+                    "height": "2px",
+                    "left": "14px",
+                    "position": "absolute",
+                    "top": "29px",
+                    "transform": "none",
+                    "transition": "0.4s cubic-bezier(0, 0, 0, 1)",
+                    "width": "20px",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="hidden sm:hidden"
+    >
+      <div
+        className="px-2 pt-2 pb-3 space-y-1"
+      >
+        <a
+          aria-label="Home"
+          className="block font-medium px-3 py-2 text-base hover:text-white"
+          href="/"
+        >
+          🏡
+            
+          Home
+        </a>
+        <a
+          aria-label="Notes"
+          className="block font-medium px-3 py-2 text-base hover:text-white"
+          href="/notes"
+        >
+          📝
+            
+          Notes
+        </a>
+        <a
+          aria-label="About️"
+          className="block font-medium px-3 py-2 text-base hover:text-white"
+          href="/about"
+        >
+          👨🏻‍💻
+            
+          About️
+        </a>
+      </div>
+    </div>
+    <div
+      className="bg-accent relative"
+    >
+      <div
+        className="max-w-7xl mx-auto pl-8 sm:px-8 py-3"
+      >
+        <div
+          className="pr-16 sm:px-16 sm:text-center"
+        >
+          <p
+            className="font-medium text-sm sm:text-base text-tertiary"
+          >
+            <a
+              className="md:hidden"
+              href="#"
+            >
+              This is a default text just to fill the space.
+               
+              <span
+                aria-hidden="true"
+              >
+                →
+              </span>
+            </a>
+            <a
+              className="hidden md:inline"
+              href="#"
+            >
+              This is a default text just to fill the space.
+               
+              <span
+                aria-hidden="true"
+              >
+                →
+              </span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </nav>,
+  <main
+    className="max-w-full mx-auto overflow-hidden relative"
+  >
+    <div
+      className="max-w-6xl mx-auto my-7 sm:my-8 px-8 sm:px-12 xl:px-8"
+    />
+  </main>,
+  <footer>
+    <div
+      className="md:flex md:items-center md:justify-between max-w-6xl mx-auto px-4-safe sm:px-6-safe lg:px-8 py-6 sm:py-8"
+    >
+      <div
+        className="flex justify-center md:order-2 space-x-6"
+      >
+        <a
+          aria-label="Keybase"
+          className="hover:text-secondary"
+          href="https://keybase.io/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span
+            className="sr-only"
+          >
+            Keybase
+          </span>
+          <test-file-stub
+            aria-hidden="true"
+            className="h-6 w-6"
+          />
+        </a>
+        <a
+          aria-label="GitHub"
+          className="hover:text-secondary"
+          href="https://github.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span
+            className="sr-only"
+          >
+            GitHub
+          </span>
+          <test-file-stub
+            aria-hidden="true"
+            className="h-6 w-6"
+          />
+        </a>
+        <a
+          aria-label="LinkedIn"
+          className="hover:text-secondary"
+          href="https://linkedin.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span
+            className="sr-only"
+          >
+            LinkedIn
+          </span>
+          <test-file-stub
+            aria-hidden="true"
+            className="h-6 w-6"
+          />
+        </a>
+      </div>
+      <div
+        className="mt-8 md:mt-0 md:order-1"
+      >
+        <p
+          className="text-center text-sm sm:text-base"
+        >
+          © 2021 
+          Default author
+          . Built with
+           
+          <a
+            aria-label="Gatsby Starter"
+            href="https://github.com/2n3g5c9/gatsby-starter-typescript-tailwindcss"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            React & Gatsby
+          </a>
+          .
+        </p>
+      </div>
+    </div>
+  </footer>,
+]
+`;

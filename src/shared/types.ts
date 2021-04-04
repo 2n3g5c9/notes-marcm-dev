@@ -1,10 +1,9 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import PropTypes from 'prop-types'
+import PropTypes, { InferProps } from 'prop-types'
 
 type InferPropTypes<
   PropTypes,
   DefaultProps = Record<string, unknown>,
-  Props = PropTypes.InferProps<PropTypes>
+  Props = InferProps<PropTypes>
 > = {
   [Key in keyof Props]: Key extends keyof DefaultProps
     ? Props[Key] | DefaultProps[Key]
