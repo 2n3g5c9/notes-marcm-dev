@@ -51,7 +51,7 @@ preload/prefetch, tree shaking, etc.).
 ### CSS Library
 * Bootstraps building blocks for standards-compliant web design elements.
 * Reduces the amount of CSS code, while ensuring a degree of overall coherence in the web design.
-* Offers ability to write CSS-in-JS to embed conditional styling in components, and reduces the risk of unintended
+* Offers the ability to write CSS-in-JS to embed conditional styling in components, and reduces the risk of unintended
 cascading style.
 
 ## Operations
@@ -230,7 +230,7 @@ Brotli, incremental builds were not really that fast.
 
 To prevent falling in the rabbit hole of micro-optimization, I set quantitative performance goals from the start. Even
 if those are not representative of the overall user experience (most of the data is fetched on the first visit, content
-is preloaded, a service worker caches files locally), this will ensure a sufficient amount of good practices are in
+is preloaded, and a service worker caches files locally), this will ensure a sufficient amount of good practices are in
 place (or at least guide me in the right direction).
 
 * **Largest Contentful Paint** (mesures loading performance) must be under 2.5s (p75) in the US West Coast (0.801s),
@@ -261,8 +261,7 @@ If you want more consistent performance results from remote Lighthouse reports, 
 ## WebPageTest
 
 Another popular automated audit tool is [WebPageTest](https://www.webpagetest.org/). Here the goal was to get the
-highest possible scores in the regions I was interested it, which was fairly achievable with a static website
-served by a CDN.
+highest possible scores in the regions I was interested in.
 
 ![WebPageTest](./images/webpagetest.png)
 
@@ -332,4 +331,4 @@ strong security practices.
 * Implement a scroll tracking table of content for notes.
 * Improve dark mode switching.
 
-That's it, feel free to share some advice!
+That's it, feel free to share your advice!
