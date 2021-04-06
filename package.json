@@ -39,7 +39,7 @@
     "mdx-utils": "^0.2.0",
     "postcss": "^8.2.9",
     "preact": "^10.5.13",
-    "preact-render-to-string": "^5.1.18",
+    "preact-render-to-string": "^5.1.19",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-children-utilities": "^2.5.0",
