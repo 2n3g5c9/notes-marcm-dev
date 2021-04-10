@@ -1,7 +1,7 @@
 ---
 title: Building a static website with Gatsby and TypeScript
 summary: The concepts and technical decisions I made on this static website, as a non-Front-End Engineer. From requirements to implementation details.
-category: Web / Frontend
+category: Web / Front-End
 date: 2021-02-21
 ---
 
@@ -86,8 +86,8 @@ cascading style.
 # Tech Stack
 
 <BlockInfo>
-  <strong>Note for beginners:</strong> there is no silver bullet, and the tech stack doesn't matter as much as the high-level design ; as long as
-  you stick with it long enough to understand it.
+  <strong>Note for beginners:</strong> there is no silver bullet, and the tech stack doesn't matter as much as the
+  high-level design ; as long as you stick with it long enough to understand it.
 </BlockInfo>
 
 ## Development
@@ -97,8 +97,8 @@ cascading style.
 Among the considered options were:
 ![Static Site Generator](./images/static-site-generator.png)
 
-* [Gatsby](https://www.gatsbyjs.com/): based on React, leverages [GraphQL](https://graphql.org/) for its unified data layer, relies on its
-ecosystem of plugins.
+* [Gatsby](https://www.gatsbyjs.com/): based on React, leverages [GraphQL](https://graphql.org/) for its unified data
+layer, relies on its ecosystem of plugins.
 * [Next.js](https://nextjs.org/): based on React, additionally handles SSR, maintained by [Vercel](https://vercel.com/).
 * [Eleventy (11ty)](https://www.11ty.dev/): able to inject React components, but meant to be simpler (based on
 independent template engines like [Nunjucks](https://mozilla.github.io/nunjucks/)).
@@ -113,8 +113,8 @@ Gatsby, and iteratively extended it to what it is today.
 directives.
 
 **Gatsby Browser APIs:**
-* The `wrapRootElement` API has been used to wrap the root element with the `MDXProvider` which includes `shortcodes` for
-the design system.
+* The `wrapRootElement` API has been used to wrap the root element with the `MDXProvider` which includes `shortcodes`
+for the design system.
 * The `onServiceWorkerUpdateReady` API has been used for the service worker to auto-refresh the client cache on change,
 which sometimes conflicts with the MDX design system.
 
@@ -267,7 +267,7 @@ highest possible scores in the regions I was interested in.
 
 # Security Goals
 
-Most attack vectors are taken care of by the Front-End framework's design, and the fact that only static content is
+Most attack vectors are taken care of by the front-end framework's design, and the fact that only static content is
 served (although that also means client-side executable code):
 * **Cross-Site Scripting (XSS):** avoided by automatically escaping HTML in JSX elements, and adding a restrictive
 [Content Security Policy (CSP)](https://content-security-policy.com/).
@@ -278,7 +278,8 @@ expected).
 access to the service is restricted with a unique, high entropy password, plus MFA.
 * **Dependencies:** avoided by updating them daily to ensure the latest security fixes are applied as soon as they are
 available. In addition, Dependabot's GitHub integration will alert if a vulnerability has been found in one of the
-dependencies.
+dependencies. We could argue this opens the door to automatically merging malicious code, but I'm not going to review
+dozens of updates every week.
 * **DNS cache poisoning and spoofing:** avoided by enabling
 [DNSSEC](https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en) on
 [Google Domains](https://domains.google.com).
@@ -318,8 +319,9 @@ HIPAA and NIST certifications.
 strong security practices.
 
 <BlockWarning>
-  <strong>Warning:</strong> two caveats about using a CDN are that the <code>access-control-allow-origin</code> header has
-  to be set to <code>*</code>, and that the CSP needs to contain <code>unsafe-inline</code> which will lower the score.
+  <strong>Warning:</strong> two caveats about using a CDN are that the <code>access-control-allow-origin</code> header
+  has to be set to <code>*</code>, and that the CSP needs to contain <code>unsafe-inline</code> which will lower the
+  score.
 </BlockWarning>
 
 ![Security Headers](./images/security-headers.png)

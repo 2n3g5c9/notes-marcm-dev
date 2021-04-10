@@ -53,16 +53,19 @@ yarn preload-fonts
 ### Local tests
 
 **Lint checks:**
+
 ```bash
 yarn lint
 ```
 
 **Type checks:**
+
 ```bash
 yarn type-check
 ```
 
 **Snapshot tests:**
+
 ```bash
 yarn test
 ```

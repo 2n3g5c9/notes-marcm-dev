@@ -1,5 +1,5 @@
 const categoryColors: Record<string, string> = {
-  'Web / Frontend': 'red',
+  'Web / Front-End': 'red',
 }
 
 const categoryBg = (category: string, theme: string): string =>
