@@ -13,5 +13,4 @@ updates:
       interval: 'daily'
     rebase-strategy: 'auto'
     labels:
-      - 'security'
       - 'dependencies'
