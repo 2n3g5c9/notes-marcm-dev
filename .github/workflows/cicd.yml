@@ -51,7 +51,16 @@ jobs:
     needs: checks
     runs-on: ubuntu-latest
 
-    if: github.actor == 'dependabot[bot]'
+    if: >
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.draft == false && (
+        github.event.action == 'opened' ||
+        github.event.action == 'reopened' ||
+        github.event.action == 'synchronize'
+      ) && (
+        github.actor == 'dependabot[bot]'
+      )
+
     steps:
       - name: Automerge Dependabot PR 🤖
         uses: actions/github-script@v3
