@@ -40,8 +40,8 @@ jobs:
       - name: Run Jest Tests 🧪
         run: yarn test
 
-#      - name: Run Cypress Tests 🧪
-#        run: yarn test:e2e:cli
+      - name: Run Cypress Tests 🧪
+        run: yarn test:e2e:cli
 
       - name: Build Gatsby Site ⚙️
         run: yarn build
