@@ -200,14 +200,14 @@ Among the considered options were:
 
 ![Dependency Management](./images/dependency-management.png)
 
-* [Dependabot](https://dependabot.com/): tight integration with GitHub, configuration from file, supports more
-languages, supports auto-merge, free for public and private repositories.
 * [Depfu](https://depfu.com/): previous experience with the product, gives more control over the update strategy like
 support for grouped updates, configuration from Web UI, supports auto-merge, free for public and private repositories.
+* [Dependabot](https://dependabot.com/): tight integration with GitHub, configuration from file, supports more
+languages, supports auto-merge, free for public and private repositories.
 
-I went with Dependabot for the ability to describe the whole repository strategy with GitHub Actions, despite Depfu
-offering more advanced update strategies. The coverage of the aforementioned automated checks gave enough confidence
-about the ability to identify breaking changes on a specific dependency. Even if it breaks, rolling back is easy.
+I went with Depfu as it offers more advanced update strategies, and a straightforward auto-merging process. The coverage
+of the aforementioned automated checks gave enough confidence about the ability to identify breaking changes on a
+specific dependency. Even if it breaks, rolling back is easy.
 
 ### Global Content Delivery Network (CDN)
 
@@ -276,7 +276,7 @@ served (although that also means client-side executable code):
 expected).
 * **Third-party scripts:** [Google Tag Manager](https://tagmanager.google.com/#/home) is the only one used, and the
 access to the service is restricted with a unique, high entropy password, plus MFA.
-* **Dependencies:** avoided by updating them daily to ensure the latest security fixes are applied as soon as they are
+* **Dependencies:** avoided by updating them weekly to ensure the latest security fixes are applied as they are
 available. In addition, Dependabot's GitHub integration will alert if a vulnerability has been found in one of the
 dependencies. We could argue this opens the door to automatically merging malicious code, but I'm not going to review
 dozens of updates every week.
