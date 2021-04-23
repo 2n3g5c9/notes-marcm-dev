@@ -63,7 +63,7 @@ jobs:
 
     steps:
       - name: Automerge Dependabot PR 🤖
-        uses: actions/github-script@v3
+        uses: actions/github-script@v4.0.1
         with:
           script: |
             github.pulls.createReview({
