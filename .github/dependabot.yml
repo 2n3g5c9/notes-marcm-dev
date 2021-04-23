@@ -6,11 +6,3 @@ updates:
       interval: 'daily'
     labels:
       - 'actions'
-
-  - package-ecosystem: 'npm'
-    directory: '/'
-    schedule:
-      interval: 'daily'
-    rebase-strategy: 'auto'
-    labels:
-      - 'dependencies'
