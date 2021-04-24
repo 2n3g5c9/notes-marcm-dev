@@ -8,6 +8,7 @@ import KeybaseSVG from './keybase.svg'
 import LinkedInSVG from './linkedIn.svg'
 import LogoSVG from './logo.svg'
 import MoonSVG from './moon.svg'
+import NotFoundSVG from './not-found.svg'
 import QuoteSVG from './quote.svg'
 import ShapeSVG from './shape.svg'
 import SunSVG from './sun.svg'
@@ -22,6 +23,7 @@ export {
   LinkedInSVG,
   LogoSVG,
   MoonSVG,
+  NotFoundSVG,
   QuoteSVG,
   ShapeSVG,
   SunSVG,
