@@ -19,17 +19,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Cache Dependencies 💽
-        uses: actions/cache@v2.1.4
-        with:
-          path: |
-            **/node_modules
-            /home/runner/.cache
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-
       - name: Install Packages 📦
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
+
+      - name: Build Gatsby Site ⚙️
+        run: yarn build
+
+      - name: Bundle Artifact 📦
+        run: |
+          cd ..
+          tar -czf marcm-dev.tar.gz marcm-dev
+          mv marcm-dev.tar.gz marcm-dev
+
+      - name: Upload Artifact ⏫
+        uses: actions/upload-artifact@v2
+        with:
+          name: marcm-dev
+          path: marcm-dev.tar.gz
 
   lint:
     needs: init
@@ -37,7 +43,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Download Artifact ⏬
+        uses: actions/download-artifact@v2
+        with:
+          name: marcm-dev
+
+      - name: Extract Artifact 📦
+        run: tar -xf marcm-dev.tar.gz
+
       - name: Run ESLint Checks ✅
+        working-directory: marcm-dev
         run: yarn lint
 
   type:
@@ -46,7 +61,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Download Artifact ⏬
+        uses: actions/download-artifact@v2
+        with:
+          name: marcm-dev
+
+      - name: Extract Artifact 📦
+        run: tar -xf marcm-dev.tar.gz
+
       - name: Run TypeScript Checks ✅
+        working-directory: marcm-dev
         run: yarn type-check
 
   snapshot:
@@ -55,27 +79,59 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Download Artifact ⏬
+        uses: actions/download-artifact@v2
+        with:
+          name: marcm-dev
+
+      - name: Extract Artifact 📦
+        run: tar -xf marcm-dev.tar.gz
+
       - name: Run Jest Tests 🧪
+        working-directory: marcm-dev
         run: yarn test
 
-#      - name: Run Cypress Tests 🧪
-#        run: yarn test:e2e:cli
-
-  build:
+  accessibility:
     needs: init
-    name: Build
+    name: Accessibility tests
     runs-on: ubuntu-latest
 
     steps:
-      - name: Build Gatsby Site ⚙️
-        run: yarn build
+      - name: Download Artifact ⏬
+        uses: actions/download-artifact@v2
+        with:
+          name: marcm-dev
+
+      - name: Extract Artifact 📦
+        run: tar -xf marcm-dev.tar.gz
+
+      - name: Reinstall Cypress 📦
+        working-directory: marcm-dev
+        run: yarn cy:install
+
+      - name: Run Cypress Tests 🧪
+        uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
+          working-directory: marcm-dev
+          start: yarn develop
+          wait-on: 'http://localhost:8000'
+          wait-on-timeout: 300
 
   lhci:
-    needs: [init, build]
+    needs: init
     name: Lighthouse report
     runs-on: ubuntu-latest
     steps:
+      - name: Download Artifact ⏬
+        uses: actions/download-artifact@v2
+        with:
+          name: marcm-dev
+
+      - name: Extract Artifact 📦
+        run: tar -xf marcm-dev.tar.gz
+
       - name: Run Lighthouse CI 🗼
+        working-directory: marcm-dev
         run: |
-          yarn global add @lhci/cli@0.7.x
-          lhci autorun
+          yarn run lhci

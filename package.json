@@ -49,6 +49,7 @@
     "tailwindcss-padding-safe": "^1.0.5"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.7.2",
     "@testing-library/cypress": "^7.0.6",
     "@types/jest": "^26.0.23",
     "@types/mdx-js__react": "^1.5.3",
@@ -98,10 +99,12 @@
     "lint": "eslint . --ext ts --ext tsx",
     "type-check": "tsc --pretty --noEmit",
     "test": "jest",
+    "cy:install": "cypress install",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test develop 8000 cy:open",
-    "test:e2e:cli": "start-server-and-test develop 8000 cy:run"
+    "test:e2e:cli": "start-server-and-test develop 8000 cy:run",
+    "lhci": "lhci autorun"
   },
   "repository": {
     "type": "git",
