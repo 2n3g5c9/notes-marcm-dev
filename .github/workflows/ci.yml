@@ -1,0 +1,137 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  init:
+    name: Initialisation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code 🛎
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install Packages 📦
+        run: yarn install --frozen-lockfile
+
+      - name: Build Gatsby Site ⚙️
+        run: yarn build
+
+      - name: Bundle Artifact 📦
+        run: |
+          cd ..
+          tar -czf marcm-dev.tar.gz marcm-dev
+          mv marcm-dev.tar.gz marcm-dev
+
+      - name: Upload Artifact ⏫
+        uses: actions/upload-artifact@v2
+        with:
+          name: marcm-dev
+          path: marcm-dev.tar.gz
+
+  lint:
+    needs: init
+    name: Lint checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Artifact ⏬
+        uses: actions/download-artifact@v2
+        with:
+          name: marcm-dev
+
+      - name: Extract Artifact 📦
+        run: tar -xf marcm-dev.tar.gz
+
+      - name: Run ESLint Checks ✅
+        working-directory: marcm-dev
+        run: yarn lint
+
+  type:
+    needs: init
+    name: Type checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Artifact ⏬
+        uses: actions/download-artifact@v2
+        with:
+          name: marcm-dev
+
+      - name: Extract Artifact 📦
+        run: tar -xf marcm-dev.tar.gz
+
+      - name: Run TypeScript Checks ✅
+        working-directory: marcm-dev
+        run: yarn type-check
+
+  snapshot:
+    needs: init
+    name: Snapshot tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Artifact ⏬
+        uses: actions/download-artifact@v2
+        with:
+          name: marcm-dev
+
+      - name: Extract Artifact 📦
+        run: tar -xf marcm-dev.tar.gz
+
+      - name: Run Jest Tests 🧪
+        working-directory: marcm-dev
+        run: yarn test
+
+  accessibility:
+    needs: init
+    name: Accessibility tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Artifact ⏬
+        uses: actions/download-artifact@v2
+        with:
+          name: marcm-dev
+
+      - name: Extract Artifact 📦
+        run: tar -xf marcm-dev.tar.gz
+
+      - name: Reinstall Cypress 📦
+        working-directory: marcm-dev
+        run: yarn cy:install
+
+      - name: Run Cypress Tests 🧪
+        uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
+          working-directory: marcm-dev
+          start: yarn develop
+          wait-on: 'http://localhost:8000'
+          wait-on-timeout: 300
+
+  lhci:
+    needs: init
+    name: Lighthouse report
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Artifact ⏬
+        uses: actions/download-artifact@v2
+        with:
+          name: marcm-dev
+
+      - name: Extract Artifact 📦
+        run: tar -xf marcm-dev.tar.gz
+
+      - name: Run Lighthouse CI 🗼
+        working-directory: marcm-dev
+        run: |
+          yarn run lhci

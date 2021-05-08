@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/2n3g5c9/marcm-dev/workflows/Automated%20Checks/badge.svg" alt="actions-badge"/>
+  <img src="https://github.com/2n3g5c9/marcm-dev/workflows/Continuous%20Integration/badge.svg" alt="actions-badge"/>
 </p>
 
 <p align="center">
