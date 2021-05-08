@@ -133,5 +133,6 @@ jobs:
 
       - name: Run Lighthouse CI 🗼
         working-directory: marcm-dev
-        run: |
-          yarn run lhci
+        run: yarn run lhci
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
