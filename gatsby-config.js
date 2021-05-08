@@ -128,8 +128,6 @@ module.exports = {
         plugins: [],
       },
     },
-    // TypeScript
-    `gatsby-plugin-typescript`,
     // CSS
     `gatsby-plugin-postcss`,
     {
