@@ -1,4 +1,4 @@
-name: Automated Checks
+name: Continuous Integration
 
 on:
   push:
@@ -9,8 +9,8 @@ on:
       - main
 
 jobs:
-  checks:
-    name: Automated checks
+  init:
+    name: Initialisation
     runs-on: ubuntu-latest
 
     steps:
@@ -31,17 +31,51 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
 
+  lint:
+    needs: init
+    name: Lint checks
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Run ESLint Checks ✅
         run: yarn lint
 
+  type:
+    needs: init
+    name: Type checks
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Run TypeScript Checks ✅
         run: yarn type-check
 
+  snapshot:
+    needs: init
+    name: Snapshot tests
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Run Jest Tests 🧪
         run: yarn test
 
 #      - name: Run Cypress Tests 🧪
 #        run: yarn test:e2e:cli
 
+  build:
+    needs: init
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Build Gatsby Site ⚙️
         run: yarn build
+
+  lhci:
+    needs: [init, build]
+    name: Lighthouse report
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Lighthouse CI 🗼
+        run: |
+          yarn global add @lhci/cli@0.7.x
+          lhci autorun
