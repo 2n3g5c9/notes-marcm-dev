@@ -15,15 +15,26 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/2n3g5c9/marcm-dev/workflows/Continuous%20Integration/badge.svg" alt="actions-badge"/>
+  <a href="https://github.com/2n3g5c9/marcm-dev/actions/workflows/ci.yml">
+    <img src="https://github.com/2n3g5c9/marcm-dev/workflows/Continuous%20Integration/badge.svg" alt="ci-badge"/>
+  </a>
+  <a href="https://github.com/2n3g5c9/marcm-dev/actions/workflows/codeql-analysis.yml">
+    <img src="https://github.com/2n3g5c9/marcm-dev/workflows/CodeQL/badge.svg" alt="codeql-badge"/>
+  </a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/website-up-down-green-red/https/marcm.dev.svg?label=marcm.dev" alt="up-down-badge"/>
+  <a href="https://www.marcm.dev/">
+    <img src="https://img.shields.io/website-up-down-green-red/https/marcm.dev.svg?label=marcm.dev" alt="up-down-badge"/>
+  </a>
   <img src="https://img.shields.io/github/languages/count/2n3g5c9/marcm-dev.svg?style=flat" alt="languages-badge"/>
-  <img src="https://img.shields.io/github/license/2n3g5c9/marcm-dev" alt="license-badge">
+  <a href="./LICENSE"> 
+    <img src="https://img.shields.io/github/license/2n3g5c9/marcm-dev" alt="license-badge">
+  </a>
   <img src="https://img.shields.io/github/repo-size/2n3g5c9/marcm-dev" alt="repo-size-badge">
-  <img src="https://img.shields.io/github/last-commit/2n3g5c9/marcm-dev" alt="last-commit-badge">
+  <a href="https://github.com/2n3g5c9/marcm-dev/commits/main">
+    <img src="https://img.shields.io/github/last-commit/2n3g5c9/marcm-dev" alt="last-commit-badge">
+  </a>
 </p>
 
 ## 🏁 Getting Started

@@ -69,6 +69,7 @@ cascading style.
 * Type checks: detects type mismatches with static code analysis.
 * Snapshot tests: detects unexpected changes in UI components rendering.
 * Accessibility tests: detects drift with basic axe accessibility compliance checks.
+* Best practices audit: detects UX regressions with industry standard practices checks.
 
 ### Continuous Deployment (CD)
 * Often offered by the CDN service, by passing an NPM script command.
@@ -193,6 +194,8 @@ types are inferred from `PropTypes` via `InferProps` wherever possible.
 [Jest](https://jestjs.io/) and default props for simplicity's sake.
 * `cypress/e2e/accessibility.test.js` is where accessibility tests are defined, and bootstrapped with
 [Cypress](https://www.cypress.io/). Strict compliance with axe web rules are checked on most pages.
+* `lighthouserc.js` is where expectations on the automated [Lighthouse](https://github.com/GoogleChrome/lighthouse-ci)
+audits are defined.
 
 ### Dependency Management
 
@@ -200,14 +203,15 @@ Among the considered options were:
 
 ![Dependency Management](./images/dependency-management.png)
 
-* [Depfu](https://depfu.com/): previous experience with the product, gives more control over the update strategy like
+* [Depfu](https://depfu.com/): previous experience with the tool, gives more control over the update strategy like
 support for grouped updates, configuration from Web UI, supports auto-merge, free for public and private repositories.
 * [Dependabot](https://dependabot.com/): tight integration with GitHub, configuration from file, supports more
-languages, supports auto-merge, free for public and private repositories.
+languages, doesn't natively support auto-merge, free for public and private repositories.
 
-I went with Depfu as it offers more advanced update strategies, and a straightforward auto-merging process. The coverage
-of the aforementioned automated checks gave enough confidence about the ability to identify breaking changes on a
-specific dependency. Even if it breaks, rolling back is easy.
+I went with Depfu for its more advanced update strategies, and a straightforward auto-merging process. I still use
+Dependabot for GitHub Actions and security alerts. The coverage of the aforementioned automated checks gave enough
+confidence about the ability to identify breaking changes on a specific dependency. If it breaks, rolling back is
+fast and easy.
 
 ### Global Content Delivery Network (CDN)
 
@@ -245,10 +249,10 @@ If there is one well-known automated web auditing tool, it's
 
 ![Lighthouse](./images/lighthouse-local.png)
 
-Achieving all perfect scores in Lighthouse (Chrome 89) wasn't that hard with Gatsby & Vercel. But it certainly became
+Achieving all perfect scores in Lighthouse (Chrome 90) wasn't that hard with Gatsby & Vercel. But it certainly became
 more challenging with things like service worker registration, or custom font preloading in the critical rendering path
 (to avoid flickering). Even if this improves the overall user experience on the website, it will impact the performance
-score negatively.
+score negatively. Also, [Google Tag Manager](https://tagmanager.google.com/) has a significant impact on performance.
 
 Results from [web.dev/measure](https://web.dev/measure/) can vary a lot between runs (probably ran in containers with a
 small amount of resources from different locations), but it eventually gave some good results.
@@ -278,8 +282,8 @@ expected).
 access to the service is restricted with a unique, high entropy password, plus MFA.
 * **Dependencies:** avoided by updating them weekly to ensure the latest security fixes are applied as they are
 available. In addition, Dependabot's GitHub integration will alert if a vulnerability has been found in one of the
-dependencies. We could argue this opens the door to automatically merging malicious code, but I'm not going to review
-dozens of updates every week.
+dependencies. We could argue this opens the door to automatically merging malicious code, but I can't review dozens of
+updates every week.
 * **DNS cache poisoning and spoofing:** avoided by enabling
 [DNSSEC](https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en) on
 [Google Domains](https://domains.google.com).
@@ -329,7 +333,8 @@ strong security practices.
 # Future Work
 
 * Add more implementation details to this page.
-* Implement a scroll tracking table of content for notes.
+* Refine automated testing.
 * Improve dark mode switching.
+* Implement a scroll tracking table of content for notes.
 
 That's it, feel free to share your advice!

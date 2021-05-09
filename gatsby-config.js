@@ -64,7 +64,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-preconnect',
       options: {
-        domains: ['https://www.google-analytics.com'],
+        domains: [
+          'https://www.googletagmanager.com',
+          'https://www.google-analytics.com',
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -92,16 +95,6 @@ module.exports = {
         backgroundColor: `transparent`,
         disableBgImageOnAlpha: true,
         linkImagesToOriginal: false,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-web-vitals',
-      options: {
-        trackingId: 'G-G11QYKS7W4',
-        metrics: [`FID`, `TTFB`, `LCP`, `CLS`, `FCP`],
-        eventCategory: 'Web Vitals',
-        includeInDevelopment: false,
-        debug: false,
       },
     },
     `gatsby-remark-reading-time`,
