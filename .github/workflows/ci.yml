@@ -19,7 +19,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Cache Dependencies 💽
+        uses: actions/cache@v2.1.4
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
       - name: Install Packages 📦
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
 
       - name: Build Gatsby Site ⚙️
