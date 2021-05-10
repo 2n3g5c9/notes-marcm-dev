@@ -252,7 +252,7 @@ Array [
       >
         <a
           aria-label="Keybase"
-          className="hover:text-secondary"
+          className="flex items-center hover:text-secondary"
           href="https://keybase.io/"
           rel="noopener noreferrer"
           target="_blank"
@@ -269,7 +269,7 @@ Array [
         </a>
         <a
           aria-label="GitHub"
-          className="hover:text-secondary"
+          className="flex items-center hover:text-secondary"
           href="https://github.com/"
           rel="noopener noreferrer"
           target="_blank"
@@ -286,7 +286,7 @@ Array [
         </a>
         <a
           aria-label="LinkedIn"
-          className="hover:text-secondary"
+          className="flex items-center hover:text-secondary"
           href="https://linkedin.com/"
           rel="noopener noreferrer"
           target="_blank"

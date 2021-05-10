@@ -10,7 +10,7 @@ const Footer = ({ author, urls }: FooterProps): ReactElement => (
       <a
         href={urls.keybase}
         aria-label="Keybase"
-        className="hover:text-secondary"
+        className="flex items-center hover:text-secondary"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -20,7 +20,7 @@ const Footer = ({ author, urls }: FooterProps): ReactElement => (
       <a
         href={urls.github}
         aria-label="GitHub"
-        className="hover:text-secondary"
+        className="flex items-center hover:text-secondary"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -30,7 +30,7 @@ const Footer = ({ author, urls }: FooterProps): ReactElement => (
       <a
         href={urls.linkedIn}
         aria-label="LinkedIn"
-        className="hover:text-secondary"
+        className="flex items-center hover:text-secondary"
         target="_blank"
         rel="noopener noreferrer"
       >

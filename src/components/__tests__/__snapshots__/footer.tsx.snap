@@ -9,7 +9,7 @@ exports[`Footer renders correctly 1`] = `
   >
     <a
       aria-label="Keybase"
-      className="hover:text-secondary"
+      className="flex items-center hover:text-secondary"
       href="#"
       rel="noopener noreferrer"
       target="_blank"
@@ -26,7 +26,7 @@ exports[`Footer renders correctly 1`] = `
     </a>
     <a
       aria-label="GitHub"
-      className="hover:text-secondary"
+      className="flex items-center hover:text-secondary"
       href="#"
       rel="noopener noreferrer"
       target="_blank"
@@ -43,7 +43,7 @@ exports[`Footer renders correctly 1`] = `
     </a>
     <a
       aria-label="LinkedIn"
-      className="hover:text-secondary"
+      className="flex items-center hover:text-secondary"
       href="#"
       rel="noopener noreferrer"
       target="_blank"
