@@ -36,14 +36,14 @@ jobs:
       - name: Bundle Artifact 📦
         run: |
           cd ..
-          tar -czf marcm-dev.tar.gz marcm-dev
-          mv marcm-dev.tar.gz marcm-dev
+          tar --zstd -cf marcm-dev.tar.zst marcm-dev
+          mv marcm-dev.tar.zst marcm-dev
 
       - name: Upload Artifact ⏫
         uses: actions/upload-artifact@v2
         with:
           name: marcm-dev
-          path: marcm-dev.tar.gz
+          path: marcm-dev.tar.zst
 
   lint:
     needs: init
@@ -57,7 +57,7 @@ jobs:
           name: marcm-dev
 
       - name: Extract Artifact 📦
-        run: tar -xf marcm-dev.tar.gz
+        run: tar --zstd -xf marcm-dev.tar.zst
 
       - name: Run ESLint Checks ✅
         working-directory: marcm-dev
@@ -75,7 +75,7 @@ jobs:
           name: marcm-dev
 
       - name: Extract Artifact 📦
-        run: tar -xf marcm-dev.tar.gz
+        run: tar --zstd -xf marcm-dev.tar.zst
 
       - name: Run TypeScript Checks ✅
         working-directory: marcm-dev
@@ -93,7 +93,7 @@ jobs:
           name: marcm-dev
 
       - name: Extract Artifact 📦
-        run: tar -xf marcm-dev.tar.gz
+        run: tar --zstd -xf marcm-dev.tar.zst
 
       - name: Run Jest Tests 🧪
         working-directory: marcm-dev
@@ -111,7 +111,7 @@ jobs:
           name: marcm-dev
 
       - name: Extract Artifact 📦
-        run: tar -xf marcm-dev.tar.gz
+        run: tar --zstd -xf marcm-dev.tar.zst
 
       - name: Reinstall Cypress 📦
         working-directory: marcm-dev
@@ -137,7 +137,7 @@ jobs:
           name: marcm-dev
 
       - name: Extract Artifact 📦
-        run: tar -xf marcm-dev.tar.gz
+        run: tar --zstd -xf marcm-dev.tar.zst
 
       - name: Run Lighthouse CI 🗼
         working-directory: marcm-dev
