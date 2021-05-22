@@ -24,6 +24,9 @@
   <a href="https://sonarcloud.io/dashboard?id=2n3g5c9_marcm-dev" target="_blank" rel="noopener noreferrer">
     <img src="https://sonarcloud.io/api/project_badges/measure?project=2n3g5c9_marcm-dev&metric=alert_status" alt="sonarcloud-badge"/>
   </a>
+  <a href="https://depfu.com/github/2n3g5c9/marcm-dev?project_id=24387" target="_blank" rel="noopener noreferrer">
+    <img src="https://badges.depfu.com/badges/a2b37072995a8de2a954a43807b5fdac/overview.svg" alt="depfu-badge"/>
+  </a>
 </p>
 
 <p align="center">
