@@ -8,6 +8,11 @@ on:
     branches:
       - main
 
+env:
+  repository_owner: ${{ github.repository_owner }}
+  repository_name: ${{ github.event.repository.name }}
+  artifact: ${{ github.event.repository.name }}.tar.zst
+
 jobs:
   init:
     name: Initialisation
@@ -36,14 +41,14 @@ jobs:
       - name: Bundle Artifact 📦
         run: |
           cd ..
-          tar --zstd -cf ${{ github.event.repository.name }}.tar.zst ${{ github.event.repository.name }}/.
-          mv ${{ github.event.repository.name }}.tar.zst ${{ github.event.repository.name }}
+          tar --zstd -cf ${{ env.artifact }} ${{ env.repository_name }}
+          mv ${{ env.artifact }} ${{ env.repository_name }}
 
       - name: Upload Artifact ⏫
         uses: actions/upload-artifact@v2
         with:
-          name: ${{ github.event.repository.name }}
-          path: ${{ github.event.repository.name }}.tar.zst
+          name: ${{ env.repository_name }}
+          path: ${{ env.artifact }}
 
   lint:
     needs: init
@@ -54,13 +59,13 @@ jobs:
       - name: Download Artifact ⏬
         uses: actions/download-artifact@v2
         with:
-          name: ${{ github.event.repository.name }}
+          name: ${{ env.repository_name }}
 
       - name: Extract Artifact 📦
-        run: tar --zstd -xf ${{ github.event.repository.name }}.tar.zst
+        run: tar --zstd -xf ${{ env.artifact }}
 
       - name: Run ESLint Checks ✅
-        working-directory: ${{ github.event.repository.name }}
+        working-directory: ${{ env.repository_name }}
         run: yarn lint
 
   type:
@@ -72,13 +77,13 @@ jobs:
       - name: Download Artifact ⏬
         uses: actions/download-artifact@v2
         with:
-          name: ${{ github.event.repository.name }}
+          name: ${{ env.repository_name }}
 
       - name: Extract Artifact 📦
-        run: tar --zstd -xf ${{ github.event.repository.name }}.tar.zst
+        run: tar --zstd -xf ${{ env.artifact }}
 
       - name: Run TypeScript Checks ✅
-        working-directory: ${{ github.event.repository.name }}
+        working-directory: ${{ env.repository_name }}
         run: yarn type-check
 
   snapshot:
@@ -90,13 +95,13 @@ jobs:
       - name: Download Artifact ⏬
         uses: actions/download-artifact@v2
         with:
-          name: ${{ github.event.repository.name }}
+          name: ${{ env.repository_name }}
 
       - name: Extract Artifact 📦
-        run: tar --zstd -xf ${{ github.event.repository.name }}.tar.zst
+        run: tar --zstd -xf ${{ env.artifact }}
 
       - name: Run Jest Tests 🧪
-        working-directory: ${{ github.event.repository.name }}
+        working-directory: ${{ env.repository_name }}
         run: yarn test
 
   accessibility:
@@ -108,20 +113,20 @@ jobs:
       - name: Download Artifact ⏬
         uses: actions/download-artifact@v2
         with:
-          name: ${{ github.event.repository.name }}
+          name: ${{ env.repository_name }}
 
       - name: Extract Artifact 📦
-        run: tar --zstd -xf ${{ github.event.repository.name }}.tar.zst
+        run: tar --zstd -xf ${{ env.artifact }}
 
       - name: Reinstall Cypress 📦
-        working-directory: ${{ github.event.repository.name }}
+        working-directory: ${{ env.repository_name }}
         run: yarn cy:install
 
       - name: Run Cypress Tests 🧪
         uses: cypress-io/github-action@v2
         with:
           browser: chrome
-          working-directory: ${{ github.event.repository.name }}
+          working-directory: ${{ env.repository_name }}
           start: yarn develop
           wait-on: 'http://localhost:8000'
           wait-on-timeout: 300
@@ -135,18 +140,18 @@ jobs:
       - name: Download Artifact ⏬
         uses: actions/download-artifact@v2
         with:
-          name: ${{ github.event.repository.name }}
+          name: ${{ env.repository_name }}
 
       - name: Extract Artifact 📦
-        run: tar --zstd -xf ${{ github.event.repository.name }}.tar.zst
+        run: tar --zstd -xf ${{ env.artifact }}
 
       - name: Run SonarCloud Scan 📡
         uses: sonarsource/sonarcloud-github-action@v1.6
         with:
-          projectBaseDir: ${{ github.event.repository.name }}
+          projectBaseDir: ${{ env.repository_name }}
           args: >
-            -Dsonar.organization=${{ github.repository_owner }}
-            -Dsonar.projectKey=${{ github.repository_owner }}_${{ github.event.repository.name }}
+            -Dsonar.organization=${{ env.repository_owner }}
+            -Dsonar.projectKey=${{ env.repository_owner }}_${{ env.repository_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -159,13 +164,13 @@ jobs:
       - name: Download Artifact ⏬
         uses: actions/download-artifact@v2
         with:
-          name: ${{ github.event.repository.name }}
+          name: ${{ env.repository_name }}
 
       - name: Extract Artifact 📦
-        run: tar --zstd -xf ${{ github.event.repository.name }}.tar.zst
+        run: tar --zstd -xf ${{ env.artifact }}
 
       - name: Run Lighthouse CI 🗼
-        working-directory: ${{ github.event.repository.name }}
+        working-directory: ${{ env.repository_name }}
         run: yarn run lhci
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
