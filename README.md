@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.marcm.dev/">
+  <a href="https://www.marcm.dev/" aria-label="marcm-dev" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/website-up-down-green-red/https/marcm.dev.svg?label=marcm.dev" alt="up-down-badge"/>
   </a>
   <img src="https://img.shields.io/github/languages/count/2n3g5c9/marcm-dev.svg?style=flat" alt="languages-badge"/>
