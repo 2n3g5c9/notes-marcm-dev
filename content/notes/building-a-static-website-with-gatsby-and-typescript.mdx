@@ -9,7 +9,8 @@ import { BlockInfo, BlockWarning } from '@components'
 
 <BlockWarning>
   <strong>Disclaimer:</strong> this static website was built from the ground up as a hobby to maintain, or at best
-  develop my understanding. Feel free to drop me a message if you want to share some advice.
+  develop my understanding. Feel free to drop me a message if you want to share some advice. The code is publicly
+  accessible <a href="https://github.com/2n3g5c9/marcm-dev" aria-label="GitHub repository" target="_blank" rel="noopener noreferrer">on GitHub</a>.
 </BlockWarning>
 
 # Context
@@ -189,19 +190,20 @@ GitHub Actions and the fact that it was natively integrated with GitHub, I decid
 **Automated checks:**
 * `.github/workflows/ci.yml` is where automated checks on push and pull requests are defined (via NPM scripts).
 `node_modules` is cached with `actions/cache` and a [ZSTD](https://facebook.github.io/zstd/) compressed archive is used
-as shared artifact for subsequent tests.
+as shared artifact for subsequent tests running in parallel.
 * `.eslintrc.js` is where linting rules are defined, in addition to the `@typescript-eslint` and `react` plugins.
 * Types are checked statically with TypeScript, and at runtime with `PropTypes`. To avoid typing duplication, TypeScript
 types are inferred from `PropTypes` via `InferProps` wherever possible.
 * `src/components/__tests__` is where simple snapshot tests are defined. Component rendering tests are written with
 [Jest](https://jestjs.io/) and default props for simplicity's sake.
 * `cypress/e2e/accessibility.test.js` is where accessibility tests are defined, and bootstrapped with
-[Cypress](https://www.cypress.io/). Strict compliance with axe web rules are checked on most pages.
-* [SonarCloud](https://sonarcloud.io/) ensures the code complies with high standards by passing the quality gate.
+[Cypress](https://www.cypress.io/). Strict compliance with axe web rules are checked on the main pages.
+* [SonarCloud](https://sonarcloud.io/) ensures the code complies with high quality standards by passing the quality
+gate.
 * `.github/workflows/codeql-analysis.yml` is where automated code vulnerability scanning is defined, leveraging
-[CodeQL](https://codeql.github.com/), which is known as the project behind [LGTM](https://lgtm.com/).
+[CodeQL](https://codeql.github.com/), which is also known as the project behind [LGTM](https://lgtm.com/).
 * `lighthouserc.js` is where expectations on the automated [Lighthouse](https://github.com/GoogleChrome/lighthouse-ci)
-audits are defined.
+audit results are defined.
 
 ### Dependency Management
 
