@@ -9,9 +9,9 @@ on:
       - main
 
 env:
-  repository_owner: ${{ github.repository_owner }}
-  repository_name: ${{ github.event.repository.name }}
   artifact: ${{ github.event.repository.name }}.tar.zst
+  repository_name: ${{ github.event.repository.name }}
+  repository_owner: ${{ github.repository_owner }}
 
 jobs:
   init:
