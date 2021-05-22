@@ -69,6 +69,8 @@ cascading style.
 * Type checks: detects type mismatches with static code analysis.
 * Snapshot tests: detects unexpected changes in UI components rendering.
 * Accessibility tests: detects drift with basic axe accessibility compliance checks.
+* Code quality checks: detects bugs, code duplication and code smells.
+* Security audit: detects vulnerabilities in the code with semantic code analysis.
 * Best practices audit: detects UX regressions with industry standard practices checks.
 
 ### Continuous Deployment (CD)
@@ -185,8 +187,9 @@ It's ultimately a bit inconsistent to compare minutes or credits for different o
 GitHub Actions and the fact that it was natively integrated with GitHub, I decided to give it a try.
 
 **Automated checks:**
-* `.github/workflows/checks.yml` is where automated checks on push and pull requests are defined (via NPM scripts).
-`node_modules` and the runner cache (including Cypress binaries) are cached with `actions/cache`.
+* `.github/workflows/ci.yml` is where automated checks on push and pull requests are defined (via NPM scripts).
+`node_modules` is cached with `actions/cache` and a [ZSTD](https://facebook.github.io/zstd/) compressed archive is used
+as shared artifact for subsequent tests.
 * `.eslintrc.js` is where linting rules are defined, in addition to the `@typescript-eslint` and `react` plugins.
 * Types are checked statically with TypeScript, and at runtime with `PropTypes`. To avoid typing duplication, TypeScript
 types are inferred from `PropTypes` via `InferProps` wherever possible.
@@ -194,6 +197,9 @@ types are inferred from `PropTypes` via `InferProps` wherever possible.
 [Jest](https://jestjs.io/) and default props for simplicity's sake.
 * `cypress/e2e/accessibility.test.js` is where accessibility tests are defined, and bootstrapped with
 [Cypress](https://www.cypress.io/). Strict compliance with axe web rules are checked on most pages.
+* [SonarCloud](https://sonarcloud.io/) ensures the code complies with high standards by passing the quality gate.
+* `.github/workflows/codeql-analysis.yml` is where automated code vulnerability scanning is defined, leveraging
+[CodeQL](https://codeql.github.com/), which is known as the project behind [LGTM](https://lgtm.com/).
 * `lighthouserc.js` is where expectations on the automated [Lighthouse](https://github.com/GoogleChrome/lighthouse-ci)
 audits are defined.
 

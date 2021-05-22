@@ -108,7 +108,8 @@
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test develop 8000 cy:open",
     "test:e2e:cli": "start-server-and-test develop 8000 cy:run",
-    "lhci": "lhci autorun"
+    "lhci": "lhci autorun",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
