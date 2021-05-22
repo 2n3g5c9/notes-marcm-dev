@@ -21,6 +21,9 @@
   <a href="https://github.com/2n3g5c9/marcm-dev/actions/workflows/codeql-analysis.yml">
     <img src="https://github.com/2n3g5c9/marcm-dev/workflows/CodeQL/badge.svg" alt="codeql-badge"/>
   </a>
+  <a href="https://sonarcloud.io/dashboard?id=2n3g5c9_marcm-dev" target="_blank" rel="noopener noreferrer">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=2n3g5c9_marcm-dev&metric=alert_status" alt="sonarcloud-badge"/>
+  </a>
 </p>
 
 <p align="center">
