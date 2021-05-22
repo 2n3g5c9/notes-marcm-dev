@@ -22,7 +22,6 @@ import { BlockInfo, BlockWarning } from '@components'
 * Keep up with [React](https://reactjs.org/)/[TypeScript](https://www.typescriptlang.org/) core concepts, and modern
 front-end web development workflows.
 * Maintain basic knowledge of web design, without the overhead of writing layers of wrapper components.
-* Experiment with a web analytics tool, and understand derived insights.
 
 ## Requirements
 
@@ -260,7 +259,7 @@ If there is one well-known automated web auditing tool, it's
 Achieving all perfect scores in Lighthouse (Chrome 90) wasn't that hard with Gatsby & Vercel. But it certainly became
 more challenging with things like service worker registration, or custom font preloading in the critical rendering path
 (to avoid flickering). Even if this improves the overall user experience on the website, it will impact the performance
-score negatively. Also, [Google Tag Manager](https://tagmanager.google.com/) has a significant impact on performance.
+score negatively.
 
 Results from [web.dev/measure](https://web.dev/measure/) can vary a lot between runs (probably ran in containers with a
 small amount of resources from different locations), but it eventually gave some good results.
@@ -286,8 +285,7 @@ served (although that also means client-side executable code):
 * **Cross-Site Request Forgery (CSRF):** avoided by only allowing `GET` requests (via the
 `Access-Control-Allow-Methods` HTTP header), and not using cookies (but if we were to, the `X-CSRF-Token` HTTP header is
 expected).
-* **Third-party scripts:** [Google Tag Manager](https://tagmanager.google.com/#/home) is the only one used, and the
-access to the service is restricted with a unique, high entropy password, plus MFA.
+* **Third-party scripts:** no third-party script is currently used.
 * **Dependencies:** avoided by updating them weekly to ensure the latest security fixes are applied as they are
 available. In addition, Dependabot's GitHub integration will alert if a vulnerability has been found in one of the
 dependencies. We could argue this opens the door to automatically merging malicious code, but I can't review dozens of

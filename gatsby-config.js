@@ -61,15 +61,6 @@ module.exports = {
         crossOrigin: `anonymous`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-preconnect',
-      options: {
-        domains: [
-          'https://www.googletagmanager.com',
-          'https://www.google-analytics.com',
-        ],
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-react-svg',
@@ -158,21 +149,6 @@ module.exports = {
       options: {
         hash: 'sha256',
         crossorigin: false,
-      },
-    },
-    // Analytics
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          'G-G11QYKS7W4', // Google Analytics
-        ],
-        gtagConfig: {
-          anonymize_ip: true,
-        },
-        pluginConfig: {
-          respectDNT: true,
-        },
       },
     },
   ],

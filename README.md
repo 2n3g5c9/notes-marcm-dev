@@ -118,7 +118,6 @@ yarn build && yarn serve
 - [TypeScript](https://www.typescriptlang.org/): Typed superset of JavaScript that compiles to plain JavaScript.
 - [Gatsby](https://www.gatsbyjs.com/): Free and open source framework based on React that helps developers build blazing fast websites and apps.
 - [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for rapidly building custom user interfaces.
-- [Google Analytics](https://analytics.google.com/): A web analytics service offered by Google that tracks and reports website traffic.
 
 ## 📃 License
 
