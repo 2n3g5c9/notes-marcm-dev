@@ -70,8 +70,8 @@ exports[`Footer renders correctly 1`] = `
       . Built with
        
       <a
-        aria-label="Gatsby Starter"
-        href="https://github.com/2n3g5c9/gatsby-starter-typescript-tailwindcss"
+        aria-label="GitHub repository"
+        href="https://github.com/2n3g5c9/marcm-dev"
         rel="noopener noreferrer"
         target="_blank"
       >

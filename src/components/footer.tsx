@@ -42,8 +42,8 @@ const Footer = ({ author, urls }: FooterProps): ReactElement => (
       <p className="text-center text-sm sm:text-base">
         &copy; 2021 {author}. Built with{' '}
         <a
-          href="https://github.com/2n3g5c9/gatsby-starter-typescript-tailwindcss"
-          aria-label="Gatsby Starter"
+          href="https://github.com/2n3g5c9/marcm-dev"
+          aria-label="GitHub repository"
           target="_blank"
           rel="noopener noreferrer"
         >
