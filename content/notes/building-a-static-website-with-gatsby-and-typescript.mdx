@@ -65,11 +65,11 @@ cascading style.
 
 ### Continuous Integration (CI)
 * Triggered on push/merge to all branches, gives enough confidence that the code is in a stable state to be deployed.
-* Lint checks: detects structural problems and improves code quality with static code analysis.
-* Type checks: detects type mismatches with static code analysis.
-* Snapshot tests: detects unexpected changes in UI components rendering.
-* Accessibility tests: detects drift with basic axe accessibility compliance checks.
-* Code quality checks: detects bugs, code duplication and code smells.
+* Lint checks: detect structural problems and improves code quality with static code analysis.
+* Type checks: detect type mismatches with static code analysis.
+* Snapshot tests: detect unexpected changes in UI components rendering.
+* Accessibility tests: detect drift with basic axe accessibility compliance checks.
+* Code quality checks: detect bugs, code duplication and code smells.
 * Security audit: detects vulnerabilities in the code with semantic code analysis.
 * Best practices audit: detects UX regressions with industry standard practices checks.
 
@@ -199,10 +199,10 @@ types are inferred from `PropTypes` via `InferProps` wherever possible.
 [Cypress](https://www.cypress.io/). Strict compliance with axe web rules are checked on the main pages.
 * [SonarCloud](https://sonarcloud.io/) ensures the code complies with high quality standards by passing the quality
 gate.
-* `.github/workflows/codeql-analysis.yml` is where automated code vulnerability scanning is defined, leveraging
+* `.github/workflows/codeql-analysis.yml` is where automated code vulnerability scanning is defined by leveraging
 [CodeQL](https://codeql.github.com/), which is also known as the project behind [LGTM](https://lgtm.com/).
 * `lighthouserc.js` is where expectations on the automated [Lighthouse](https://github.com/GoogleChrome/lighthouse-ci)
-audit results are defined.
+audit results are set.
 
 ### Dependency Management
 
@@ -227,7 +227,7 @@ Among the considered options were:
 ![Content Delivery Network](./images/cdn.png)
 
 * [Vercel](https://vercel.com/): past experience with the product, supports TLS 1.2 & 1.3, supports GZIP & Brotli, free
-plan includes 100 GB bandwidth.
+plan includes 100 GB bandwidth per month.
 * [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/): supports TLS 1.2, supports GZIP, faster incremental Gatsby
 builds, free plan includes 5M requests and 100 GB bandwidth per month.
 * [Netlify](https://www.netlify.com/): supports TLS 1.2 & 1.3, supports GZIP & Brotli, free plan includes 100 GB
@@ -251,12 +251,12 @@ Coast (0), London (0) and Tokyo (0) ✅
 
 ## Lighthouse
 
-If there is one well-known automated web auditing tool, it's
+Without contest the most well-known automated web auditing tool:
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) by Google.
 
 ![Lighthouse](./images/lighthouse-local.png)
 
-Achieving all perfect scores in Lighthouse (Chrome 90) wasn't that hard with Gatsby & Vercel. But it certainly became
+Achieving all perfect scores in Lighthouse (Chrome 91) wasn't that hard with Gatsby & Vercel. But it certainly became
 more challenging with things like service worker registration, or custom font preloading in the critical rendering path
 (to avoid flickering). Even if this improves the overall user experience on the website, it will impact the performance
 score negatively.
@@ -278,8 +278,8 @@ highest possible scores in the regions I was interested in.
 
 # Security Goals
 
-Most attack vectors are taken care of by the front-end framework's design, and the fact that only static content is
-served (although that also means client-side executable code):
+Most attack vectors are taken care of by the front-end framework's design, and the fact that it only serves static
+content (including client-side executable code):
 * **Cross-Site Scripting (XSS):** avoided by automatically escaping HTML in JSX elements, and adding a restrictive
 [Content Security Policy (CSP)](https://content-security-policy.com/).
 * **Cross-Site Request Forgery (CSRF):** avoided by only allowing `GET` requests (via the

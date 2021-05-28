@@ -66,9 +66,9 @@ module.exports = {
         },
       },
       animation: {
-        'fade-in-down': 'fade-in-down 0.75s ease-out',
-        'left-splash': 'left-splash 1s',
-        'right-splash': 'right-splash 1s',
+        'fade-in-down': 'fade-in-down 0.5s ease-out',
+        'left-splash': 'left-splash 0.75s',
+        'right-splash': 'right-splash 0.75s',
       },
     },
     fontFamily: {
