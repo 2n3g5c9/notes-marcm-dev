@@ -53,7 +53,7 @@ Array [
         <button
           aria-checked={false}
           className="bg-accent border-2 border-transparent cursor-pointer duration-200 ease-in-out flex-shrink-0 h-6 inline-flex focus:outline-none relative rounded-full transition-colors w-11"
-          id="headlessui-switch-1"
+          id="headlessui-switch-undefined"
           onClick={[Function]}
           onKeyPress={[Function]}
           onKeyUp={[Function]}
