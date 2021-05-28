@@ -22,7 +22,7 @@ const NoteLayout = ({ data: { site, mdx } }: NoteLayoutProps): ReactElement => {
 }
 
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     site: site {
       siteMetadata {
         title
