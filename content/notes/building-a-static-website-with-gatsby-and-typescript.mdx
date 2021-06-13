@@ -142,13 +142,13 @@ styled wrapper components which were hard to reason about. Utility-classes event
 easier to read.
 
 **Configuration:**
-* `tailwind.config.js` is where custom utility-classes are declared to extend the base library (e.g. types of colors,
-margins, animations, fonts, etc.).
-* `src/assets/css/global.css` is where global CSS rules are defined, such as theme colors. I tried to stick to a
-minimalist color palette, as declining it for a dark theme and insuring contrast ratios match accessibility expectations
-is a lot of extra work.
-* `gatsby-config.js` is where [PurgeCSS](https://purgecss.com/) safelists are defined for a few utility-classes injected
-in MDX files that would get excluded by the purge algorithm.
+* `tailwind.config.js` declares custom utility-classes to extend the base library (e.g. types of colors, margins,
+animations, fonts, etc.).
+* `src/assets/css/global.css` defines global CSS rules, such as theme colors. I tried to stick to a minimalist color
+palette, as declining it for a dark theme and insuring contrast ratios match accessibility expectations is a lot of
+extra work.
+* `gatsby-config.js` defines [PurgeCSS](https://purgecss.com/) safelists for a few utility-classes injected in MDX files
+that would get excluded by the purge algorithm.
 
 ## Operations
 
@@ -187,22 +187,22 @@ It's ultimately a bit inconsistent to compare minutes or credits for different o
 GitHub Actions and the fact that it was natively integrated with GitHub, I decided to give it a try.
 
 **Automated checks:**
-* `.github/workflows/ci.yml` is where automated checks on push and pull requests are defined (via NPM scripts).
-`node_modules` is cached with `actions/cache` and a [ZSTD](https://facebook.github.io/zstd/) compressed archive is used
-as shared artifact for subsequent tests running in parallel.
-* `.eslintrc.js` is where linting rules are defined, in addition to the `@typescript-eslint` and `react` plugins.
+* `.github/workflows/ci.yml` defines automated checks on push and pull requests (via NPM scripts). `node_modules` is
+cached with `actions/cache` and a [ZSTD](https://facebook.github.io/zstd/) compressed archive is used as shared artifact
+for subsequent tests running in parallel.
+* `.eslintrc.js` defines linting rules, in addition to the `@typescript-eslint` and `react` plugins.
 * Types are checked statically with TypeScript, and at runtime with `PropTypes`. To avoid typing duplication, TypeScript
 types are inferred from `PropTypes` via `InferProps` wherever possible.
-* `src/components/__tests__` is where simple snapshot tests are defined. Component rendering tests are written with
+* `src/components/__tests__` defines simple snapshot tests. Component rendering tests are written with
 [Jest](https://jestjs.io/) and default props for simplicity's sake.
-* `cypress/e2e/accessibility.test.js` is where accessibility tests are defined, and bootstrapped with
+* `cypress/e2e/accessibility.test.js` defines accessibility tests, and bootstrapped with
 [Cypress](https://www.cypress.io/). Strict compliance with axe web rules are checked on the main pages.
 * [SonarCloud](https://sonarcloud.io/) ensures the code complies with high quality standards by passing the quality
 gate.
-* `.github/workflows/codeql-analysis.yml` is where automated code vulnerability scanning is defined by leveraging
+* `.github/workflows/codeql-analysis.yml` defines automated code vulnerability scanning by leveraging
 [CodeQL](https://codeql.github.com/), which is also known as the project behind [LGTM](https://lgtm.com/).
-* `lighthouserc.js` is where expectations on the automated [Lighthouse](https://github.com/GoogleChrome/lighthouse-ci)
-audit results are set.
+* `lighthouserc.js` sets expectations on the automated [Lighthouse](https://github.com/GoogleChrome/lighthouse-ci)
+audit results.
 
 ### Dependency Management
 
