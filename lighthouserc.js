@@ -14,6 +14,7 @@ module.exports = {
       preset: 'lighthouse:recommended',
       assertions: {
         interactive: 'off',
+        'csp-xss': 'off',
         'largest-contentful-paint': 'off',
         'legacy-javascript': 'off',
         'non-composited-animations': 'off',
