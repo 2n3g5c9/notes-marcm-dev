@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="https://github.com/2n3g5c9/marcm-dev/actions/workflows/ci.yml">
-    <img src="https://github.com/2n3g5c9/marcm-dev/workflows/Continuous%20Integration/badge.svg" alt="ci-badge"/>
+    <img src="https://github.com/2n3g5c9/marcm-dev/workflows/CI/badge.svg" alt="ci-badge"/>
   </a>
   <a href="https://github.com/2n3g5c9/marcm-dev/actions/workflows/codeql-analysis.yml">
     <img src="https://github.com/2n3g5c9/marcm-dev/workflows/CodeQL/badge.svg" alt="codeql-badge"/>

@@ -7,6 +7,9 @@ date: 2021-02-21
 
 import { BlockInfo, BlockWarning } from '@components'
 
+import ProcessSVG from './images/process.svg'
+import StaticSiteGeneratorSVG from './images/static-site-generator.svg'
+
 <BlockWarning>
   <strong>Disclaimer:</strong> this static website was built from the ground up as a hobby to maintain, or at best
   develop my understanding. Feel free to drop me a message if you want to share some advice. The code is publicly
@@ -15,7 +18,7 @@ import { BlockInfo, BlockWarning } from '@components'
 
 # Context
 
-![Process](./images/process.png)
+<ProcessSVG className="text-primary"/>
 
 ## Motivation
 
@@ -50,9 +53,8 @@ preload/prefetch, tree shaking, etc.).
 
 ### CSS Library
 * Bootstraps building blocks for standards-compliant web design elements.
-* Reduces the amount of CSS code, while ensuring a degree of overall coherence in the web design.
-* Offers the ability to write CSS-in-JS to embed conditional styling in components, and reduces the risk of unintended
-cascading style.
+* Reduces the amount of CSS code, while ensuring overall coherence in the web design.
+* Embeds conditional styling in components with CSS-in-JS, and reduces the risk of unintended cascading style.
 
 ## Operations
 
@@ -98,7 +100,7 @@ cascading style.
 ### Static Site Generator
 
 Among the considered options were:
-![Static Site Generator](./images/static-site-generator.png)
+<StaticSiteGeneratorSVG className="text-primary"/>
 
 * [Gatsby](https://www.gatsbyjs.com/): based on React, leverages [GraphQL](https://graphql.org/) for its unified data
 layer, relies on its ecosystem of plugins.
