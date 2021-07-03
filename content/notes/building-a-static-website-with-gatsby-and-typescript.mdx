@@ -8,7 +8,13 @@ date: 2021-02-21
 import { BlockInfo, BlockWarning } from '@components'
 
 import ProcessSVG from './images/process.svg'
+import HighLevelDesignSVG from './images/marcm-dev-hld.svg'
 import StaticSiteGeneratorSVG from './images/static-site-generator.svg'
+import CSSLibrarySVG from './images/css-library.svg'
+import VCSSVG from './images/vcs.svg'
+import CISVG from './images/ci.svg'
+import DependencyManagementSVG from './images/dependency-management.svg'
+import CDNSVG from './images/cdn.svg'
 
 <BlockWarning>
   <strong>Disclaimer:</strong> this static website was built from the ground up as a hobby to maintain, or at best
@@ -58,7 +64,7 @@ preload/prefetch, tree shaking, etc.).
 
 ## Operations
 
-![High-level design](./images/marcm-dev-hld.png)
+<HighLevelDesignSVG className="text-primary"/>
 
 ### Version Control System (VCS)
 * Organises, stores and versions the code.
@@ -132,7 +138,7 @@ that are included by default in production with Gatsby.
 ### CSS Library
 
 Among the considered options were (not directly opposed):
-![CSS Library](./images/css-library.png)
+<CSSLibrarySVG className="text-primary"/>
 
 * [Tailwind CSS](https://tailwindcss.com/) (with [PostCSS](https://postcss.org/)): based on pre-baked utility-classes,
 reduces the amount of CSS code but highly opinionated and difficult to migrate from.
@@ -157,8 +163,7 @@ that would get excluded by the purge algorithm.
 ### Version Control System
 
 I wasn't really going for anything other than [Git](https://git-scm.com/), but for repository management, I considered:
-
-![Version Control System](./images/vcs.png)
+<VCSSVG className="text-primary"/>
 
 * [GitHub](https://github.com/): owned by Microsoft, free plan includes unlimited public/private repositories, unlimited
 Actions on public repositories and 2,000 Actions minutes/month on private repositories.
@@ -175,8 +180,7 @@ They are both compatible with a wide range of services, including the options I 
 ### Continuous Integration (CI)
 
 Among the considered options were:
-
-![Continuous Integration](./images/ci.png)
+<CISVG className="text-primary"/>
 
 * [GitHub Actions](https://github.com/features/actions): out-of-the-box integration with GitHub, large collection of
 pre-built Actions, free plan includes unlimited Actions on public repositories and 2,000 Actions minutes/month on
@@ -209,8 +213,7 @@ audit results.
 ### Dependency Management
 
 Among the considered options were:
-
-![Dependency Management](./images/dependency-management.png)
+<DependencyManagementSVG className="text-primary"/>
 
 * [Depfu](https://depfu.com/): previous experience with the tool, gives more control over the update strategy like
 support for grouped updates, configuration from Web UI, supports auto-merge, free for public and private repositories.
@@ -225,8 +228,7 @@ fast and easy.
 ### Global Content Delivery Network (CDN)
 
 Among the considered options were:
-
-![Content Delivery Network](./images/cdn.png)
+<CDNSVG className="text-primary"/>
 
 * [Vercel](https://vercel.com/): past experience with the product, supports TLS 1.2 & 1.3, supports GZIP & Brotli, free
 plan includes 100 GB bandwidth per month.

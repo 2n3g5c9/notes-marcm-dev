@@ -17,6 +17,6 @@ module.exports = {
     text: 'How to build a static website?',
     slug: '/notes/building-a-static-website-with-gatsby-and-typescript',
   },
-  backgroundColor: '#FFFEF1',
-  themeColor: '#212121',
+  backgroundColor: '#212121',
+  themeColor: '#FFFEF1',
 }
