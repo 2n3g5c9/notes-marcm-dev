@@ -20,6 +20,7 @@ module.exports = {
         'non-composited-animations': 'off',
         'unused-css-rules': 'off',
         'unused-javascript': 'off',
+        'valid-source-maps': 'off',
       },
     },
     upload: {
