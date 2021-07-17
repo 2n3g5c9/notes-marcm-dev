@@ -22,6 +22,7 @@ module.exports = {
         start_url: `/`,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
+        theme_color_in_head: false,
         display: `minimal-ui`,
         icon: `src/assets/images/icon.png`,
         icon_options: {
