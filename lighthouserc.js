@@ -18,6 +18,7 @@ module.exports = {
         'largest-contentful-paint': 'off',
         'legacy-javascript': 'off',
         'non-composited-animations': 'off',
+        'themed-omnibox': 'off', // to dynamically set theme-color
         'unused-css-rules': 'off',
         'unused-javascript': 'off',
         'valid-source-maps': 'off',
