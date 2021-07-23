@@ -20,7 +20,7 @@ const HeroSection = ({
                 slug={latestNote.slug}
                 title={latestNote.frontmatter.title}
               />
-              <h1 className="font-black text-2xl sm:text-3xl lg:text-4xl">
+              <h1 className="font-black text-xl sm:text-3xl lg:text-4xl">
                 {title}
               </h1>
               <p className="sm:max-w-xl mt-3 sm:mt-5 md:mt-5 sm:mx-auto lg:mx-0 text-base sm:text-lg text-secondary">

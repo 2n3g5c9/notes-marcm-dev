@@ -37,11 +37,11 @@ export const ButtonLink = ({ text, slug, alt = false }) => (
 )
 
 export const LatestNote = ({ slug, title }) => (
-  <Link to={'/notes/' + slug} className="inline-flex space-x-4 mb-5">
-    <span className="rounded bg-secondary px-2.5 py-1 text-xs font-semibold text-primary tracking-wide uppercase">
+  <Link to={'/notes/' + slug} className="inline-flex mb-5 space-x-4">
+    <span className="bg-secondary font-semibold px-2.5 py-1 rounded text-xs tracking-wide uppercase">
       What's new
     </span>
-    <span className="inline-flex items-center text-sm font-medium text-primary space-x-1">
+    <span className="font-medium inline-flex items-center space-x-1 text-sm">
       <span>{title}</span>
       <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
     </span>
