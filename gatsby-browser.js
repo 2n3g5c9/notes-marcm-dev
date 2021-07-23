@@ -1,6 +1,3 @@
-// Serif font
-import '@fontsource/ibm-plex-serif/latin-700.css'
-
 // Sans font
 import '@fontsource/ibm-plex-sans/latin-400.css'
 import '@fontsource/ibm-plex-sans/latin-500.css'
