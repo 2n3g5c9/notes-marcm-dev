@@ -27,7 +27,7 @@ exports[`NoteSummary renders correctly 1`] = `
     href="#"
   >
     <p
-      className="font-semibold font-serif text-xl sm:text-2xl "
+      className="font-semibold text-xl sm:text-2xl "
     >
       Default title
     </p>

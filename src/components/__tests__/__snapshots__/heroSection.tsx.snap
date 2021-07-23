@@ -16,8 +16,38 @@ exports[`HeroSection renders correctly 1`] = `
         <div
           className="animate-fade-in-down"
         >
+          <a
+            className="inline-flex space-x-4 mb-5"
+            href="/notes/#"
+          >
+            <span
+              className="rounded bg-secondary px-2.5 py-1 text-xs font-semibold text-primary tracking-wide uppercase"
+            >
+              What's new
+            </span>
+            <span
+              className="inline-flex items-center text-sm font-medium text-primary space-x-1"
+            >
+              <span>
+                The latest note based on its date
+              </span>
+              <svg
+                aria-hidden="true"
+                className="h-5 w-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </span>
+          </a>
           <h1
-            className="font-bold font-serif text-3xl sm:text-4xl lg:text-5xl"
+            className="font-black text-2xl sm:text-3xl lg:text-4xl"
           >
             This is a default title
           </h1>
@@ -39,7 +69,7 @@ exports[`HeroSection renders correctly 1`] = `
             <div>
               <a
                 aria-label="Read the notes"
-                className="bg-accent hover:bg-transparent text-tertiary hover:text-primary border border-accent flex items-center justify-center px-8 py-3 lg:py-3.5 rounded lg:text-lg w-full"
+                className="bg-accent hover:bg-transparent text-tertiary hover:text-primary border border-accent flex items-center justify-center px-7 py-2.5 lg:py-3 rounded lg:text-lg w-full"
                 href="/notes"
               >
                 Read the notes
@@ -52,7 +82,7 @@ exports[`HeroSection renders correctly 1`] = `
           <div>
             <a
               aria-label="More about me"
-              className="bg-transparent hover:bg-accent hover:text-tertiary border border-accent flex items-center justify-center px-8 py-3 lg:py-3.5 rounded lg:text-lg w-full"
+              className="bg-transparent hover:bg-accent hover:text-tertiary border border-accent flex items-center justify-center px-7 py-2.5 lg:py-3 rounded lg:text-lg w-full"
               href="/about"
             >
               More about me
