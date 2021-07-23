@@ -4,16 +4,37 @@ import PropTypes, { InferProps } from 'prop-types'
 
 import { HeroSection, Layout, SEO } from '@components'
 
-const IndexPage = ({ data: { md } }: IndexPageProps): ReactElement => (
+const IndexPage = ({
+  data: { md, latestNote },
+}: IndexPageProps): ReactElement => (
   <Layout>
     <SEO title="Home" />
-    <HeroSection {...md} />
+    <HeroSection
+      title={md.frontmatter.title}
+      subtitle={md.frontmatter.subtitle}
+      latestNote={latestNote.edges[0].node}
+    />
   </Layout>
 )
 
 const indexPagePropTypes = {
   data: PropTypes.shape({
-    md: PropTypes.object,
+    md: PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string,
+        subtitle: PropTypes.string,
+      }),
+    }),
+    latestNote: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            slug: PropTypes.string,
+            frontmatter: PropTypes.objectOf(PropTypes.string),
+          }),
+        })
+      ),
+    }),
   }),
 }
 
@@ -29,6 +50,20 @@ export const pageQuery = graphql`
       frontmatter {
         title
         subtitle
+      }
+    }
+    latestNote: allMdx(
+      filter: { fileAbsolutePath: { regex: "/notes/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 1
+    ) {
+      edges {
+        node {
+          slug
+          frontmatter {
+            title
+          }
+        }
       }
     }
   }

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import { ChevronRightIcon } from '@heroicons/react/solid'
+
 export const AboutHeading = ({ title, contactText, contactLink }) => (
   <div className="flex pb-1">
     <h1 className="flex-1 font-bold leading-7 min-w-0 text-2xl sm:text-3xl sm:truncate">
@@ -26,12 +28,24 @@ export const ButtonLink = ({ text, slug, alt = false }) => (
         alt
           ? 'bg-transparent hover:bg-accent hover:text-tertiary'
           : 'bg-accent hover:bg-transparent text-tertiary hover:text-primary'
-      } border border-accent flex items-center justify-center px-8 py-3 lg:py-3.5 rounded lg:text-lg w-full`}
+      } border border-accent flex items-center justify-center px-7 py-2.5 lg:py-3 rounded lg:text-lg w-full`}
       aria-label={text}
     >
       {text}
     </Link>
   </div>
+)
+
+export const LatestNote = ({ slug, title }) => (
+  <Link to={'/notes/' + slug} className="inline-flex space-x-4 mb-5">
+    <span className="rounded bg-secondary px-2.5 py-1 text-xs font-semibold text-primary tracking-wide uppercase">
+      What's new
+    </span>
+    <span className="inline-flex items-center text-sm font-medium text-primary space-x-1">
+      <span>{title}</span>
+      <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
+    </span>
+  </Link>
 )
 
 export const NoteHeading = ({ title, summary, category }) => (
@@ -40,7 +54,7 @@ export const NoteHeading = ({ title, summary, category }) => (
       <span className="block font-semibold text-secondary text-center text-sm sm:text-base tracking-wide uppercase">
         {category}
       </span>
-      <span className="block font-extrabold font-serif leading-8 mt-1 sm:mt-2 text-center text-2xl sm:text-4xl tracking-tight">
+      <span className="block font-extrabold leading-8 mt-1 sm:mt-2 text-center text-2xl sm:text-4xl tracking-tight">
         {title}
       </span>
     </h1>
