@@ -41,7 +41,7 @@ export const LatestNote = ({ slug, title }) => (
     <span className="bg-secondary font-semibold px-2.5 py-1 rounded text-xs tracking-wide uppercase">
       What's new
     </span>
-    <span className="font-medium inline-flex items-center space-x-1 text-sm">
+    <span className="font-medium inline-flex items-center space-x-1 text-secondary text-sm">
       <span>{title}</span>
       <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
     </span>

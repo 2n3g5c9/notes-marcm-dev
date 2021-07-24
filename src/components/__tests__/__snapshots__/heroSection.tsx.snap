@@ -26,7 +26,7 @@ exports[`HeroSection renders correctly 1`] = `
               What's new
             </span>
             <span
-              className="font-medium inline-flex items-center space-x-1 text-sm"
+              className="font-medium inline-flex items-center space-x-1 text-secondary text-sm"
             >
               <span>
                 The latest note based on its date
