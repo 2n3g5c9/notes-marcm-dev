@@ -2,9 +2,10 @@ import React, { ReactElement } from 'react'
 import { navigate } from 'gatsby'
 
 import { Layout, SEO } from '@components'
+import { ButtonLink } from '@components/atoms'
 
 const NotFoundPage = (): ReactElement => {
-  const [counter, setCounter] = React.useState(5)
+  const [counter, setCounter] = React.useState(10)
 
   React.useEffect(() => {
     if (counter == 0) {
@@ -16,18 +17,23 @@ const NotFoundPage = (): ReactElement => {
 
   return (
     <Layout>
-      <SEO title="404: Not found" />
+      <SEO title="404: Page not found" />
       <div className="flex flex-col justify-center">
-        <div className="flex flex-col justify-center my-8 sm:my-10 lg:my-12">
-          <h1 className="flex-grow font-bold mx-auto text-6xl sm:text-7xl lg:text-8xl">
-            404
-          </h1>
-          <h2 className="flex-grow font-medium mx-auto text-xl sm:text-2xl lg:text-3xl">
-            Page Not Found
-          </h2>
+        <div className="sm:flex justify-center my-5 sm:my-12">
+          <p className="font-extrabold text-4xl sm:text-5xl">404</p>
+          <div className="sm:ml-6">
+            <div className="border-accent sm:border-l sm:pl-6">
+              <h1 className="font-extrabold text-2xl sm:text-4xl tracking-tight">
+                Page not found
+              </h1>
+              <p className="mt-1 text-secondary text-sm sm:text-base">
+                Please check the URL in the address bar and try again.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex-grow mx-auto sm:text-lg">
-          Taking you back home in... {counter}s
+        <div className="flex justify-center mt-6 sm:mt-0">
+          <ButtonLink text={`Going back home in... ${counter}s`} slug="/" />
         </div>
       </div>
     </Layout>
