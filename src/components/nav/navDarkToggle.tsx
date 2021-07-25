@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react'
 import { Switch } from '@headlessui/react'
+import { MoonIcon, SunIcon } from '@heroicons/react/solid'
 
 import { ThemeContext } from '@context/themeContext'
-import { MoonSVG, SunSVG } from '@assets/images'
 
 const NavDarkToggle = (): ReactElement => {
   const { theme, setTheme } = React.useContext(ThemeContext)
@@ -35,7 +35,7 @@ const NavDarkToggle = (): ReactElement => {
           } absolute flex h-full inset-0 items-center justify-center transition-opacity w-full`}
           aria-hidden="true"
         >
-          <MoonSVG className="h-3 w-3" />
+          <MoonIcon className="h-3 w-3" />
         </span>
         <span
           className={`${
@@ -45,7 +45,7 @@ const NavDarkToggle = (): ReactElement => {
           } absolute flex h-full inset-0 items-center justify-center transition-opacity w-full`}
           aria-hidden="true"
         >
-          <SunSVG className="h-3 w-3" />
+          <SunIcon className="h-3 w-3" />
         </span>
       </span>
     </Switch>
