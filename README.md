@@ -3,14 +3,14 @@
 </div>
 
 <h1 align="center">
-  Tech notes with words and code
+  Greetings to my not a blog 👋
 </h1>
 
 <p align="center">
-    <a href="#-getting-started">Getting Started</a>
-    &nbsp; • &nbsp;
-    <a href="#-techframeworks-used">Tech/frameworks used</a>
-    &nbsp; • &nbsp;
+  <a href="#-getting-started">Getting Started</a>
+  &nbsp; • &nbsp;
+  <a href="#-techframeworks-used">Tech/frameworks used</a>
+  &nbsp; • &nbsp;
     <a href="#-license">License</a>
 </p>
 
