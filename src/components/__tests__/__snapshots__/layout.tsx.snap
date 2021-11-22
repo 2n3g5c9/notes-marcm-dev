@@ -75,6 +75,7 @@ Array [
                 className="duration-100 ease-out opacity-0 absolute flex h-full inset-0 items-center justify-center transition-opacity w-full"
               >
                 <svg
+                  aria-hidden="true"
                   className="h-3 w-3"
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -90,6 +91,7 @@ Array [
                 className="duration-200 ease-in opacity-100 absolute flex h-full inset-0 items-center justify-center transition-opacity w-full"
               >
                 <svg
+                  aria-hidden="true"
                   className="h-3 w-3"
                   fill="currentColor"
                   viewBox="0 0 20 20"
