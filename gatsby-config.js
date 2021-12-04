@@ -88,7 +88,6 @@ module.exports = {
         linkImagesToOriginal: false,
       },
     },
-    `gatsby-remark-reading-time`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

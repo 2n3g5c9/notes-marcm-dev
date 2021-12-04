@@ -18,7 +18,7 @@ const NotesPage = ({ data: { mdx } }: NotesPageProps): ReactElement => (
           title={node.frontmatter.title}
           summary={node.frontmatter.summary}
           category={node.frontmatter.category}
-          readingTime={node.fields.readingTime.text}
+          timeToRead={node.timeToRead}
           slug={`/notes/${node.slug}`}
           key={id}
         />
@@ -31,11 +31,7 @@ const NotePropTypes = PropTypes.shape({
   node: PropTypes.shape({
     slug: PropTypes.string,
     frontmatter: PropTypes.objectOf(PropTypes.string),
-    fields: PropTypes.shape({
-      readingTime: PropTypes.shape({
-        text: PropTypes.string,
-      }),
-    }),
+    timeToRead: PropTypes.number,
   }),
 })
 
@@ -68,11 +64,7 @@ export const pageQuery = graphql`
             category
             date
           }
-          fields {
-            readingTime {
-              text
-            }
-          }
+          timeToRead
         }
       }
     }

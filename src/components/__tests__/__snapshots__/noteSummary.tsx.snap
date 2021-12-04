@@ -19,7 +19,8 @@ exports[`NoteSummary renders correctly 1`] = `
     <span
       className="text-secondary"
     >
-      1 min read
+      1
+       min read
     </span>
   </div>
   <a

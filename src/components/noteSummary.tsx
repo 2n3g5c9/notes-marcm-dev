@@ -10,7 +10,7 @@ const NoteSummary = ({
   title,
   summary,
   category,
-  readingTime,
+  timeToRead,
   slug,
 }: NoteSummaryProps): ReactElement => {
   const { theme } = React.useContext(ThemeContext)
@@ -29,7 +29,7 @@ const NoteSummary = ({
         <span className="px-2 text-secondary" aria-hidden="true">
           ⏱
         </span>
-        <span className="text-secondary">{readingTime}</span>
+        <span className="text-secondary">{timeToRead} min read</span>
       </div>
       <Link to={slug} className="block mt-3">
         <p className="font-semibold text-xl sm:text-2xl ">{title}</p>
@@ -50,7 +50,7 @@ const NoteSummaryPropTypes = {
   title: PropTypes.string,
   summary: PropTypes.string,
   category: PropTypes.string,
-  readingTime: PropTypes.string,
+  timeToRead: PropTypes.number,
   slug: PropTypes.string,
 }
 
@@ -60,7 +60,7 @@ const NoteSummaryDefaultProps = {
   title: 'Default title',
   summary: 'This is a default summary for a default article.',
   category: 'Default',
-  readingTime: '1 min read',
+  timeToRead: 1,
   slug: '#',
 }
 
