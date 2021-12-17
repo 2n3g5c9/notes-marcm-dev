@@ -1,15 +1,1 @@
-<svg
-        fill="currentColor"
-        viewBox="0 0 19 34"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        xml:space="preserve"
-        style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
->
-    <clipPath id="_clipright1"><path d="M9.384,32.262c-1.433,1.686 -2.66,1.783 -3.908,0.766c-1.678,-1.366 -3.373,-2.733 -4.884,-4.272c-0.484,-0.493 -0.411,-1.534 -0.592,-2.323c1.136,-0.108 2.701,-0.742 3.328,-0.228c2.172,1.78 4.018,3.96 6.056,6.057Z"/></clipPath>
-    <g clip-path="url(#_clipright1)"><rect x="-3.75" y="22.256" width="16.884" height="15.178"/></g>
-    <clipPath id="_clipright2"><path d="M18.272,20.132c-4.2,1.832 -7.107,-1.24 -10.44,-2.428c-0.305,-0.11 -0.635,-1.193 -0.501,-1.31c0.661,-0.58 1.73,-1.567 2.191,-1.363c2.928,1.296 5.736,2.865 8.571,4.368c0.112,0.06 0.095,0.362 0.179,0.733Z"/></clipPath>
-    <g clip-path="url(#_clipright2)"><rect x="3.55" y="11.253" width="18.472" height="13.198"/></g>
-    <clipPath id="_clipright3"><path d="M17.513,0c-0.319,0.724 -0.365,1.109 -0.581,1.277c-2.262,1.744 -4.494,3.537 -6.867,5.118c-0.674,0.449 -1.779,0.251 -2.745,0.014c2.974,-2.732 5.645,-5.724 10.193,-6.409Z"/></clipPath>
-    <g clip-path="url(#_clipright3)"><rect x="3.57" y="-3.75" width="17.693" height="14.164"/></g>
-</svg>
+<svg fill="currentColor" viewBox="0 0 19 34" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2"><clipPath id="_clipright1"><path d="M9.384 32.262c-1.433 1.686-2.66 1.783-3.908.766-1.678-1.366-3.373-2.733-4.884-4.272-.484-.493-.411-1.534-.592-2.323 1.136-.108 2.701-.742 3.328-.228 2.172 1.78 4.018 3.96 6.056 6.057Z"/></clipPath><g clip-path="url(#_clipright1)"><path d="M-3.75 22.256h16.884v15.178H-3.75z"/></g><clipPath id="_clipright2"><path d="M18.272 20.132c-4.2 1.832-7.107-1.24-10.44-2.428-.305-.11-.635-1.193-.501-1.31.661-.58 1.73-1.567 2.191-1.363 2.928 1.296 5.736 2.865 8.571 4.368.112.06.095.362.179.733Z"/></clipPath><g clip-path="url(#_clipright2)"><path d="M3.55 11.253h18.472v13.198H3.55z"/></g><clipPath id="_clipright3"><path d="M17.513 0c-.319.724-.365 1.109-.581 1.277-2.262 1.744-4.494 3.537-6.867 5.118-.674.449-1.779.251-2.745.014C10.294 3.677 12.965.685 17.513 0Z"/></clipPath><g clip-path="url(#_clipright3)"><path d="M3.57-3.75h17.693v14.164H3.57z"/></g></svg>
