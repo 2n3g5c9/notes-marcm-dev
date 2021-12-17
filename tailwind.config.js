@@ -1,5 +1,13 @@
 module.exports = {
-  purge: false,
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  safelist: [
+    'bg-red-50',
+    'bg-red-700',
+    'text-red-50',
+    'text-red-700',
+  ],
   variants: {
     extend: {},
   },
