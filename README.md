@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="512" src="https://raw.githubusercontent.com/2n3g5c9/marcm-dev/main/src/assets/images/shape.png" alt="marcm-dev">
+  <img width="512" src="https://raw.githubusercontent.com/2n3g5c9/notes-marcm-dev/main/src/assets/images/shape.png" alt="notes-marcm-dev">
 </div>
 
 <h1 align="center">
@@ -15,31 +15,31 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/2n3g5c9/marcm-dev/actions/workflows/ci.yml">
-    <img src="https://github.com/2n3g5c9/marcm-dev/workflows/CI/badge.svg" alt="ci-badge"/>
+  <a href="https://github.com/2n3g5c9/notes-marcm-dev/actions/workflows/ci.yml">
+    <img src="https://github.com/2n3g5c9/notes-marcm-dev/workflows/CI/badge.svg" alt="ci-badge"/>
   </a>
-  <a href="https://github.com/2n3g5c9/marcm-dev/actions/workflows/codeql-analysis.yml">
-    <img src="https://github.com/2n3g5c9/marcm-dev/workflows/CodeQL/badge.svg" alt="codeql-badge"/>
+  <a href="https://github.com/2n3g5c9/notes-marcm-dev/actions/workflows/codeql-analysis.yml">
+    <img src="https://github.com/2n3g5c9/notes-marcm-dev/workflows/CodeQL/badge.svg" alt="codeql-badge"/>
   </a>
-  <a href="https://sonarcloud.io/dashboard?id=2n3g5c9_marcm-dev" target="_blank" rel="noopener noreferrer">
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=2n3g5c9_marcm-dev&metric=alert_status" alt="sonarcloud-badge"/>
+  <a href="https://sonarcloud.io/dashboard?id=2n3g5c9_notes-marcm-dev" target="_blank" rel="noopener noreferrer">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=2n3g5c9_notes-marcm-dev&metric=alert_status" alt="sonarcloud-badge"/>
   </a>
-  <a href="https://depfu.com/github/2n3g5c9/marcm-dev?project_id=24387" target="_blank" rel="noopener noreferrer">
+  <a href="https://depfu.com/github/2n3g5c9/notes-marcm-dev?project_id=24387" target="_blank" rel="noopener noreferrer">
     <img src="https://badges.depfu.com/badges/a2b37072995a8de2a954a43807b5fdac/overview.svg" alt="depfu-badge"/>
   </a>
 </p>
 
 <p align="center">
-  <a href="https://www.marcm.dev/" aria-label="marcm-dev" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/website-up-down-green-red/https/marcm.dev.svg?label=marcm.dev" alt="up-down-badge"/>
+  <a href="https://notes.marcm.dev/" aria-label="notes-marcm-dev" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/website-up-down-green-red/https/notes.marcm.dev.svg?label=notes.marcm.dev" alt="up-down-badge"/>
   </a>
-  <img src="https://img.shields.io/github/languages/count/2n3g5c9/marcm-dev.svg?style=flat" alt="languages-badge"/>
+  <img src="https://img.shields.io/github/languages/count/2n3g5c9/notes-marcm-dev.svg?style=flat" alt="languages-badge"/>
   <a href="./LICENSE"> 
-    <img src="https://img.shields.io/github/license/2n3g5c9/marcm-dev" alt="license-badge">
+    <img src="https://img.shields.io/github/license/2n3g5c9/notes-marcm-dev" alt="license-badge">
   </a>
-  <img src="https://img.shields.io/github/repo-size/2n3g5c9/marcm-dev" alt="repo-size-badge">
-  <a href="https://github.com/2n3g5c9/marcm-dev/commits/main">
-    <img src="https://img.shields.io/github/last-commit/2n3g5c9/marcm-dev" alt="last-commit-badge">
+  <img src="https://img.shields.io/github/repo-size/2n3g5c9/notes-marcm-dev" alt="repo-size-badge">
+  <a href="https://github.com/2n3g5c9/notes-marcm-dev/commits/main">
+    <img src="https://img.shields.io/github/last-commit/2n3g5c9/notes-marcm-dev" alt="last-commit-badge">
   </a>
 </p>
 
@@ -52,7 +52,7 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/2n3g5c9/marcm-dev && cd marcm-dev
+git clone https://github.com/2n3g5c9/notes-marcm-dev && cd notes-marcm-dev
 ```
 
 2. Download the dependencies:
