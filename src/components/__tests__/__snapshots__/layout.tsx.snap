@@ -327,7 +327,9 @@ Array [
         <p
           className="text-center text-sm sm:text-base"
         >
-          © 2021 
+          © 
+          2022
+           
           Default author
           . Built with
            

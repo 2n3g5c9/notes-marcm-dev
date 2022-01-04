@@ -53,7 +53,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const notes = await graphql(`
     query {
       allMdx(
-        filter: { fileAbsolutePath: { regex: "/notes/" } }
+        filter: { fileAbsolutePath: { regex: "/content\/notes/" } }
         sort: { fields: [frontmatter___date], order: ASC }
         limit: 1000
       ) {

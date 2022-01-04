@@ -1,5 +1,5 @@
 {
-  "name": "marcm-dev",
+  "name": "notes-marcm-dev",
   "private": false,
   "description": "Tech notes with words and code",
   "version": "2.1.0",
@@ -110,9 +110,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/2n3g5c9/marcm-dev"
+    "url": "https://github.com/2n3g5c9/notes-marcm-dev"
   },
   "bugs": {
-    "url": "https://github.com/2n3g5c9/marcm-dev/issues"
+    "url": "https://github.com/2n3g5c9/notes-marcm-dev/issues"
   }
 }

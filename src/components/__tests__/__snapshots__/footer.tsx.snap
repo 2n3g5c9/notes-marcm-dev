@@ -65,7 +65,9 @@ exports[`Footer renders correctly 1`] = `
     <p
       className="text-center text-sm sm:text-base"
     >
-      © 2021 
+      © 
+      2022
+       
       Random author
       . Built with
        

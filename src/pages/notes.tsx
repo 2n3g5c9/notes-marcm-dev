@@ -52,7 +52,7 @@ type NotesPageProps = InferProps<typeof NotesPagePropTypes>
 export const pageQuery = graphql`
   query {
     mdx: allMdx(
-      filter: { fileAbsolutePath: { regex: "/notes/" } }
+      filter: { fileAbsolutePath: { regex: "/content\/notes/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {

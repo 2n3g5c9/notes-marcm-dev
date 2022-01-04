@@ -40,7 +40,7 @@ const Footer = ({ author, urls }: FooterProps): ReactElement => (
     </div>
     <div className="mt-8 md:mt-0 md:order-1">
       <p className="text-center text-sm sm:text-base">
-        &copy; 2021 {author}. Built with{' '}
+        &copy; {new Date().getFullYear()} {author}. Built with{' '}
         <a
           href="https://github.com/2n3g5c9/marcm-dev"
           aria-label="GitHub repository"

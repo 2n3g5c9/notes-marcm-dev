@@ -53,7 +53,7 @@ export const pageQuery = graphql`
       }
     }
     latestNote: allMdx(
-      filter: { fileAbsolutePath: { regex: "/notes/" } }
+      filter: { fileAbsolutePath: { regex: "/content\/notes/" } }
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 1
     ) {
