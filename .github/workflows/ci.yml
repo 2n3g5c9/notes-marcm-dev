@@ -57,7 +57,7 @@ jobs:
 
     steps:
       - name: Download Artifact ⏬
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: ${{ env.repository_name }}
 
@@ -75,7 +75,7 @@ jobs:
 
     steps:
       - name: Download Artifact ⏬
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: ${{ env.repository_name }}
 
@@ -93,7 +93,7 @@ jobs:
 
     steps:
       - name: Download Artifact ⏬
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: ${{ env.repository_name }}
 
@@ -111,7 +111,7 @@ jobs:
 
     steps:
       - name: Download Artifact ⏬
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: ${{ env.repository_name }}
 
@@ -138,7 +138,7 @@ jobs:
 
     steps:
       - name: Download Artifact ⏬
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: ${{ env.repository_name }}
 
@@ -162,7 +162,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifact ⏬
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: ${{ env.repository_name }}
 
