@@ -1,3 +1,5 @@
+> ⚠️ This project is no longer maintained.
+
 <div align="center">
   <img width="512" src="https://raw.githubusercontent.com/2n3g5c9/notes-marcm-dev/main/src/assets/images/shape.png" alt="notes-marcm-dev">
 </div>
